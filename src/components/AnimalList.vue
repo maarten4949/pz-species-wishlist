@@ -132,6 +132,7 @@ header {
     display: flex;
     gap: var(--spacing-04);
     align-items: stretch;
+    flex-wrap: wrap;
 }
 .input-field {
     color: var(--text-dark);
@@ -238,11 +239,9 @@ select {
         z-index: 2;
         min-width: var(--spacing-08);
         color: var(--text-white);
-
     }
     & .votes{
         padding: var(--spacing-04) var(--spacing-08);
-
         font-family: var(--font-eagle-bold);
         font-size: var(--type-08);
         line-height: var(--spacing-08);
@@ -252,9 +251,71 @@ select {
             line-height: var(--spacing-07);
         }
         & .subtitle {
+            flex-wrap: wrap;
             display:flex;
             gap: var(--spacing-03);
             color: var(--text-soft);
+        }
+    }
+}
+@media (width < 800px)
+{
+    .animal {
+        & .animal-picture {
+        width: var(--spacing-14);
+        }
+        & .animal-info {
+            gap: calc(var(--spacing-13) + var(--spacing-06));
+            & .animal-name {
+                font-size: var(--type-06);
+                line-height: var(--spacing-06);
+            }
+            & .title-container {
+                gap: var(--spacing-01);
+                display: flex;
+                flex-direction: column;
+            }
+            & .subtitle {
+                flex-direction: column;
+                gap: 0;
+                font-size: var(--type-02);
+            }
+        }
+        & .votes {
+            padding: var(--spacing-04) var(--spacing-06);
+            padding-left: 0;
+        }
+    }
+}
+@media (width < 550px)
+{
+    .animal {
+        & .animal-picture {
+          width: var(--spacing-13);
+        }
+        & .animal-info {
+            padding: var(--spacing-04) var(--spacing-04);
+            gap: calc(var(--spacing-12) + var(--spacing-04));
+        }
+        & .votes {
+            padding: var(--spacing-04) var(--spacing-04);
+            padding-left: 0;
+        }
+    }
+}
+@media (width < 380px)
+{
+    .animal {
+        & .animal-picture {
+          width: calc(var(--spacing-12) + var(--spacing-02));
+        }
+        & .animal-info {
+            padding: var(--spacing-04) var(--spacing-04);
+            gap: calc(var(--spacing-09));
+        }
+        & .votes {
+            padding: var(--spacing-04) var(--spacing-04);
+            padding-left: 0;
         }
     }
 }
