@@ -93,12 +93,7 @@ onMounted(async () => {
     errorMessage.value = 'Could not load today\'s puzzle. Please try again!';
   }
 });
-function onSearchInput(e){
-  errorMessage = "";
-  if (searchInput.value === "") return;
-}
 const filteredAnimals = computed(() => {
-
   let animalsFiltered = animals;
   if (searchInput.value != "" && searchInput.value != undefined)
   {
@@ -218,10 +213,10 @@ select {
         background-image: radial-gradient(closest-side,#000, transparent);
     }
     & .animal-picture {
-        bottom: .01rem;
+        bottom: .08rem;
         left: -0.1rem;
         position: absolute;
-        height: 110%;
+        height: 100%;
         object-fit:cover;
         width: var(--spacing-15);
     }
@@ -233,7 +228,7 @@ select {
     & .animal-info {
         padding: var(--spacing-04) var(--spacing-06);
         display:flex;
-        gap: var(--spacing-15);
+        gap: calc(var(--spacing-14) + var(--spacing-07));
         align-items: center;
     }
     & .rank {
@@ -241,7 +236,8 @@ select {
         font-size: var(--type-06);
         line-height: var(--spacing-07);
         z-index: 2;
-        color: var(--text-white)
+        min-width: var(--spacing-08);
+        color: var(--text-white);
 
     }
     & .votes{
