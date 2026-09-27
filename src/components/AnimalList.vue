@@ -92,8 +92,8 @@ onMounted(async () => {
     });
     totalVotes.value = animals.reduce((acc, animal) => acc + animal.votes, 0);
   } catch (err) {
-    console.error('Failed to load today\'s character:', err);
-    errorMessage.value = 'Could not load today\'s puzzle. Please try again!';
+    console.error('Failed to load animal data:', err);
+    errorMessage.value = 'Failed to load animal data.';
   }
 });
 const filteredAnimals = computed(() => {
@@ -124,14 +124,8 @@ const filteredAnimals = computed(() => {
   }
   return animalsFiltered;
 })
-
-function getImageUrl(name) {
-  return new URL(`/images/${name}.webp`, import.meta.url).href;
-}
 </script>
-
 <style>
-
 header {
     display: flex;
     gap: var(--spacing-04);
