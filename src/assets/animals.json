@@ -299,13 +299,6 @@
   "animalSubCategory": "Primates"
 },
 {
-  "name": "Black handed spider monkey",
-  "votes": 1,
-  "habitatType": "Terrestrial",
-  "animalCategory": "Mammals",
-  "animalSubCategory": "Primates"
-},
-{
   "name": "Blue eyed black lemur",
   "votes": 1,
   "habitatType": "Terrestrial",
@@ -356,7 +349,7 @@
 },
 {
   "name": "Geoffroy's spider monkey",
-  "votes": 4,
+  "votes": 5,
   "habitatType": "Terrestrial",
   "animalCategory": "Mammals",
   "animalSubCategory": "Primates"
@@ -727,7 +720,7 @@
 },
 {
   "name": "Rock hyrax",
-  "votes": 1,
+  "votes": 2,
   "habitatType": "Terrestrial",
   "animalCategory": "Mammals",
   "animalSubCategory": "Other mammals"
@@ -741,13 +734,6 @@
 },
 {
   "name": "Sugar glider",
-  "votes": 1,
-  "habitatType": "Terrestrial",
-  "animalCategory": "Mammals",
-  "animalSubCategory": "Other mammals"
-},
-{
-  "name": "Rock hyrax",
   "votes": 1,
   "habitatType": "Terrestrial",
   "animalCategory": "Mammals",
@@ -1778,14 +1764,7 @@
 }
 ,{
   "name": "Hummingbird hawk moth",
-  "votes": 1,
-  "habitatType": "Exhibit",
-  "animalCategory": "Invertebrates",
-  "animalSubCategory": ""
-}
-,{
-  "name": "Kolibri butterfly",
-  "votes": 1,
+  "votes": 2,
   "habitatType": "Exhibit",
   "animalCategory": "Invertebrates",
   "animalSubCategory": ""
