@@ -201,7 +201,7 @@
   "animalSubCategory": "Hyenas & Small carnivorans"
 },
 {
-  "name": "Ring tailed & S.A coati",
+  "name": "Ring tailed or S.A coati",
   "votes": 7,
   "habitatType": "Terrestrial",
   "animalCategory": "Mammals",
@@ -363,7 +363,7 @@
 },
 {
   "name": "Gelada baboon",
-  "votes": 2,
+  "votes": 3,
   "habitatType": "Terrestrial",
   "animalCategory": "Mammals",
   "animalSubCategory": "Primates"
@@ -406,13 +406,6 @@
 {
   "name": "Red-shanked douc",
   "votes": 2,
-  "habitatType": "Terrestrial",
-  "animalCategory": "Mammals",
-  "animalSubCategory": "Primates"
-},
-{
-  "name": "Gelada baboon",
-  "votes": 1,
   "habitatType": "Terrestrial",
   "animalCategory": "Mammals",
   "animalSubCategory": "Primates"
@@ -649,13 +642,6 @@
   "animalSubCategory": "Hoofstock"
 },
 {
-  "name": "White tailed deer",
-  "votes": 2,
-  "habitatType": "Terrestrial",
-  "animalCategory": "Mammals",
-  "animalSubCategory": "Hoofstock"
-},
-{
   "name": "Zebu",
   "votes": 1,
   "habitatType": "Terrestrial",
@@ -782,7 +768,7 @@
   "animalSubCategory": "Crcocodilians"
 },
 {
-  "name": "Sunda & False gharial",
+  "name": "Sunda or False gharial",
   "votes": 4,
   "habitatType": "Terrestrial",
   "animalCategory": "Reptiles",
@@ -1139,7 +1125,7 @@
   "animalSubCategory": ""
 }
 ,{
-  "name": "Black pacu/tambaqui",
+  "name": "Black pacu or tambaqui",
   "votes": 4,
   "habitatType": "Aquarium",
   "animalCategory": "Freshwater fish",
@@ -1216,7 +1202,7 @@
   "animalSubCategory": ""
 }
 ,{
-  "name": "Freshwater angelfish/scalar",
+  "name": "Freshwater angelfish or scalar",
   "votes": 3,
   "habitatType": "Aquarium",
   "animalCategory": "Freshwater fish",
@@ -1322,13 +1308,6 @@
 }
 ,{
   "name": "Silver arowana",
-  "votes": 2,
-  "habitatType": "Aquarium",
-  "animalCategory": "Freshwater fish",
-  "animalSubCategory": ""
-}
-,{
-  "name": "Wels catfish",
   "votes": 2,
   "habitatType": "Aquarium",
   "animalCategory": "Freshwater fish",
@@ -1502,13 +1481,7 @@
   "animalCategory": "Saltwater fish",
   "animalSubCategory": ""
 }
-,{
-  "name": "Trum",
-  "votes": 1,
-  "habitatType": "Aquarium",
-  "animalCategory": "Saltwater fish",
-  "animalSubCategory": ""
-}
+
 ,{
   "name": "Wolf eel",
   "votes": 1,
@@ -1595,13 +1568,6 @@
 }
 ,{
   "name": "Tucuxi",
-  "votes": 1,
-  "habitatType": "Aquarium",
-  "animalCategory": "Marine mammals",
-  "animalSubCategory": ""
-}
-,{
-  "name": "Rough toothed dolphin",
   "votes": 1,
   "habitatType": "Aquarium",
   "animalCategory": "Marine mammals",
@@ -1902,7 +1868,7 @@
   "animalSubCategory": ""
 }
 ,{
-  "name": "White-spotted assasin bug",
+  "name": "White-spotted assassin bug",
   "votes": 1,
   "habitatType": "Exhibit",
   "animalCategory": "Invertebrates",
@@ -1972,7 +1938,7 @@
   "animalSubCategory": ""
 }
 ,{
-  "name": "Yellowbanded pipefish",
+  "name": "Yellow banded pipefish",
   "votes": 1,
   "habitatType": "Exhibit",
   "animalCategory": "Fish",
@@ -2098,14 +2064,14 @@
   "animalSubCategory": ""
 }
 ,{
-  "name": "Pacman frog ",
+  "name": "Pacman frog",
   "votes": 1,
   "habitatType": "Exhibit",
   "animalCategory": "Amphibians",
   "animalSubCategory": ""
 }
 ,{
-  "name": "Strawberry poison dart frog ",
+  "name": "Strawberry poison dart frog",
   "votes": 1,
   "habitatType": "Exhibit",
   "animalCategory": "Amphibians",
@@ -2140,7 +2106,7 @@
   "animalSubCategory": ""
 }
 ,{
-  "name": "Borneo earless monitor ",
+  "name": "Borneo earless monitor",
   "votes": 1,
   "habitatType": "Exhibit",
   "animalCategory": "Reptiles",
@@ -2280,7 +2246,7 @@
   "animalSubCategory": ""
 }
 ,{
-  "name": "Giant girdled lizard ",
+  "name": "Giant girdled lizard",
   "votes": 1,
   "habitatType": "Exhibit",
   "animalCategory": "Reptiles",
@@ -2441,7 +2407,7 @@
   "animalSubCategory": ""
 }
 ,{
-  "name": "Viatnamese B. breasted leaf turtle",
+  "name": "Vietnamese B. breasted leaf turtle",
   "votes": 1,
   "habitatType": "Exhibit",
   "animalCategory": "Reptiles",
@@ -2798,7 +2764,7 @@
   "animalSubCategory": ""
 }
 ,{
-  "name": "Saddle billed stork",
+  "name": "Saddle-billed stork",
   "votes": 1,
   "habitatType": "Aviary",
   "animalCategory": "Wading birds, shorebirds  and alike",
@@ -2910,7 +2876,7 @@
   "animalSubCategory": ""
 }
 ,{
-  "name": "Cockatiel ",
+  "name": "Cockatiel",
   "votes": 1,
   "habitatType": "Aviary",
   "animalCategory": "Parrots and cockatoos",
@@ -2931,14 +2897,14 @@
   "animalSubCategory": ""
 }
 ,{
-  "name": "Great green macaw ",
+  "name": "Great green macaw",
   "votes": 2,
   "habitatType": "Aviary",
   "animalCategory": "Parrots and cockatoos",
   "animalSubCategory": ""
 }
 ,{
-  "name": "Horned parakeet ",
+  "name": "Horned parakeet",
   "votes": 1,
   "habitatType": "Aviary",
   "animalCategory": "Parrots and cockatoos",
@@ -3057,7 +3023,7 @@
   "animalSubCategory": ""
 }
 ,{
-  "name": "Baly myna",
+  "name": "Bali myna",
   "votes": 6,
   "habitatType": "Aviary",
   "animalCategory": "Other birds (songbirds, tropical birds etc.)",
@@ -3148,7 +3114,7 @@
   "animalSubCategory": ""
 }
 ,{
-  "name": "Java sparrow ",
+  "name": "Java sparrow",
   "votes": 1,
   "habitatType": "Aviary",
   "animalCategory": "Other birds (songbirds, tropical birds etc.)",
@@ -3267,7 +3233,7 @@
   "animalSubCategory": ""
 }
 ,{
-  "name": "Three wattled bell bird ",
+  "name": "Three-wattled bellbird",
   "votes": 1,
   "habitatType": "Aviary",
   "animalCategory": "Other birds (songbirds, tropical birds etc.)",
@@ -3288,7 +3254,7 @@
   "animalSubCategory": ""
 }
 ,{
-  "name": "Western capercailie",
+  "name": "Western capercaillie",
   "votes": 1,
   "habitatType": "Aviary",
   "animalCategory": "Other birds (songbirds, tropical birds etc.)",

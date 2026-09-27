@@ -37,7 +37,7 @@
     <div class="error-message">{{errorMessage}}</div>
     <ul class= "animal-list">
         <li v-for="animal in filteredAnimals" class="animal" :style="{ clipPath: `url(#${animal.name.replace(/\s/g, '')})` }">
-            <img class="animal-picture" :style="{ clipPath: `url(#${animal.name.replace(/\s/g, '')}-shape)` }" :src="getImageUrl(animal.name)" :alt="`${ animal.name } picture`">
+            <img class="animal-picture" :style="{ clipPath: `url(#${animal.name.replace(/\s/g, '')}-shape)` }" :src="`/images/${encodeURIComponent(animal.name)}.webp`" :alt="`${ animal.name } picture`">
             <svg viewBox="0 0 131 60" fill="none" xmlns="http://www.w3.org/2000/svg" class="svg-clip-path">
                 <defs>
                 <clipPath :id="`${animal.name.replace(/\s/g, '')}-shape`" transform="scale(0.007634, 0.026667)" clipPathUnits="objectBoundingBox">
@@ -123,7 +123,7 @@ const filteredAnimals = computed(() => {
 })
 
 function getImageUrl(name) {
-  return new URL(`../assets/images/${name}.webp`, import.meta.url).href;
+  return new URL(`/images/${name}.webp`, import.meta.url).href;
 }
 </script>
 
@@ -237,7 +237,7 @@ select {
         font-size: var(--type-06);
         line-height: var(--spacing-07);
         z-index: 2;
-        min-width: var(--spacing-08);
+        min-width: var(--spacing-09);
         color: var(--text-white);
     }
     & .votes{
