@@ -24,3 +24,9 @@ pnpm-debug.log*
 .idea/
 src/assets/original-images/
 src/assets/new-images/
+
+# wrangler files
+.wrangler
+.dev.vars*
+!.dev.vars.example
+!.env.example
