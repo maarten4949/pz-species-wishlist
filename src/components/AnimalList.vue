@@ -31,8 +31,9 @@
             </select>
         </div>
     </header>
-    <div>
+    <div class="metadata-container">
         <span class="animal-count">{{filteredAnimals.length}} animals</span>
+        <span class="total-votes">{{totalVotes}} votes</span>
     </div>
     <div class="error-message">{{errorMessage}}</div>
     <ul class= "animal-list">
@@ -74,6 +75,7 @@ import { ref, computed, onMounted } from 'vue'
 import animals from "../assets/animals.json"
 
 let errorMessage = ref("")
+let totalVotes = ref(0);
 let animalCategories = ref([])
 let habitatTypes = ref([])
 const searchInput = defineModel("searchInput", { default: "" });
@@ -88,6 +90,7 @@ onMounted(async () => {
     animals.sort((a, b) => b.votes - a.votes ).forEach((animal, index) => {
       animal.rank = index + 1;
     });
+    totalVotes.value = animals.reduce((acc, animal) => acc + animal.votes, 0);
   } catch (err) {
     console.error('Failed to load today\'s character:', err);
     errorMessage.value = 'Could not load today\'s puzzle. Please try again!';
@@ -128,6 +131,7 @@ function getImageUrl(name) {
 </script>
 
 <style>
+
 header {
     display: flex;
     gap: var(--spacing-04);
@@ -178,11 +182,17 @@ select {
     display:grid;
     gap: var(--spacing-04);
 }
-.animal-count {
+.animal-count, .total-votes {
     font-size: var(--type-01);
     color: var(--text-soft);
     line-height: var(--spacing-05);
 }
+.metadata-container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
 .animal {
     overflow:hidden;
     align-items:stretch;
