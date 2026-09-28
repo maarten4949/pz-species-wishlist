@@ -593,13 +593,6 @@
   "animalSubCategory": "Hoofstock"
 },
 {
-  "name": "Tufted deer",
-  "votes": 1,
-  "habitatType": "Terrestrial",
-  "animalCategory": "Mammals",
-  "animalSubCategory": "Hoofstock"
-},
-{
   "name": "Turkmenian kulan",
   "votes": 1,
   "habitatType": "Terrestrial",
@@ -809,15 +802,8 @@
   "animalSubCategory": ""
 }
 ,{
-  "name": "Vietnamese sika deer",
-  "votes": 1,
-  "habitatType": "Terrestrial",
-  "animalCategory": "Mammals",
-  "animalSubCategory": ""
-}
-,{
   "name": "Western tufted deer",
-  "votes": 1,
+  "votes": 2,
   "habitatType": "Terrestrial",
   "animalCategory": "Mammals",
   "animalSubCategory": ""
@@ -1665,6 +1651,20 @@
 }
 ,{
   "name": "Yellow boxfish",
+  "votes": 1,
+  "habitatType": "Aquarium",
+  "animalCategory": "Saltwater fish",
+  "animalSubCategory": ""
+}
+,{
+  "name": "Spot fin porcupinefish",
+  "votes": 1,
+  "habitatType": "Aquarium",
+  "animalCategory": "Saltwater fish",
+  "animalSubCategory": ""
+}
+,{
+  "name": "Sheepshead seabream",
   "votes": 1,
   "habitatType": "Aquarium",
   "animalCategory": "Saltwater fish",
@@ -3674,7 +3674,7 @@
 }
 ,{
   "name": "Western capercaillie",
-  "votes": 1,
+  "votes": 3,
   "habitatType": "Aviary",
   "animalCategory": "Other birds (songbirds, tropical birds etc.)",
   "animalSubCategory": ""
