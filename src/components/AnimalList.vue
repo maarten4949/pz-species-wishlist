@@ -86,28 +86,16 @@ const searchInput = defineModel("searchInput", { default: "" });
 const sortDropdown = defineModel("sortDropdown", { default: "VOTES-DESC" });
 const habitatTypeFilters = defineModel("habitatTypeFilters", { default: "" });
 const animalCategoryFilters = defineModel("animalCategoryFilters", { default: "" });
-
 onMounted(async () => {
   try {
     animalCategories.value = [...new Set(animals.map(animal => animal.animalCategory))]
     habitatTypes.value = [...new Set(animals.map(animal => animal.habitatType))]
-    prevanimals.sort((a, b) => {
-        if (b.votes < a.votes) return -1
-          else if (b.votes > a.votes) return 1
-        else {
-              return a.name - b.name
-            }
-    })
-    animals.sort((a, b) => {
-      if (b.votes < a.votes) return -1
-        else if (b.votes > a.votes) return 1
-      else {
-            return a.name - b.name
-          }
-    })
+    const compareAnimals = (a, b) => b.votes - a.votes || a.name.localeCompare(b.name);
+    prevanimals.sort(compareAnimals);
     prevanimals.forEach((animal, index) => {
       animal.rank = index + 1;
     });
+    animals.sort(compareAnimals);
     animals.forEach((animal, index) => {
       animal.rank = index + 1;
       animal.rankDifference = prevanimals.find(prevAnimal => prevAnimal.name === animal.name)?.rank - animal.rank;
@@ -138,8 +126,8 @@ const filteredAnimals = computed(() => {
   if (sortDropdown.value != undefined)
   {
     animalsFiltered = animalsFiltered.sort((a, b) => {
-      if (sortDropdown.value === "VOTES-DESC") return b.votes - a.votes
-      if (sortDropdown.value === "VOTES-ASC") return a.votes - b.votes
+      if (sortDropdown.value === "VOTES-DESC") return b.votes - a.votes || a.name.localeCompare(b.name)
+      if (sortDropdown.value === "VOTES-ASC") return a.votes - b.votes || b.name.localeCompare(a.name)
       if (sortDropdown.value === "NAMES-DESC") return b.name.localeCompare(a.name)
       if (sortDropdown.value === "NAMES-ASC") return a.name.localeCompare(b.name)
       return 0
