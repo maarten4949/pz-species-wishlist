@@ -55,7 +55,10 @@
             </svg>
             <div class="animal-content">
                 <div class="animal-info">
-                    <span class="rank">{{ animal.rank}}</span>
+                    <div class="rank-container">
+                        <span :class="`prev-rank ${animal.rankDifference > 0 ? 'positive' : animal.rankDifference < 0 ? 'negative' : 'neutral' }`"><span class="arrow-sign">{{animal.rankDifference === undefined || isNaN(animal.rankDifference) ? '' : animal.rankDifference > 0 ? '&#9650;' : (animal.rankDifference < 0 ? '&#9660;' : '') }}</span><span :class="`${ animal.rankDifference == 0 ? 'regular-text' : '' }`">{{animal.rankDifference == undefined || isNaN(animal.rankDifference) ? "NEW" : animal.rankDifference == 0 ? '~' : Math.abs(animal.rankDifference) }}</span></span>
+                        <span class="rank">{{ animal.rank}}</span>
+                    </div>
                     <div class = "title-container">
                         <h2 class= "animal-name">{{animal.name}}</h2>
                         <div class= "subtitle">
@@ -73,6 +76,7 @@
 <script setup>
 import { ref, computed, onMounted } from 'vue'
 import animals from "../assets/animals.json"
+import prevanimals from "../assets/prev-animals.json"
 
 let errorMessage = ref("")
 let totalVotes = ref(0);
@@ -87,9 +91,28 @@ onMounted(async () => {
   try {
     animalCategories.value = [...new Set(animals.map(animal => animal.animalCategory))]
     habitatTypes.value = [...new Set(animals.map(animal => animal.habitatType))]
-    animals.sort((a, b) => b.votes - a.votes ).forEach((animal, index) => {
+    prevanimals.sort((a, b) => {
+        if (b.votes < a.votes) return -1
+          else if (b.votes > a.votes) return 1
+        else {
+              return a.name - b.name
+            }
+    })
+    animals.sort((a, b) => {
+      if (b.votes < a.votes) return -1
+        else if (b.votes > a.votes) return 1
+      else {
+            return a.name - b.name
+          }
+    })
+    prevanimals.forEach((animal, index) => {
       animal.rank = index + 1;
     });
+    animals.forEach((animal, index) => {
+      animal.rank = index + 1;
+      animal.rankDifference = prevanimals.find(prevAnimal => prevAnimal.name === animal.name)?.rank - animal.rank;
+    });
+
     totalVotes.value = animals.reduce((acc, animal) => acc + animal.votes, 0);
   } catch (err) {
     console.error('Failed to load animal data:', err);
@@ -210,10 +233,10 @@ select {
     & .animal-content::before {
         content: "";
         position: absolute;
-        bottom: calc(var(--spacing-14) / 4 * -1);
+        bottom: -25%;
         left: calc(var(--spacing-14) / 2 * -1);
-        width: var(--spacing-14);
-        height: var(--spacing-14);
+        width: var(--spacing-15);
+        height: 150%;
         z-index: 1;
         background-image: radial-gradient(closest-side,#000, transparent);
     }
@@ -231,12 +254,39 @@ select {
         top: 50%;
     }
     & .animal-info {
-        padding: var(--spacing-04) var(--spacing-06);
+        padding: var(--spacing-04) var(--spacing-04);
         display:flex;
         gap: calc(var(--spacing-14) + var(--spacing-07));
         align-items: center;
     }
-    & .rank {
+    & .rank-container {
+        display: flex;
+        align-items: center;
+        gap: var(--spacing-04);
+    }
+    & .prev-rank {
+        &.positive {
+            color: var(--green);
+        }
+        &.negative {
+            color: var(--red);
+        }
+        &.neutral {
+            color: var(--text-soft-inverted);
+        }
+
+        font-family: var(--font-eagle-bold);
+        font-size: var(--type-03);
+        line-height: var(--spacing-07);
+        z-index: 2;
+        color: var(--text-white);
+        & .arrow-sign {
+            font-size: var(--type-01);
+            vertical-align: middle;
+            line-height: var(--spacing-07);
+        }
+    }
+    & .rank{
         font-family: var(--font-eagle-bold);
         font-size: var(--type-06);
         line-height: var(--spacing-07);
@@ -260,6 +310,11 @@ select {
             gap: var(--spacing-03);
             color: var(--text-soft);
         }
+    }
+    & .regular-text {
+        font-family: var(--font-noto-sans);
+        font-size: var(--type-06);
+        vertical-align: middle;
     }
 }
 @media (width < 800px)
