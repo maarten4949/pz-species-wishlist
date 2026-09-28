@@ -244,7 +244,7 @@ select {
     & .animal-info {
         padding: var(--spacing-04) var(--spacing-04);
         display:flex;
-        gap: calc(var(--spacing-14) + var(--spacing-07));
+        gap: calc(var(--spacing-14) + var(--spacing-02));
         align-items: center;
     }
     & .rank-container {
@@ -253,6 +253,7 @@ select {
         gap: var(--spacing-04);
     }
     & .prev-rank {
+        text-align: right;
         &.positive {
             color: var(--green);
         }
@@ -262,7 +263,7 @@ select {
         &.neutral {
             color: var(--text-soft-inverted);
         }
-
+        min-width: 2.5rem;
         font-family: var(--font-eagle-bold);
         font-size: var(--type-03);
         line-height: var(--spacing-07);
@@ -275,11 +276,11 @@ select {
         }
     }
     & .rank{
+        min-width: 3rem;
         font-family: var(--font-eagle-bold);
         font-size: var(--type-06);
         line-height: var(--spacing-07);
         z-index: 2;
-        min-width: var(--spacing-09);
         color: var(--text-white);
     }
     & .votes{
@@ -312,7 +313,7 @@ select {
         width: var(--spacing-14);
         }
         & .animal-info {
-            gap: calc(var(--spacing-13) + var(--spacing-06));
+            gap: calc(var(--spacing-13) + var(--spacing-02));
             & .animal-name {
                 font-size: var(--type-06);
                 line-height: var(--spacing-06);
@@ -337,12 +338,79 @@ select {
 @media (width < 550px)
 {
     .animal {
+        & .animal-content::before {
+            content: "";
+            position: absolute;
+            bottom: 0%;
+            left: calc(var(--spacing-14) / 2 * -1);
+            width: var(--spacing-14);
+            height: 100%;
+
+        }
+        & .rank-container {
+            flex-direction:column-reverse;
+            align-items: start;
+            gap: var(--spacing-01);
+        }
+        & .prev-rank {
+            line-height: var(--spacing-04);
+            text-align:left;
+                & .arrow-sign {
+                    line-height: var(--spacing-04);
+                }
+        }
+        & .rank{
+            line-height: var(--spacing-06);
+        }
         & .animal-picture {
           width: var(--spacing-13);
         }
         & .animal-info {
             padding: var(--spacing-04) var(--spacing-04);
-            gap: calc(var(--spacing-12) + var(--spacing-04));
+            gap: calc(var(--spacing-12) + var(--spacing-02));
+
+        }
+        & .votes {
+            padding: var(--spacing-04) var(--spacing-05);
+            padding-left: 0;
+        }
+    }
+}
+@media (width < 450px)
+{
+    .animal {
+        & .animal-content::before {
+            content: "";
+            position: absolute;
+            bottom: 0%;
+            left: calc(var(--spacing-14) / 2 * -1);
+            width: 14rem;
+            height: 100%;
+
+        }
+        & .animal-picture {
+          width: calc(var(--spacing-12) + var(--spacing-02));
+        }
+        & .animal-info {
+            padding: var(--spacing-04) var(--spacing-03);
+            gap: calc(var(--spacing-09));
+            & .rank-container {
+                gap: var(--spacing-02);
+            }
+            & .animal-name {
+                font-size: var(--type-03);
+                line-height: var(--spacing-06);
+            }
+            & .title-container {
+                gap: var(--spacing-01);
+                display: flex;
+                flex-direction: column;
+            }
+            & .subtitle {
+                flex-direction: column;
+                gap: 0;
+                font-size: var(--type-02);
+            }
         }
         & .votes {
             padding: var(--spacing-04) var(--spacing-04);
@@ -350,20 +418,43 @@ select {
         }
     }
 }
-@media (width < 380px)
+@media (width < 350px)
 {
     .animal {
+        & .animal-content::before {
+            content: "";
+            position: absolute;
+            bottom: 0%;
+            left: calc(var(--spacing-14) / 1.7 * -1);
+            width: 14rem;
+            height: 100%;
+
+        }
         & .animal-picture {
-          width: calc(var(--spacing-12) + var(--spacing-02));
+          width: calc(var(--spacing-11));
         }
         & .animal-info {
-            padding: var(--spacing-04) var(--spacing-04);
-            gap: calc(var(--spacing-09));
+            gap: calc(var(--spacing-06));
+
+            & .animal-name {
+                font-size: var(--type-02);
+                line-height: var(--spacing-06);
+            }
+            & .title-container {
+                gap: var(--spacing-01);
+                display: flex;
+                flex-direction: column;
+            }
+            & .subtitle {
+                flex-direction: column;
+                gap: 0;
+                font-size: var(--type-01);
+            }
         }
         & .votes {
-            padding: var(--spacing-04) var(--spacing-04);
-            padding-left: 0;
+            font-size: var(--type-07)
         }
+
     }
 }
 </style>

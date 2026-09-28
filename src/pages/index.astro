@@ -19,11 +19,15 @@ import Layout from "../layouts/Layout.astro";
         justify-content: center;
         align-items: center;
     }
-    h1 {
-    }
+
     .subtitle {
         text-align: center;
         font-size: var(--type-01);
         color: var(--text-soft);
+    }
+    @media (width < 315px) {
+        h1 {
+            font-size: var(--type-10);
+        }
     }
 </style>
