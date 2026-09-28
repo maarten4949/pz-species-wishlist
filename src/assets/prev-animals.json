@@ -1750,7 +1750,7 @@
 }
 ,{
   "name": "Hairy-headed leafcutter ant",
-  "votes": 1,
+  "votes": 2,
   "habitatType": "Exhibit",
   "animalCategory": "Invertebrates",
   "animalSubCategory": ""
@@ -1765,13 +1765,6 @@
 ,{
   "name": "Hummingbird hawk moth",
   "votes": 2,
-  "habitatType": "Exhibit",
-  "animalCategory": "Invertebrates",
-  "animalSubCategory": ""
-}
-,{
-  "name": "Leaf cutter ant",
-  "votes": 1,
   "habitatType": "Exhibit",
   "animalCategory": "Invertebrates",
   "animalSubCategory": ""

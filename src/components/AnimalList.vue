@@ -88,7 +88,7 @@ const habitatTypeFilters = defineModel("habitatTypeFilters", { default: "" });
 const animalCategoryFilters = defineModel("animalCategoryFilters", { default: "" });
 onMounted(async () => {
   try {
-    animalCategories.value = [...new Set(animals.map(animal => animal.animalCategory))]
+    animalCategories.value = [...new Set(animals.map(animal => animal.animalCategory != "" && animal.animalCategory))]
     habitatTypes.value = [...new Set(animals.map(animal => animal.habitatType))]
     const compareAnimals = (a, b) => b.votes - a.votes || a.name.localeCompare(b.name);
     prevanimals.sort(compareAnimals);
