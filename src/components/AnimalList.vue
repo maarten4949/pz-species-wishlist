@@ -12,6 +12,8 @@
                 <option value="VOTES-ASC">Votes Ascending</option>
                 <option value="NAMES-DESC">Names Descending</option>
                 <option value="NAMES-ASC">Names Ascending</option>
+                <option value="GAIN-DESC">Position Gain Descending</option>
+                <option value="GAIN-ASC">Position Gain Ascending</option>
             </select>
         </div>
         <div class="input-group">
@@ -125,13 +127,24 @@ const filteredAnimals = computed(() => {
   }
   if (sortDropdown.value != undefined)
   {
+    const newAnimals = animalsFiltered.filter(animal => isNaN(animal.rankDifference))
+    if (sortDropdown.value === "GAIN-DESC" || sortDropdown.value === "GAIN-ASC")
+    {
+      animalsFiltered = animalsFiltered.filter(animal  => !isNaN(animal.rankDifference))
+    }
     animalsFiltered = animalsFiltered.sort((a, b) => {
       if (sortDropdown.value === "VOTES-DESC") return b.votes - a.votes || a.name.localeCompare(b.name)
       if (sortDropdown.value === "VOTES-ASC") return a.votes - b.votes || b.name.localeCompare(a.name)
       if (sortDropdown.value === "NAMES-DESC") return b.name.localeCompare(a.name)
       if (sortDropdown.value === "NAMES-ASC") return a.name.localeCompare(b.name)
+      if (sortDropdown.value === "GAIN-DESC") return b.rankDifference - a.rankDifference || a.name.localeCompare(b.name)
+      if (sortDropdown.value === "GAIN-ASC") return a.rankDifference - b.rankDifference || b.name.localeCompare(a.name)
       return 0
     })
+    if (sortDropdown.value === "GAIN-DESC" || sortDropdown.value === "GAIN-ASC")
+    {
+      animalsFiltered = [...animalsFiltered, ...newAnimals]
+    }
   }
   return animalsFiltered;
 })
