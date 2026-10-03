@@ -3,7 +3,7 @@
     <header>
         <div class="input-group grow">
             <label for="search">Search:</label>
-            <input id="search" name="search" type="text" v-model="searchInput" @input="onSearchInput" placeholder="Search an animal" class="input-field">
+            <input id="search" name="search" type="text" v-model="searchInput" placeholder="Search an animal" class="input-field">
         </div>
         <div class="input-group">
             <label for="sort">Sort By:</label>
@@ -32,10 +32,22 @@
                 <option v-for="category in animalCategories" :value="category">{{category}}</option>
             </select>
         </div>
+        <div class="input-group">
+            <label for="animalPosition">Absolute/Relative position:</label>
+            <select name="animalPosition" id="animalPosition" v-model="animalPositionDropdown">
+                <option value="ABS" selected>Absolute positioning</option>
+                <option value="REL" selected>Relative postitioning</option>
+            </select>
+        </div>
     </header>
     <div class="metadata-container">
-        <span class="animal-count">{{filteredAnimals.length}} animals</span>
+        <span class="animal-count">{{animalCount}} animals</span>
         <span class="total-votes">{{totalVotes}} votes</span>
+    </div>
+    <div class="page-controls">
+        <button class = "page-control" @click="GoPageBack"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-left preview-icon"><path d="m15 18-6-6 6-6"/></svg></button>
+        <span class="page-number">{{currentPage}}</span>
+        <button class = "page-control" @click="GoPageForward"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right preview-icon"><path d="m9 18 6-6-6-6"/></svg></button>
     </div>
     <div class="error-message">{{errorMessage}}</div>
     <ul class= "animal-list">
@@ -58,8 +70,8 @@
             <div class="animal-content">
                 <div class="animal-info">
                     <div class="rank-container">
-                        <span :class="`prev-rank ${animal.rankDifference > 0 ? 'positive' : animal.rankDifference < 0 ? 'negative' : 'neutral' }`"><span class="arrow-sign">{{animal.rankDifference === undefined || isNaN(animal.rankDifference) ? '' : animal.rankDifference > 0 ? '&#9650;' : (animal.rankDifference < 0 ? '&#9660;' : '') }}</span><span :class="`${ animal.rankDifference == 0 ? 'regular-text' : '' }`">{{animal.rankDifference == undefined || isNaN(animal.rankDifference) ? "NEW" : animal.rankDifference == 0 ? '~' : Math.abs(animal.rankDifference) }}</span></span>
-                        <span class="rank">{{ animal.rank}}</span>
+                        <span :class="`prev-rank ${getAnimalRankDifference(animal)}`"><span class="arrow-sign" v-html="getAnimalRankDifferenceArrow(animal)"></span><span :class="getAnimalRankDifferenceTextClass(animal)">{{getAnimalRankDifferenceValue(animal)}}</span></span>
+                        <span class="rank">{{getRank(animal)}}</span>
                     </div>
                     <div class = "title-container">
                         <h2 class= "animal-name">{{animal.name}}</h2>
@@ -73,19 +85,28 @@
             </div>
         </li>
     </ul>
+    <div class="page-controls">
+        <button class = "page-control" @click="GoPageBack"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-left preview-icon"><path d="m15 18-6-6 6-6"/></svg></button>
+        <span class="page-number">{{currentPage}}</span>
+        <button class = "page-control" @click="GoPageForward"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right preview-icon"><path d="m9 18 6-6-6-6"/></svg></button>
+    </div>
 </div>
 </template>
 <script setup>
 import { ref, computed, onMounted } from 'vue'
 import animals from "../assets/animals.json"
 import prevanimals from "../assets/prev-animals.json"
-
+const pageSize = 100;
+let currentPage = ref(1);
 let errorMessage = ref("")
 let totalVotes = ref(0);
 let animalCategories = ref([])
+let animalCount = ref(0)
+let totalAnimalCount = ref(0)
 let habitatTypes = ref([])
 const searchInput = defineModel("searchInput", { default: "" });
 const sortDropdown = defineModel("sortDropdown", { default: "VOTES-DESC" });
+const animalPositionDropdown = defineModel("animalPositionDropdown", { default: "ABS" });
 const habitatTypeFilters = defineModel("habitatTypeFilters", { default: "" });
 const animalCategoryFilters = defineModel("animalCategoryFilters", { default: "" });
 onMounted(async () => {
@@ -102,6 +123,7 @@ onMounted(async () => {
       animal.rank = index + 1;
       animal.rankDifference = prevanimals.find(prevAnimal => prevAnimal.name === animal.name)?.rank - animal.rank;
     });
+    totalAnimalCount.value = animals.length;
 
     totalVotes.value = animals.reduce((acc, animal) => acc + animal.votes, 0);
   } catch (err) {
@@ -109,22 +131,96 @@ onMounted(async () => {
     errorMessage.value = 'Failed to load animal data.';
   }
 });
+const calculateRelativeRank = (animals, prevAnimals) => {
+  prevAnimals.forEach((animal, index) => {
+    animal.relativeRank = index + 1;
+  });
+  animals.forEach((animal, index) => {
+    animal.relativeRank = index + 1;
+    animal.relativeRankDifference = prevAnimals.find(prevAnimal => prevAnimal.name === animal.name)?.relativeRank - animal.relativeRank;
+  });
+  return animals
+}
+const getAnimalRankDifference = (animal) => {
+  const rankDiff = animalPositionDropdown.value === "ABS" ? animal.rankDifference : animal.relativeRankDifference;
+  if (rankDiff > 0)
+  {
+    return "positive";
+  }
+  else if (rankDiff == 0)
+  {
+    return "neutral";
+  }
+  else {
+    return "negative";
+  }
+}
+const getAnimalRankDifferenceArrow = (animal) => {
+  const rankDiff = animalPositionDropdown.value == "ABS" ? animal.rankDifference : animal.relativeRankDifference;
+  if (rankDiff === undefined || isNaN(rankDiff))
+  {
+    return "";
+  }
+  else if (rankDiff > 0)
+  {
+    return '&#9650;';
+  }
+  else if (rankDiff === 0)
+  {
+      return ""
+  }
+  else {
+    return '&#9660;';
+  }
+}
+const getAnimalRankDifferenceTextClass = (animal) => {
+  const rankDiff = animalPositionDropdown.value == "ABS" ? animal.rankDifference : animal.relativeRankDifference;
+  if (rankDiff == 0)
+  {
+    return "regular-text";
+  }
+    return "";
+}
+const getAnimalRankDifferenceValue = (animal) => {
+  const rankDiff = animalPositionDropdown.value == "ABS" ? animal.rankDifference : animal.relativeRankDifference;
+  if (rankDiff == undefined || isNaN(rankDiff))
+  {
+    return "NEW";
+  }
+  else if (rankDiff == 0)
+  {
+      return '~'
+  }
+  return Math.abs(rankDiff);
+}
+const getRank = (animal) => {
+  const rank = animalPositionDropdown.value == "ABS" ? animal.rank : animal.relativeRank;
+  return rank;
+}
 const filteredAnimals = computed(() => {
   let animalsFiltered = animals;
+  let prevAnimalsFiltered = prevanimals;
   if (searchInput.value != "" && searchInput.value != undefined)
   {
     animalsFiltered = animals.filter(animal => animal.name.toLowerCase().includes(searchInput.value.toLowerCase()) ||
+      animal.habitatType.toLowerCase().includes(searchInput.value.toLowerCase()) ||
+      animal.animalCategory.toLowerCase().includes(searchInput.value.toLowerCase()))
+
+    prevAnimalsFiltered = prevAnimalsFiltered.filter(animal => animal.name.toLowerCase().includes(searchInput.value.toLowerCase()) ||
       animal.habitatType.toLowerCase().includes(searchInput.value.toLowerCase()) ||
       animal.animalCategory.toLowerCase().includes(searchInput.value.toLowerCase()))
   }
   if (habitatTypeFilters.value != undefined)
   {
     animalsFiltered = animalsFiltered.filter(animal => animal.habitatType.toLowerCase().includes(habitatTypeFilters.value.toLowerCase()))
+    prevAnimalsFiltered = prevAnimalsFiltered.filter(animal => animal.habitatType.toLowerCase().includes(habitatTypeFilters.value.toLowerCase()))
   }
   if (animalCategoryFilters.value != undefined)
   {
     animalsFiltered = animalsFiltered.filter(animal => animal.animalCategory.toLowerCase().includes(animalCategoryFilters.value.toLowerCase()))
+    prevAnimalsFiltered = prevAnimalsFiltered.filter(animal => animal.animalCategory.toLowerCase().includes(animalCategoryFilters.value.toLowerCase()))
   }
+
   if (sortDropdown.value != undefined)
   {
     const newAnimals = animalsFiltered.filter(animal => isNaN(animal.rankDifference))
@@ -146,8 +242,21 @@ const filteredAnimals = computed(() => {
       animalsFiltered = [...animalsFiltered, ...newAnimals]
     }
   }
+  animalCount.value = animalsFiltered.length;
+  animalsFiltered = calculateRelativeRank(animalsFiltered, prevAnimalsFiltered)
+  animalsFiltered = animalsFiltered.slice((currentPage.value - 1) * pageSize, currentPage.value * pageSize)
   return animalsFiltered;
 })
+function GoPageBack() {
+  currentPage.value = Math.max(1, currentPage.value - 1)
+  window.scrollTo({ top: 0, behavior: 'smooth' })
+
+}
+function GoPageForward() {
+  currentPage.value = Math.ceil(Math.min(animals.length / pageSize, currentPage.value + 1))
+  window.scrollTo({ top: 0, behavior: 'smooth' })
+  console.log("changed currentPage to: ", currentPage.value)
+}
 </script>
 <style>
 header {
@@ -195,7 +304,7 @@ select {
     flex-grow: 1;
 }
 .animal-list {
-    padding: var(--spacing-06) 0 ;
+    padding: var(--spacing-05) 0;
     list-style: none;
     display:grid;
     gap: var(--spacing-04);
@@ -209,8 +318,34 @@ select {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    margin-bottom: var(--spacing-03);
 }
-
+.page-controls {
+    display:flex;
+    align-items: center;
+    margin-left: auto;
+    width: 100%;
+    justify-content: flex-end;
+    gap: var(--spacing-04);
+    & .page-control {
+        background-color: var(--bg-2);
+        border: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: var(--spacing-04);
+        border-radius: var(--radii-m);
+        & svg {
+            stroke-width: 3px;
+            color: var(--text-normal);
+        }
+    }
+    & .page-number {
+        font-family: var(--font-eagle-bold);
+        font-size: var(--type-08);
+        color: var(--text-soft)
+    }
+}
 .animal {
     overflow:hidden;
     align-items:stretch;
