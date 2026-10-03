@@ -1,12 +1,20 @@
+---
+const { active } = Astro.props;
+---
+
 <nav class="nav">
-    <div class="nav-group left none"></div>
-    <div class="nav-group large">
-        <div class="title-header">
-            <h1>Planet Zoo 2 Species Wishlist</h1>
-            <p class="subtitle">Data from: -</p>
-        </div>
+    <div class="nav-group left">
+        <a class={`nav-link${active == "home" ? " active" : ""}`} href="/">
+            Meta-wishlist
+        </a>
+        <a
+            class={`nav-link${active == "newatzoo" ? " active" : ""}`}
+            href="/new-at-the-zoo"
+        >
+            New at the zoo
+        </a>
     </div>
-    <div class="nav-group right">
+    <div class="nav-group right no-grow hide-small">
         <a class="nav-button disabled" href="#link">
             Vote here
         </a>
@@ -14,18 +22,6 @@
 </nav>
 
 <style>
-    .title-header {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .subtitle {
-        text-align: center;
-        font-size: var(--type-01);
-        color: var(--text-soft);
-    }
     .nav {
         display: flex;
         justify-content: space-between;
@@ -40,6 +36,7 @@
         flex-basis: 20%;
         display: flex;
         flex-grow: 1;
+        align-items: center;
         gap: var(--spacing-06);
         &.large {
             flex-basis: 60%;
@@ -53,10 +50,17 @@
     }
     .nav-link {
         color: var(--text-normal);
-        transition: color 0.2s ease-in-out;
+        transition:
+            color,
+            background-color 0.2s ease-in-out;
         text-decoration: none;
+        padding: var(--spacing-04) var(--spacing-05);
+        border-radius: var(--radii-m);
         &:hover {
-            color: var(--text-hover);
+            background-color: var(--bg-2);
+        }
+        &.active {
+            background-color: var(--bg-2);
         }
     }
     .nav-button {
@@ -92,20 +96,20 @@
         }
     }
     @media (width < 600px) {
+        .hide-small {
+            display: none;
+        }
         .nav-group {
-            flex-basis: unset;
-            flex-wrap: wrap;
-            flex-grow: 0;
-            &.large {
-                flex-basis: unset;
+            justify-content: center;
+            &.right {
+                justify-content: center;
+            }
+            &.left {
+                justify-content: center;
             }
         }
         .nav {
-            justify-content: center;
-            flex-wrap: wrap;
-            & a {
-                display: block;
-            }
+            flex-direction: column;
         }
     }
     @media (width < 400px) {
@@ -120,17 +124,21 @@
     }
     @media (width < 1000px) {
         .nav {
-            flex-direction: column;
+            /*flex-direction: column;*/
             & .nav-group {
                 flex-basis: 0;
                 &.right {
-                    justify-content: center;
+                    /*justify-content: center;*/
                 }
                 &.left {
-                    justify-content: center;
+                    /*justify-content: center;*/
                 }
                 &.none {
                     display: none;
+                }
+                &.no-grow {
+                    flex-grow: 0;
+                    min-width: max-content;
                 }
             }
         }

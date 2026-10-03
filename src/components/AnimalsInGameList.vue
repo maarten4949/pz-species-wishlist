@@ -12,8 +12,6 @@
                 <option value="VOTES-ASC">Votes Ascending</option>
                 <option value="NAMES-DESC">Names Descending</option>
                 <option value="NAMES-ASC">Names Ascending</option>
-                <option value="GAIN-DESC">Position Gain Descending</option>
-                <option value="GAIN-ASC">Position Gain Ascending</option>
             </select>
         </div>
         <div class="input-group">
@@ -47,6 +45,13 @@
                 <option value="NEW" selected>Only New Animals</option>
             </select>
         </div>
+        <div class="input-group">
+            <label for="dlcPackFilter">DLC Pack:</label>
+            <select name="dlcPackFilter" id="dlcPackFilter" v-model="dlcPackFilter">
+                <option value="" selected>All DLC's</option>
+                <option v-for="dlc in dlcs" :value="dlc">{{dlc}}</option>
+            </select>
+        </div>
     </header>
     <div class="metadata-container">
         <span class="animal-count">{{animalCount}} animals</span>
@@ -58,7 +63,7 @@
         <button :disabled="isForwardButtonDisabled" :class = "`page-control ${getDisabledClassForwardButton()}`" @click="GoPageForward"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right preview-icon"><path d="m9 18 6-6-6-6"/></svg></button>
     </div>
     <div class="error-message">{{errorMessage}}</div>
-    <ul class= "animal-list" v-if="animalsWithVotes.length > 0">
+    <ul class= "animal-list" v-if="animals.length > 0">
         <li v-for="animal in filteredAnimals" class="animal" :style="{ clipPath: `url(#${animal.name.replace(/\s/g, '')})` }">
             <img class="animal-picture" :style="{ clipPath: `url(#${animal.name.replace(/\s/g, '')}-shape)` }" :src="`/images/${encodeURIComponent(animal.name)}.webp`" :alt="`${ animal.name } picture`">
             <svg viewBox="0 0 131 60" fill="none" xmlns="http://www.w3.org/2000/svg" class="svg-clip-path">
@@ -78,7 +83,6 @@
             <div class="animal-content">
                 <div class="animal-info">
                     <div class="rank-container">
-                        <span :class="`prev-rank ${getAnimalRankDifference(animal)}`"><span class="arrow-sign" v-html="getAnimalRankDifferenceArrow(animal)"></span><span :class="getAnimalRankDifferenceTextClass(animal)">{{getAnimalRankDifferenceValue(animal)}}</span></span>
                         <span class="rank">{{getRank(animal)}}</span>
                     </div>
                     <div class = "title-container">
@@ -107,14 +111,13 @@
 </template>
 <script setup>
 import { ref, computed, onMounted } from 'vue'
-import animals from "../assets/animals.json"
-import prevanimals from "../assets/prev-animals.json"
+import animals from "../assets/animals-in-game.json"
 const pageSize = 100;
-const animalsWithVotes = ref(animals);
 const currentPage = ref(1);
 const errorMessage = ref("")
 const totalVotes = ref(0);
 const animalCategories = ref([])
+const dlcs = ref([]);
 const animalCount = ref(0)
 const totalAnimalCount = ref(0)
 const habitatTypes = ref([])
@@ -124,22 +127,15 @@ const animalPositionDropdown = defineModel("animalPositionDropdown", { default: 
 const habitatTypeFilters = defineModel("habitatTypeFilters", { default: "" });
 const animalCategoryFilters = defineModel("animalCategoryFilters", { default: "" });
 const returningAnimalsFilter = defineModel("returningAnimalsFilter", { default: "ALL" });
+const dlcPackFilter = defineModel("dlcPackFilter", { default: "" });
 
 onMounted(async () => {
   try {
-    animalsWithVotes.value = animals.filter(animal => animal.votes > 0);
+    dlcs.value = [...new Set(animals.map(animal => animal.dlc))]
     animalCategories.value = [...new Set(animals.map(animal => animal.animalCategory))]
     habitatTypes.value = [...new Set(animals.map(animal => animal.habitatType))]
     const compareAnimals = (a, b) => b.votes - a.votes || a.name.localeCompare(b.name);
-    prevanimals.sort(compareAnimals);
-    prevanimals.forEach((animal, index) => {
-      animal.rank = index + 1;
-    });
     animals.sort(compareAnimals);
-    animals.forEach((animal, index) => {
-      animal.rank = index + 1;
-      animal.rankDifference = prevanimals.find(prevAnimal => prevAnimal.name === animal.name)?.rank - animal.rank;
-    });
     totalAnimalCount.value = animals.length;
 
     totalVotes.value = animals.reduce((acc, animal) => acc + animal.votes, 0);
@@ -148,82 +144,20 @@ onMounted(async () => {
     errorMessage.value = 'Failed to load animal data.';
   }
 });
-const calculateRelativeRank = (animals, prevAnimals) => {
-  prevAnimals.forEach((animal, index) => {
-    animal.relativeRank = index + 1;
-  });
+const calculateRelativeRank = (animals) => {
   animals.forEach((animal, index) => {
     animal.relativeRank = index + 1;
-    animal.relativeRankDifference = prevAnimals.find(prevAnimal => prevAnimal.name === animal.name)?.relativeRank - animal.relativeRank;
   });
   return animals
 }
-const getAnimalRankDifference = (animal) => {
-  const rankDiff = animalPositionDropdown.value === "ABS" ? animal.rankDifference : animal.relativeRankDifference;
-  if (rankDiff > 0)
-  {
-    return "positive";
-  }
-  else if (rankDiff < 0)
-  {
-    return "negative";
-  }
-  else {
-    return "neutral";
-  }
-}
-const getAnimalRankDifferenceArrow = (animal) => {
-  const rankDiff = animalPositionDropdown.value == "ABS" ? animal.rankDifference : animal.relativeRankDifference;
-  if (rankDiff === undefined || isNaN(rankDiff))
-  {
-    return "";
-  }
-  else if (rankDiff > 0)
-  {
-    return '&#9650;';
-  }
-  else if (rankDiff === 0)
-  {
-      return ""
-  }
-  else {
-    return '&#9660;';
-  }
-}
-const getAnimalRankDifferenceTextClass = (animal) => {
-  const rankDiff = animalPositionDropdown.value == "ABS" ? animal.rankDifference : animal.relativeRankDifference;
-  if (rankDiff == 0)
-  {
-    return "regular-text";
-  }
-    return "";
-}
-const getAnimalRankDifferenceValue = (animal) => {
-  const rankDiff = animalPositionDropdown.value == "ABS" ? animal.rankDifference : animal.relativeRankDifference;
-  if (rankDiff == undefined || isNaN(rankDiff))
-  {
-    return "NEW";
-  }
-  else if (rankDiff == 0)
-  {
-      return '~'
-  }
-  return Math.abs(rankDiff);
-}
 const getRank = (animal) => {
-  const rank = animalPositionDropdown.value == "ABS" ? animal.rank : animal.relativeRank;
+  const rank = animalPositionDropdown.value == "ABS" ? animal.lastRank : animal.relativeRank;
   return rank;
 }
 const filteredAnimals = computed(() => {
   let animalsFiltered = animals.filter(animal => animal.votes > 0);
-  let prevAnimalsFiltered = prevanimals;
-  if (searchInput.value != "" && searchInput.value != undefined)
-  {
+  if (searchInput.value != "" && searchInput.value != undefined) {
     animalsFiltered = animals.filter(animal => animal.name.toLowerCase().includes(searchInput.value.toLowerCase()) ||
-      animal.habitatType.toLowerCase().includes(searchInput.value.toLowerCase()) ||
-      animal.animalCategory.toLowerCase().includes(searchInput.value.toLowerCase()))
-
-    prevAnimalsFiltered = prevAnimalsFiltered.filter(animal => animal.name.toLowerCase().includes(searchInput.value.toLowerCase()) ||
       animal.habitatType.toLowerCase().includes(searchInput.value.toLowerCase()) ||
       animal.animalCategory.toLowerCase().includes(searchInput.value.toLowerCase()))
   }
@@ -232,48 +166,36 @@ const filteredAnimals = computed(() => {
     if (returningAnimalsFilter.value == "RET")
     {
       animalsFiltered = animalsFiltered.filter(animal => animal.isReturning)
-      prevAnimalsFiltered = prevAnimalsFiltered.filter(animal => animal.isReturning)
     }
     else if (returningAnimalsFilter.value == "NEW")
     {
       animalsFiltered = animalsFiltered.filter(animal => !animal.isReturning)
-      prevAnimalsFiltered = prevAnimalsFiltered.filter(animal => !animal.isReturning)
     }
   }
   if (habitatTypeFilters.value != undefined)
   {
     animalsFiltered = animalsFiltered.filter(animal => animal.habitatType.toLowerCase().includes(habitatTypeFilters.value.toLowerCase()))
-    prevAnimalsFiltered = prevAnimalsFiltered.filter(animal => animal.habitatType.toLowerCase().includes(habitatTypeFilters.value.toLowerCase()))
   }
   if (animalCategoryFilters.value != undefined)
   {
     animalsFiltered = animalsFiltered.filter(animal => animal.animalCategory.toLowerCase().includes(animalCategoryFilters.value.toLowerCase()))
-    prevAnimalsFiltered = prevAnimalsFiltered.filter(animal => animal.animalCategory.toLowerCase().includes(animalCategoryFilters.value.toLowerCase()))
   }
-
+  if (dlcPackFilter.value != undefined)
+  {
+    animalsFiltered = animalsFiltered.filter(animal => animal.dlc.toLowerCase().includes(dlcPackFilter.value.toLowerCase()))
+  }
   if (sortDropdown.value != undefined)
   {
-    const newAnimals = animalsFiltered.filter(animal => isNaN(animal.rankDifference))
-    if (sortDropdown.value === "GAIN-DESC" || sortDropdown.value === "GAIN-ASC")
-    {
-      animalsFiltered = animalsFiltered.filter(animal  => !isNaN(animal.rankDifference))
-    }
     animalsFiltered = animalsFiltered.sort((a, b) => {
       if (sortDropdown.value === "VOTES-DESC") return b.votes - a.votes || a.name.localeCompare(b.name)
       if (sortDropdown.value === "VOTES-ASC") return a.votes - b.votes || b.name.localeCompare(a.name)
       if (sortDropdown.value === "NAMES-DESC") return b.name.localeCompare(a.name)
       if (sortDropdown.value === "NAMES-ASC") return a.name.localeCompare(b.name)
-      if (sortDropdown.value === "GAIN-DESC") return b.rankDifference - a.rankDifference || a.name.localeCompare(b.name)
-      if (sortDropdown.value === "GAIN-ASC") return a.rankDifference - b.rankDifference || b.name.localeCompare(a.name)
       return 0
     })
-    if (sortDropdown.value === "GAIN-DESC" || sortDropdown.value === "GAIN-ASC")
-    {
-      animalsFiltered = [...animalsFiltered, ...newAnimals]
-    }
   }
   animalCount.value = animalsFiltered.length;
-  animalsFiltered = calculateRelativeRank(animalsFiltered, prevAnimalsFiltered)
+  animalsFiltered = calculateRelativeRank(animalsFiltered)
   animalsFiltered = animalsFiltered.slice((currentPage.value - 1) * pageSize, currentPage.value * pageSize)
   return animalsFiltered;
 })
@@ -334,7 +256,6 @@ select {
     flex-grow:1;
     line-height: 15px;
 }
-
 .input-group {
     display: flex;
     flex-direction: column;
@@ -449,31 +370,8 @@ select {
         align-items: center;
         gap: var(--spacing-04);
     }
-    & .prev-rank {
-        text-align: right;
-        &.positive {
-            color: var(--green);
-        }
-        &.negative {
-            color: var(--red);
-        }
-        &.neutral {
-            color: var(--text-soft-inverted);
-        }
-        min-width: 2.5rem;
-        font-family: var(--font-eagle-bold);
-        font-size: var(--type-03);
-        line-height: var(--spacing-07);
-        z-index: 2;
-        color: var(--text-white);
-        & .arrow-sign {
-            font-size: var(--type-01);
-            vertical-align: middle;
-            line-height: var(--spacing-07);
-        }
-    }
     & .rank{
-        min-width: 3rem;
+        min-width: 5.5rem;
         font-family: var(--font-eagle-bold);
         font-size: var(--type-06);
         line-height: var(--spacing-07);
@@ -554,13 +452,6 @@ select {
             flex-direction:column-reverse;
             align-items: start;
             gap: var(--spacing-01);
-        }
-        & .prev-rank {
-            line-height: var(--spacing-04);
-            text-align:left;
-                & .arrow-sign {
-                    line-height: var(--spacing-04);
-                }
         }
         & .rank{
             line-height: var(--spacing-06);
@@ -657,7 +548,6 @@ select {
         & .votes {
             font-size: var(--type-07)
         }
-
     }
 }
 </style>

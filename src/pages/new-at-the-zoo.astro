@@ -1,0 +1,52 @@
+---
+import AnimalsInGameList from "../components/AnimalsInGameList.vue";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Planet Zoo 2 New at the zoo" active="newatzoo">
+    <svg
+        viewBox="0 0 1208 152"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        class="svg-clip-path"
+    >
+        <defs>
+            <clipPath
+                id="notice"
+                transform="scale(0.000829, 0.00657)"
+                clipPathUnits="objectBoundingBox"
+            >
+                <path
+                    d="M0.00700545 2.06403L133.914 6.67735L303.562 0.89314L370.51 3.04644L470.933 2.36858L484.18 0L496.039 2.19911L521.145 2.02965L571.356 1.69071L619.56 3.0338L671.779 1.01285L772.202 0.334983L820.655 3.0338L1003.09 0.334983L1056.57 1.18023L1078.82 2.54892L1105.47 2.30647L1200.41 2.06403L1191.04 19.4732L1208 57.8381L1200.41 75.7074L1187.62 84.4086V88.6463L1200.41 94.1182L1208 131.033L1200.41 149.351L1056.57 146.172L985.51 150.675L889.405 146.172L750.257 149.351L682.744 149.512L594.559 147.025L441.344 149.512L288.128 152L144.068 150.675L0.00700545 149.351L14.6604 131.739L0 104.486L0.00700545 76.4393L4.08873 57.5475V38.801L10.4056 27.0852L23.4443 24.5443L10.4056 21.7211V9.76948L0.00700545 2.06403Z"
+                    fill="#E6DAC7"
+                />
+            </clipPath>
+        </defs>
+    </svg>
+    <p>
+        Take a look at what animals that were on the wishlist got added in
+        Planet Zoo 2!
+    </p>
+    <AnimalsInGameList client:load />
+</Layout>
+
+<style>
+    .svg-clip-path {
+        width: 0;
+        height: 0;
+        opacity: 0;
+    }
+    p {
+        background-color: var(--SnakesScaleDark);
+        color: var(--text-white);
+        overflow: hidden;
+        clip-path: url(#notice);
+        position: relative;
+        padding: var(--spacing-06) var(--spacing-04);
+        font-size: var(--type-07);
+        text-align: center;
+        line-height: var(--spacing-07);
+        font-family: var(--font-eagle-bold);
+        margin-bottom: var(--spacing-07);
+    }
+</style>

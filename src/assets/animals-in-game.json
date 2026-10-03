@@ -1,0 +1,29 @@
+[
+  {
+    "name": "Bat-eared fox",
+    "votes": 3,
+    "habitatType": "Terrestrial",
+    "animalCategory": "Mammals",
+    "isReturning": true,
+    "lastRank": 12,
+    "dlc": "DLC Pack 1"
+  },
+  {
+    "name": "Asiatic lion",
+    "votes": 2,
+    "habitatType": "Terrestrial",
+    "animalCategory": "Mammals",
+    "isReturning": false,
+    "lastRank": 15,
+    "dlc": "DLC Pack 2"
+  },
+  {
+    "name": "Marabou stork",
+    "votes": 5,
+    "habitatType": "Aviary",
+    "animalCategory": "Birds",
+    "isReturning": false,
+    "lastRank": 8,
+    "dlc": "DLC Pack 3"
+  }
+]

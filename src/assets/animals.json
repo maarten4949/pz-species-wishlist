@@ -1,35 +1,35 @@
 [
   {
     "name": "Bat-eared fox",
-    "votes": 0,
+    "votes": 3,
     "habitatType": "Terrestrial",
     "animalCategory": "Mammals",
-    "isReturning": false
+    "isReturning": true
   },
   {
     "name": "Black-backed jackal",
-    "votes": 0,
+    "votes": 2,
     "habitatType": "Terrestrial",
     "animalCategory": "Mammals",
-    "isReturning": false
+    "isReturning": true
   },
   {
     "name": "Red Wolf",
-    "votes": 0,
+    "votes": 1,
     "habitatType": "Terrestrial",
     "animalCategory": "Mammals",
     "isReturning": false
   },
   {
     "name": "Asian leopard cat",
-    "votes": 0,
+    "votes": 4,
     "habitatType": "Terrestrial",
     "animalCategory": "Mammals",
-    "isReturning": false
+    "isReturning": true
   },
   {
     "name": "Asian golden cat",
-    "votes": 0,
+    "votes": 5,
     "habitatType": "Terrestrial",
     "animalCategory": "Mammals",
     "isReturning": false
