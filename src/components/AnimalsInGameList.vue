@@ -229,7 +229,7 @@ header {
     gap: var(--spacing-04);
     align-items: stretch;
     flex-wrap: wrap;
-    margin-top: var(--spacing-09);
+    margin-top: var(--spacing-07);
 }
 .input-field {
     color: var(--text-dark);

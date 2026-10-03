@@ -1,10 +1,12 @@
 <template>
 <div>
+    <details class="filter-container">
+        <summary class="filter-container-button">
+            Filters
+            <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down preview-icon"><path d="m6 9 6 6 6-6"/></svg></span>
+
+        </summary>
     <header class="header">
-        <div class="input-group grow">
-            <label for="search">Search:</label>
-            <input id="search" name="search" type="text" v-model="searchInput" placeholder="Search an animal" class="input-field">
-        </div>
         <div class="input-group">
             <label for="sort">Sort By:</label>
             <select name="sort" id="sort" v-model="sortDropdown">
@@ -18,12 +20,10 @@
         </div>
         <div class="input-group">
             <label for="habitatType">Habitat Type:</label>
-            <div>
                 <select name="habitatType" id="habitatType" v-model="habitatTypeFilters">
                     <option value="" selected>Any Habitat Type</option>
                     <option v-for="habitatType in habitatTypes" :value="habitatType">{{habitatType}}</option>
                 </select>
-            </div>
         </div >
         <div class="input-group">
             <label for="animalCategory">Animal Category:</label>
@@ -48,14 +48,21 @@
             </select>
         </div>
     </header>
+    </details>
+    <div class="group">
+        <div class="input-group grow">
+            <label for="search">Search:</label>
+            <input aria-label="Search" id="search" name="search" type="text" v-model="searchInput" placeholder="Search an animal" class="input-field big">
+        </div>
+        <div class="page-controls">
+            <button :disabled="isBackButtonDisabled" :class = "`page-control ${getDisabledClassBackButton()}`" @click="GoPageBack"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-left preview-icon"><path d="m15 18-6-6 6-6"/></svg></button>
+            <span class="page-number">{{currentPage}}</span>
+            <button :disabled="isForwardButtonDisabled" :class = "`page-control ${getDisabledClassForwardButton()}`" @click="GoPageForward"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right preview-icon"><path d="m9 18 6-6-6-6"/></svg></button>
+        </div>
+    </div>
     <div class="metadata-container">
         <span class="animal-count">{{animalCount}} animals</span>
         <span class="total-votes">{{totalVotes}} votes</span>
-    </div>
-    <div class="page-controls">
-        <button :disabled="isBackButtonDisabled" :class = "`page-control ${getDisabledClassBackButton()}`" @click="GoPageBack"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-left preview-icon"><path d="m15 18-6-6 6-6"/></svg></button>
-        <span class="page-number">{{currentPage}}</span>
-        <button :disabled="isForwardButtonDisabled" :class = "`page-control ${getDisabledClassForwardButton()}`" @click="GoPageForward"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right preview-icon"><path d="m9 18 6-6-6-6"/></svg></button>
     </div>
     <div class="error-message">{{errorMessage}}</div>
     <ul class= "animal-list" v-if="animalsWithVotes.length > 0">
@@ -219,7 +226,7 @@ const filteredAnimals = computed(() => {
   let prevAnimalsFiltered = prevanimals;
   if (searchInput.value != "" && searchInput.value != undefined)
   {
-    animalsFiltered = animals.filter(animal => animal.name.toLowerCase().includes(searchInput.value.toLowerCase()) ||
+    animalsFiltered = animalsFiltered.filter(animal => animal.name.toLowerCase().includes(searchInput.value.toLowerCase()) ||
       animal.habitatType.toLowerCase().includes(searchInput.value.toLowerCase()) ||
       animal.animalCategory.toLowerCase().includes(searchInput.value.toLowerCase()))
 
@@ -302,12 +309,61 @@ const isForwardButtonDisabled = computed(() => {
 })
 </script>
 <style>
+.filter-container {
+    user-select: none;
+    margin-top: var(--spacing-07);
+    background-color: var(--text-soft);
+    padding: var(--spacing-04) var(--spacing-05);
+    border-radius: var(--radii-m);
+    color: var(--text-white);
+
+}
+.filter-container>.filter-container-button span.icon {
+  width: 24px;
+  height: 24px;
+  transition: all 0.3s;
+  margin-left: auto;
+}
+.filter-container[open] .filter-container-button span.icon {
+  transform: rotate(180deg);
+}
+
+.filter-container-button {
+  display: flex;
+  cursor: pointer;
+}
+
+.filter-container-button::-webkit-details-marker {
+  display: none;
+}
+.filter-container-button {
+    background-color: var(--text-soft);
+    border-radius: var(--radii-m);
+    color: var(--text-white);
+}
 header {
     display: flex;
+    padding-top: var(--spacing-04);
+
     gap: var(--spacing-04);
     align-items: stretch;
     flex-wrap: wrap;
-    margin-top: var(--spacing-09);
+}
+.group
+{
+    margin-top: var(--spacing-04);
+    margin-bottom: var(--spacing-02);
+    display: flex;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    gap: var(--spacing-05);
+    & .page-controls {
+        width: fit-content;
+    }
+    & .big {
+        font-size: var(--type-04);
+        padding: var(--spacing-04) var(--spacing-05);
+    }
 }
 .input-field {
     color: var(--text-dark);
@@ -336,6 +392,7 @@ select {
 }
 
 .input-group {
+    flex-grow: 1;
     display: flex;
     flex-direction: column;
 
