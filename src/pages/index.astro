@@ -4,30 +4,7 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Planet Zoo 2 Guessing Game">
-    <div class="title-header">
-        <h1>Planet Zoo 2 Species Wishlist</h1>
-        <p class="subtitle">Data from: 30/09/2026</p>
-    </div>
     <AnimalList client:load />
 </Layout>
 
-<style>
-    .title-header {
-        margin-bottom: var(--spacing-08);
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .subtitle {
-        text-align: center;
-        font-size: var(--type-01);
-        color: var(--text-soft);
-    }
-    @media (width < 315px) {
-        h1 {
-            font-size: var(--type-10);
-        }
-    }
-</style>
+<style></style>

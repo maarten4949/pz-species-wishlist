@@ -2,6 +2,7 @@
 import "../styles/global.css";
 import { Font } from "astro:assets";
 import Footer from "../components/Footer.astro";
+import Navbar from "../components/Navbar.astro";
 ---
 
 <!doctype html>
@@ -17,6 +18,7 @@ import Footer from "../components/Footer.astro";
         <title>PZ2 Species Wishlist</title>
     </head>
     <body>
+        <Navbar />
         <main>
             <slot />
         </main>
@@ -31,13 +33,15 @@ import Footer from "../components/Footer.astro";
         min-height: 100svh;
         display: grid;
         grid-template-rows: auto 1fr auto;
-        max-width: 80rem;
+
         margin: 0 auto;
         padding-inline: var(--spacing-07);
-        padding-block: var(--spacing-07);
+        padding-block: var(--spacing-08);
         box-sizing: border-box;
     }
     main {
+        max-width: 80rem;
+        margin-inline: auto;
         margin-top: var(--spacing-09);
         margin-bottom: var(--spacing-11);
     }

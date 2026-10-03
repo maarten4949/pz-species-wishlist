@@ -50,7 +50,7 @@
         <button :disabled="isForwardButtonDisabled" :class = "`page-control ${getDisabledClassForwardButton()}`" @click="GoPageForward"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right preview-icon"><path d="m9 18 6-6-6-6"/></svg></button>
     </div>
     <div class="error-message">{{errorMessage}}</div>
-    <ul class= "animal-list">
+    <ul class= "animal-list" v-if="animalsWithVotes.length > 0">
         <li v-for="animal in filteredAnimals" class="animal" :style="{ clipPath: `url(#${animal.name.replace(/\s/g, '')})` }">
             <img class="animal-picture" :style="{ clipPath: `url(#${animal.name.replace(/\s/g, '')}-shape)` }" :src="`/images/${encodeURIComponent(animal.name)}.webp`" :alt="`${ animal.name } picture`">
             <svg viewBox="0 0 131 60" fill="none" xmlns="http://www.w3.org/2000/svg" class="svg-clip-path">
@@ -85,7 +85,12 @@
             </div>
         </li>
     </ul>
-    <div class="page-controls" v-if="animalCount > 0">
+    <div class="no-votes-message" v-else>
+    <h2>Voting is not yet open,<br/> check back on October 13, when Planet Zoo 2 launches
+        <!-- <a href="link">the offical discord thread</a> -->
+    </h2>
+    </div>
+    <div class="page-controls" v-if="animalCount > 3">
         <button :disabled="isBackButtonDisabled" :class="`page-control ${getDisabledClassBackButton()}`" @click="GoPageBack"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-left preview-icon"><path d="m15 18-6-6 6-6"/></svg></button>
         <span class="page-number">{{currentPage}}</span>
         <button :disabled="isForwardButtonDisabled" :class = "`page-control ${getDisabledClassForwardButton()}`" @click="GoPageForward"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right preview-icon"><path d="m9 18 6-6-6-6"/></svg></button>
@@ -97,6 +102,7 @@ import { ref, computed, onMounted } from 'vue'
 import animals from "../assets/animals.json"
 import prevanimals from "../assets/prev-animals.json"
 const pageSize = 100;
+const animalsWithVotes = ref(animals);
 const currentPage = ref(1);
 const errorMessage = ref("")
 const totalVotes = ref(0);
@@ -111,7 +117,8 @@ const habitatTypeFilters = defineModel("habitatTypeFilters", { default: "" });
 const animalCategoryFilters = defineModel("animalCategoryFilters", { default: "" });
 onMounted(async () => {
   try {
-    animalCategories.value = [...new Set(animals.map(animal => animal.animalCategory != "" && animal.animalCategory))]
+    animalsWithVotes.value = animals.filter(animal => animal.votes > 0);
+    animalCategories.value = [...new Set(animals.map(animal => animal.animalCategory))]
     habitatTypes.value = [...new Set(animals.map(animal => animal.habitatType))]
     const compareAnimals = (a, b) => b.votes - a.votes || a.name.localeCompare(b.name);
     prevanimals.sort(compareAnimals);
@@ -198,7 +205,7 @@ const getRank = (animal) => {
   return rank;
 }
 const filteredAnimals = computed(() => {
-  let animalsFiltered = animals;
+  let animalsFiltered = animals.filter(animal => animal.votes > 0);
   let prevAnimalsFiltered = prevanimals;
   if (searchInput.value != "" && searchInput.value != undefined)
   {
@@ -470,6 +477,12 @@ select {
         font-size: var(--type-06);
         vertical-align: middle;
     }
+}
+.no-votes-message {
+    text-align: center;
+    height: 100%;
+    vertical-align: middle;
+    margin-block: var(--spacing-10);
 }
 @media (width < 800px)
 {
