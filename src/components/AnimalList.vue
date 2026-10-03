@@ -45,9 +45,9 @@
         <span class="total-votes">{{totalVotes}} votes</span>
     </div>
     <div class="page-controls">
-        <button class = "page-control" @click="GoPageBack"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-left preview-icon"><path d="m15 18-6-6 6-6"/></svg></button>
+        <button :disabled="isBackButtonDisabled" :class = "`page-control ${getDisabledClassBackButton()}`" @click="GoPageBack"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-left preview-icon"><path d="m15 18-6-6 6-6"/></svg></button>
         <span class="page-number">{{currentPage}}</span>
-        <button class = "page-control" @click="GoPageForward"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right preview-icon"><path d="m9 18 6-6-6-6"/></svg></button>
+        <button :disabled="isForwardButtonDisabled" :class = "`page-control ${getDisabledClassForwardButton()}`" @click="GoPageForward"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right preview-icon"><path d="m9 18 6-6-6-6"/></svg></button>
     </div>
     <div class="error-message">{{errorMessage}}</div>
     <ul class= "animal-list">
@@ -81,14 +81,14 @@
                         </div>
                 </div>
             </div>
-            <span class="votes" >{{animal.votes}}</span>
+            <span class="votes">{{animal.votes}}</span>
             </div>
         </li>
     </ul>
-    <div class="page-controls">
-        <button class = "page-control" @click="GoPageBack"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-left preview-icon"><path d="m15 18-6-6 6-6"/></svg></button>
+    <div class="page-controls" v-if="animalCount > 0">
+        <button :disabled="isBackButtonDisabled" :class="`page-control ${getDisabledClassBackButton()}`" @click="GoPageBack"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-left preview-icon"><path d="m15 18-6-6 6-6"/></svg></button>
         <span class="page-number">{{currentPage}}</span>
-        <button class = "page-control" @click="GoPageForward"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right preview-icon"><path d="m9 18 6-6-6-6"/></svg></button>
+        <button :disabled="isForwardButtonDisabled" :class = "`page-control ${getDisabledClassForwardButton()}`" @click="GoPageForward"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right preview-icon"><path d="m9 18 6-6-6-6"/></svg></button>
     </div>
 </div>
 </template>
@@ -97,13 +97,13 @@ import { ref, computed, onMounted } from 'vue'
 import animals from "../assets/animals.json"
 import prevanimals from "../assets/prev-animals.json"
 const pageSize = 100;
-let currentPage = ref(1);
-let errorMessage = ref("")
-let totalVotes = ref(0);
-let animalCategories = ref([])
-let animalCount = ref(0)
-let totalAnimalCount = ref(0)
-let habitatTypes = ref([])
+const currentPage = ref(1);
+const errorMessage = ref("")
+const totalVotes = ref(0);
+const animalCategories = ref([])
+const animalCount = ref(0)
+const totalAnimalCount = ref(0)
+const habitatTypes = ref([])
 const searchInput = defineModel("searchInput", { default: "" });
 const sortDropdown = defineModel("sortDropdown", { default: "VOTES-DESC" });
 const animalPositionDropdown = defineModel("animalPositionDropdown", { default: "ABS" });
@@ -253,10 +253,22 @@ function GoPageBack() {
 
 }
 function GoPageForward() {
-  currentPage.value = Math.ceil(Math.min(animals.length / pageSize, currentPage.value + 1))
+  currentPage.value = Math.ceil(Math.min(animalCount.value / pageSize, currentPage.value + 1))
   window.scrollTo({ top: 0, behavior: 'smooth' })
   console.log("changed currentPage to: ", currentPage.value)
 }
+const getDisabledClassBackButton = () => {
+  return currentPage.value === 1 ? 'disabled' : ''
+}
+const getDisabledClassForwardButton = () => {
+  return Math.ceil(animalCount.value / pageSize) == currentPage.value ? 'disabled' : ''
+}
+const isBackButtonDisabled = computed(() => {
+  return currentPage.value === 1
+})
+const isForwardButtonDisabled = computed(() => {
+  return Math.ceil(animalCount.value / pageSize) == currentPage.value
+})
 </script>
 <style>
 header {
@@ -335,12 +347,17 @@ select {
         align-items: center;
         padding: var(--spacing-04);
         border-radius: var(--radii-m);
+        &.disabled {
+            opacity: 50%;
+        }
         & svg {
             stroke-width: 3px;
             color: var(--text-normal);
         }
     }
     & .page-number {
+        min-width: var(--spacing-06);
+        text-align:center;
         font-family: var(--font-eagle-bold);
         font-size: var(--type-08);
         color: var(--text-soft)
