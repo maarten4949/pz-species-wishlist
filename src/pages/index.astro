@@ -6,25 +6,67 @@ import Layout from "../layouts/Layout.astro";
 <Layout title="Planet Zoo 2 Guessing Game">
     <div class="title-header">
         <h1>Planet Zoo 2 Species Wishlist</h1>
-        <h3 class="notice">
-            This is a list of data before launch that is no longer being
-            updated,
-            <br /> for the new list (and to vote yourself) go to:
-            <a href="https://pz2-metawishlist.maarten494.workers.dev">
-                PZ2 Metawishlist
-            </a>
-        </h3>
         <p class="subtitle">Data from: 30/09/2026</p>
+        <div class="notice">
+            <h3>
+                This is a list of data before launch that is no longer being
+                updated. Go to the PZ2 Metawishlist for the new wishlist and to
+                vote yourself
+                <br />
+            </h3>
+            <a
+                class="button"
+                href="https://pz2-metawishlist.maarten494.workers.dev"
+            >
+                Go to PZ2 Metawishlist
+            </a>
+        </div>
     </div>
     <AnimalList client:load />
 </Layout>
 
 <style>
+    .button {
+        padding: var(--spacing-04) var(--spacing-05);
+        background-color: var(--green);
+        border: 4px solid var(--dark-green);
+        border-radius: var(--radii-m);
+        color: var(--text-white);
+        font-size: var(--type-05);
+        align-self: center;
+        line-height: var(--spacing-06);
+        font-family: var(--font-eagle-bold);
+        transition: background-color 200ms ease-in-out;
+        &.disabled {
+            opacity: 0.5;
+            background-color: var(--bg-2);
+            border-color: var(--text-soft);
+            color: var(--text-soft);
+        }
+        &.disabled:hover {
+            opacity: 0.5;
+            background-color: var(--bg-2);
+            border-color: var(--text-soft);
+            color: var(--text-soft);
+            cursor: default;
+        }
+        &:hover {
+            background-color: var(--dark-green);
+        }
+        text-decoration: none;
+        &.right {
+            justify-self: flex-end;
+        }
+    }
     .notice {
+        display: flex;
+        flex-direction: column;
         background-color: var(--ToucansBeak);
         padding: var(--spacing-06) var(--spacing-05);
         border-radius: var(--radii-m);
         border: 6px solid var(--ToucansBeakDark);
+        margin-block: var(--spacing-06);
+        gap: var(--spacing-05);
     }
     .title-header {
         margin-bottom: var(--spacing-08);
@@ -34,7 +76,6 @@ import Layout from "../layouts/Layout.astro";
         align-items: center;
     }
     h3 {
-        margin-top: var(--spacing-07);
         text-align: center;
     }
     .subtitle {
