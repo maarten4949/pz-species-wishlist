@@ -6,6 +6,13 @@ import Layout from "../layouts/Layout.astro";
 <Layout title="Planet Zoo 2 Guessing Game">
     <div class="title-header">
         <h1>Planet Zoo 2 Species Wishlist</h1>
+        <h2>
+            This is a list of data before launch that is no longer being
+            updated, for the new list go to:{" "}
+            <a href="https://pz2-metawishlist.maarten494.workers.dev">
+                PZ2 Metawishlist
+            </a>
+        </h2>
         <p class="subtitle">Data from: 30/09/2026</p>
     </div>
     <AnimalList client:load />
@@ -19,7 +26,10 @@ import Layout from "../layouts/Layout.astro";
         justify-content: center;
         align-items: center;
     }
-
+    h2 {
+        margin-top: var(--spacing-07);
+        text-align: center;
+    }
     .subtitle {
         text-align: center;
         font-size: var(--type-01);
