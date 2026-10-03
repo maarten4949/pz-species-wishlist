@@ -147,12 +147,12 @@ const getAnimalRankDifference = (animal) => {
   {
     return "positive";
   }
-  else if (rankDiff == 0)
+  else if (rankDiff < 0)
   {
-    return "neutral";
+    return "negative";
   }
   else {
-    return "negative";
+    return "neutral";
   }
 }
 const getAnimalRankDifferenceArrow = (animal) => {
