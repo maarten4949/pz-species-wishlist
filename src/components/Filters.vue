@@ -4,9 +4,10 @@ import InputGroup from './InputGroup.vue';
 const props = defineProps({
   animalCategories: Array,
   habitatTypes: Array,
+  dlcs: Array
 })
 const filters = defineModel({
-  default: () => ({ sortDropdown: '', animalPositionDropdown: '', habitatTypeFilters: '', animalCategoryFilters: '', returningAnimalsFilter: '' })
+  default: () => ({ sortDropdown: '', animalPositionDropdown: '', habitatTypeFilters: '', animalCategoryFilters: '', returningAnimalsFilter: '', dlcPackFilter: '' })
 })
 </script>
 
@@ -57,6 +58,13 @@ const filters = defineModel({
                     <option value="NEW" selected>Only New Animals</option>
                 </select>
             </InputGroup>
+            <InputGroup v-if="dlcs && dlcs.length > 0">
+                <label for="dlcPackFilter">DLC Pack:</label>
+                <select name="dlcPackFilter" id="dlcPackFilter" v-model="filters.dlcPackFilter">
+                    <option value="" selected>All DLC's</option>
+                    <option v-for="dlc in dlcs" :value="dlc">{{dlc}}</option>
+                </select>
+            </InputGroup>
         </div>
     </details>
 </template>
@@ -77,7 +85,6 @@ select {
     user-select: none;
     margin-top: var(--spacing-07);
     background-color: var(--text-soft);
-    padding: var(--spacing-04) var(--spacing-05);
     border-radius: var(--radii-m);
     color: var(--text-white);
 
@@ -85,7 +92,7 @@ select {
 .filter-container>.filter-container-button span.icon {
   width: 24px;
   height: 24px;
-  transition: all 0.3s;
+  transition: all 0.3s ease-in-out;
   margin-left: auto;
 }
 .filter-container[open] .filter-container-button span.icon {
@@ -95,6 +102,7 @@ select {
 .filter-container-button {
   display: flex;
   cursor: pointer;
+  padding: var(--spacing-04) var(--spacing-05);
 }
 
 .filter-container-button::-webkit-details-marker {
@@ -107,8 +115,7 @@ select {
 }
 .header {
     display: flex;
-    padding-top: var(--spacing-04);
-
+    padding: var(--spacing-04) var(--spacing-05);
     gap: var(--spacing-04);
     align-items: stretch;
     flex-wrap: wrap;

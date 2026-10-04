@@ -17,13 +17,13 @@ const scrollToTop = () => {
       window.scrollTo({ top: 0, behavior: 'smooth' })
     }
 }
-function GoPageBack() {
+const GoPageBack = () => {
   if (currentPage.value > 1) {
     currentPage.value -= 1;
     scrollToTop()
   }
 }
-function GoPageForward() {
+const GoPageForward = () => {
   if (currentPage.value < totalPages.value) {
     currentPage.value +=1;
     scrollToTop()
