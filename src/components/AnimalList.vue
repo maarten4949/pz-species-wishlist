@@ -27,7 +27,6 @@
             />
         </ul>
         <Message text="Voting is not yet open, check back on October 13, when Planet Zoo 2 launches" v-else />
-
         <PageControls
             v-model:currentPage="currentPage"
             v-model:animalCount="animalCount"

@@ -27,6 +27,7 @@
             :style="{ clipPath: `url(#${animal.name.replace(/\s/g, '')})` }"
         />
     </ul>
+    <Message text="Animals will be added here when the first DLC/free animal releases" v-else />
 
     <PageControls
         v-model:currentPage="currentPage"
@@ -43,6 +44,7 @@ import PageControls from "./PageControls.vue";
 import MetadataContainer from "./MetadataContainer.vue";
 import AnimalItemGame from "./AnimalItemGame.vue";
 import ErrorMessage from "./ErrorMessage.vue";
+import Message from "./Message.vue";
 import SearchBarGroup from "./SearchBarGroup.vue";
 import { compareAnimals, getAnimalCategories, getHabitatTypes, getDlcs, removeAnimalsWithNoVotes, calculateTotalVotes, filterAnimalsSearch, filterAnimalsReturning, filterHabitatTypes, filterAnimalCategories, sortAnimals } from "../lib/utils.js";
 import animals from "../assets/animals-in-game.json"
