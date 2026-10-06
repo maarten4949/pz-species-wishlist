@@ -2,10 +2,11 @@
 const props = defineProps({
   animal: Object,
 })
+console.log(props.animal)
 const activeFilters = defineModel("activeFilters")
 
 const getAnimalRankDifference = (animal) => {
-  const rankDiff = activeFilters.value.animalPositionDropdown === "ABS" ? animal.rankDifference : animal.relativeRankDifference;
+  const rankDiff = getRankDifference(animal);
   if (rankDiff > 0)
   {
     return "positive";
@@ -19,7 +20,7 @@ const getAnimalRankDifference = (animal) => {
   }
 }
 const getAnimalRankDifferenceArrow = (animal) => {
-  const rankDiff = activeFilters.value.animalPositionDropdown === "ABS" ? animal.rankDifference : animal.relativeRankDifference;
+  const rankDiff = getRankDifference(animal);
   if (rankDiff === undefined || isNaN(rankDiff))
   {
     return "";
@@ -37,7 +38,7 @@ const getAnimalRankDifferenceArrow = (animal) => {
   }
 }
 const getAnimalRankDifferenceTextClass = (animal) => {
-  const rankDiff = activeFilters.value.animalPositionDropdown === "ABS" ? animal.rankDifference : animal.relativeRankDifference;
+  const rankDiff = getRankDifference(animal);
   if (rankDiff == 0)
   {
     return "regular-text";
@@ -45,7 +46,7 @@ const getAnimalRankDifferenceTextClass = (animal) => {
     return "";
 }
 const getAnimalRankDifferenceValue = (animal) => {
-  const rankDiff = activeFilters.value.animalPositionDropdown === "ABS" ? animal.rankDifference : animal.relativeRankDifference;
+  const rankDiff = getRankDifference(animal);
   if (rankDiff == undefined || isNaN(rankDiff))
   {
     return "NEW";
@@ -56,10 +57,17 @@ const getAnimalRankDifferenceValue = (animal) => {
   }
   return Math.abs(rankDiff);
 }
+
 const getRank = (animal) => {
   const rank = activeFilters.value.animalPositionDropdown === "ABS" ? animal.rank : animal.relativeRank;
+  console.log("rank", rank);
   return rank;
 }
+const getRankDifference = (animal) => {
+    return activeFilters.value.animalPositionDropdown == "ABS"
+        ? animal.rankDifference
+        : animal.relativeRankDifference;
+};
 </script>
 
 <template>

@@ -21,7 +21,7 @@ const filters = defineModel({
             <InputGroup>
                 <label for="sort">Sort By:</label>
                 <select name="sort" id="sort" v-model="filters.sortDropdown">
-                    <option value="VOTES-DESC" selected>Votes Descending</option>
+                    <option value="VOTES-DESC">Votes Descending</option>
                     <option value="VOTES-ASC">Votes Ascending</option>
                     <option value="NAMES-DESC">Names Descending</option>
                     <option value="NAMES-ASC">Names Ascending</option>
@@ -32,36 +32,36 @@ const filters = defineModel({
             <InputGroup>
                 <label for="habitatType">Habitat Type:</label>
                     <select name="habitatType" id="habitatType" v-model="filters.habitatTypeFilters">
-                        <option value="" selected>Any Habitat Type</option>
+                        <option value="">Any Habitat Type</option>
                         <option v-for="habitatType in habitatTypes" :value="habitatType">{{habitatType}}</option>
                     </select>
             </InputGroup>
             <InputGroup>
                 <label for="animalCategory">Animal Category:</label>
                 <select name="animalCategory" id="animalCategory" v-model="filters.animalCategoryFilters">
-                    <option value="" selected>Any Animal Category</option>
+                    <option value="">Any Animal Category</option>
                     <option v-for="category in animalCategories" :value="category">{{category}}</option>
                 </select>
             </InputGroup>
             <InputGroup>
                 <label for="animalPosition">Absolute/Relative position:</label>
                 <select name="animalPosition" id="animalPosition" v-model="filters.animalPositionDropdown">
-                    <option value="ABS" selected>Absolute positioning</option>
-                    <option value="REL" selected>Relative postitioning</option>
+                    <option value="ABS">Absolute positioning</option>
+                    <option value="REL">Relative postitioning</option>
                 </select>
             </InputGroup>
             <InputGroup>
                 <label for="returningAnimalsFilter">Returning animals:</label>
                 <select name="returningAnimalsFilter" id="returningAnimalsFilter" v-model="filters.returningAnimalsFilter">
-                    <option value="ALL" selected>All animals</option>
-                    <option value="RET" selected>Only Returning Animals</option>
-                    <option value="NEW" selected>Only New Animals</option>
+                    <option value="ALL">All animals</option>
+                    <option value="RET">Only Returning Animals</option>
+                    <option value="NEW">Only New Animals</option>
                 </select>
             </InputGroup>
             <InputGroup v-if="dlcs && dlcs.length > 0">
                 <label for="dlcPackFilter">DLC Pack:</label>
                 <select name="dlcPackFilter" id="dlcPackFilter" v-model="filters.dlcPackFilter">
-                    <option value="" selected>All DLC's</option>
+                    <option value="">All DLC's</option>
                     <option v-for="dlc in dlcs" :value="dlc">{{dlc}}</option>
                 </select>
             </InputGroup>
