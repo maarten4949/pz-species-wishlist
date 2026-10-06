@@ -12,6 +12,8 @@ This is a website where you can see what animal species are most requested by th
 -  boolean: this has only 2 possible values: true or false, without any quotes (eg. "isReturning": true)
 - number: this is a regular number, do not use any quotes (eg. "votes": 15)
 
+
+### Metawishlist
 ``animals.json ``
 ```
  {
@@ -33,7 +35,7 @@ This is a website where you can see what animal species are most requested by th
 
 **isReturning**: This is a true/false field whether the animals was in PZ1 or not, true if it was in PZ1, false if it is new to the Planet Zoo series (boolean: true/false)
 
-
+### Animals added to the game (dlc/free update)
 ``animals-in-game.json``
 ```
   {
@@ -60,6 +62,8 @@ This is a website where you can see what animal species are most requested by th
 
 **dlc**: This is the name of the DLC the animal was added in. (string)
 
+## How to update an animal
+Just search your animal (I recommend opening this file in a code editor so you also have highlighting for errors in the file) (tip: use CTRL + F to search), if it is in the list you can update it by changing the values (most of the times it will just be increasing the votes), if you don't see the animal you can add them to the list (see below)
 
 
 ## How to add a new animal
