@@ -11,7 +11,7 @@ import sitemap from '@astrojs/sitemap';
 // https://astro.build/config
 export default defineConfig({
   integrations: [vue(), sitemap()],
-  site: "https://pz2-metawishlist.maarten494.workers.dev",
+  site: "https://pz2-metawishlist.maarten494.workers.dev/",
   fonts: [{
       provider: fontProviders.local(),
       name: "EagleBold",

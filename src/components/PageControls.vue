@@ -43,6 +43,7 @@ const isForwardButtonDisabled = computed(() => {
 <template>
 <div class="page-controls">
     <button
+        aria-label="Go back 1 page"
         :disabled="isBackButtonDisabled"
         class ="page-control"
         @click="GoPageBack">
@@ -50,6 +51,7 @@ const isForwardButtonDisabled = computed(() => {
     </button>
     <span class="page-number">{{currentPage}}</span>
     <button
+        aria-label="Go forward 1 page"
         :disabled="isForwardButtonDisabled"
         class="page-control"
         @click="GoPageForward">

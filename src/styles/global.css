@@ -8,6 +8,7 @@
     --ToucansBeak: hsla(34, 100%, 67%, 1);
     --ToucansBeakDark:hsla(25, 80%, 61%, 1);
     --SharkFin:hsla(222, 40%, 60%, 1);
+    --SharkFinMedium:hsla(222, 40%, 45%, 1);
     --SharkFinDark:hsla(217, 28%, 32%, 1);
     --FlamingoFeather: hsla(1, 100%, 88%, 1);
     --FlamingoFeatherDark:hsla(344, 69%, 70%, 1);
@@ -124,9 +125,12 @@ footer {
     }
 }
 a {
-    color: var(--SharkFin);
+    color: var(--SharkFinMedium);
     border-radius: var(--radii-s);
 
+}
+a:visited {
+    color: var(--SharkFinDark);
 }
 a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible {
     outline: 2px solid var(--SnakesScale);
