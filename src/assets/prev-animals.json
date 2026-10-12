@@ -1512,13 +1512,6 @@
     "isReturning": false
   },
   {
-    "name": "Sand tiger shark",
-    "votes": 0,
-    "habitatType": "Aquarium",
-    "animalCategory": "Fish",
-    "isReturning": false
-  },
-  {
     "name": "Sandbar shark",
     "votes": 0,
     "habitatType": "Aquarium",
@@ -1695,13 +1688,6 @@
   },
   {
     "name": "Japanese rice fish",
-    "votes": 0,
-    "habitatType": "Aquarium",
-    "animalCategory": "Fish",
-    "isReturning": false
-  },
-  {
-    "name": "Koi carp",
     "votes": 0,
     "habitatType": "Aquarium",
     "animalCategory": "Fish",

@@ -28,7 +28,10 @@
             />
         </ul>
         <Message
-            text="Voting is not yet open, check back on October 13, when Planet Zoo 2 launches"
+            title="Voting is now open!"
+            text="You can submit your own wishlist in the PZ2 Metawishlist thread on the "
+            link="#test"
+            linkText="Frontier Unlocked Discord server"
             v-else
         />
         <PageControls
