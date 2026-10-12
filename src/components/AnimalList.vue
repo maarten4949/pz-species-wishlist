@@ -30,7 +30,7 @@
         <Message
             title="Voting is now open!"
             text="You can submit your own wishlist in the PZ2 Metawishlist thread on the "
-            link="#test"
+            link="https://discord.com/channels/1233371459993469028/1559232288410042551"
             linkText="Frontier Unlocked Discord server"
             v-else
         />

@@ -27,7 +27,7 @@
             :style="{ clipPath: `url(#${animal.name.replace(/\s/g, '')})` }"
         />
     </ul>
-    <Message text="Animals will be added here when the first DLC/free animal releases" v-else />
+    <Message title="" text="Animals will be added here when the first DLC/free animal releases" v-else />
 
     <PageControls
         v-model:currentPage="currentPage"
