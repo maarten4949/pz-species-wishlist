@@ -24,7 +24,11 @@ const calculateRelativeRank = (animals, prevAnimals) => {
     const prevAnimal = prevAnimals.find(
       (prevAnimal) => prevAnimal.name === animal.name,
     );
-    if (prevAnimal.votes == 0) {
+    if (prevAnimal === undefined)
+    {
+      animal.relativeRankDifference = undefined;
+    }
+    else if (prevAnimal.votes == 0) {
       animal.relativeRankDifference = undefined;
     } else {
       animal.relativeRankDifference =
