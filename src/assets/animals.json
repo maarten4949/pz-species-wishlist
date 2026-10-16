@@ -183,7 +183,7 @@
   },
   {
     "name": "Steller sea lion",
-    "votes": 0,
+    "votes": 1,
     "habitatType": "Terrestrial",
     "animalCategory": "Mammals",
     "isReturning": false
@@ -260,7 +260,7 @@
   },
   {
     "name": "Eurasian otter",
-    "votes": 3,
+    "votes": 4,
     "habitatType": "Terrestrial",
     "animalCategory": "Mammals",
     "isReturning": false
@@ -316,7 +316,7 @@
   },
   {
     "name": "Sea otter",
-    "votes": 6,
+    "votes": 7,
     "habitatType": "Terrestrial",
     "animalCategory": "Mammals",
     "isReturning": false
@@ -477,7 +477,7 @@
   },
   {
     "name": "Emperor tamarin",
-    "votes": 1,
+    "votes": 2,
     "habitatType": "Terrestrial",
     "animalCategory": "Mammals",
     "isReturning": false
@@ -624,7 +624,7 @@
   },
   {
     "name": "Musk Ox",
-    "votes": 4,
+    "votes": 5,
     "habitatType": "Terrestrial",
     "animalCategory": "Mammals",
     "isReturning": false
@@ -673,7 +673,7 @@
   },
   {
     "name": "Sumatran rhinoceros",
-    "votes": 6,
+    "votes": 7,
     "habitatType": "Terrestrial",
     "animalCategory": "Mammals",
     "isReturning": false
@@ -729,7 +729,7 @@
   },
   {
     "name": "North American porcupine",
-    "votes": 2,
+    "votes": 3,
     "habitatType": "Terrestrial",
     "animalCategory": "Mammals",
     "isReturning": false
@@ -750,7 +750,7 @@
   },
   {
     "name": "Alpine marmot",
-    "votes": 2,
+    "votes": 3,
     "habitatType": "Terrestrial",
     "animalCategory": "Mammals",
     "isReturning": false
@@ -834,7 +834,7 @@
   },
   {
     "name": "Columbian red howler",
-    "votes": 0,
+    "votes": 1,
     "habitatType": "Terrestrial",
     "animalCategory": "Mammals",
     "isReturning": false
@@ -1072,7 +1072,7 @@
   },
   {
     "name": "Black and rofous Sengi",
-    "votes": 0,
+    "votes": 1,
     "habitatType": "Terrestrial",
     "animalCategory": "Mammals",
     "isReturning": false
@@ -1093,7 +1093,7 @@
   },
   {
     "name": "Numbat",
-    "votes": 3,
+    "votes": 4,
     "habitatType": "Terrestrial",
     "animalCategory": "Mammals",
     "isReturning": false
@@ -1114,7 +1114,7 @@
   },
   {
     "name": "Short beaked echidna",
-    "votes": 3,
+    "votes": 4,
     "habitatType": "Terrestrial",
     "animalCategory": "Mammals",
     "isReturning": false
@@ -1142,14 +1142,14 @@
   },
   {
     "name": "Common kusimanse",
-    "votes": 0,
+    "votes": 1,
     "habitatType": "Terrestrial",
     "animalCategory": "Mammals",
     "isReturning": false
   },
   {
     "name": "Coppery titi",
-    "votes": 0,
+    "votes": 1,
     "habitatType": "Terrestrial",
     "animalCategory": "Mammals",
     "isReturning": false
@@ -1163,7 +1163,7 @@
   },
   {
     "name": "Chamois",
-    "votes": 1,
+    "votes": 2,
     "habitatType": "Terrestrial",
     "animalCategory": "Mammals",
     "isReturning": false
@@ -1191,7 +1191,7 @@
   },
   {
     "name": "Southern pudu",
-    "votes": 0,
+    "votes": 1,
     "habitatType": "Terrestrial",
     "animalCategory": "Mammals",
     "isReturning": false
@@ -1366,7 +1366,7 @@
   },
   {
     "name": "Perentie",
-    "votes": 1,
+    "votes": 2,
     "habitatType": "Terrestrial",
     "animalCategory": "Reptiles",
     "isReturning": false
@@ -1625,7 +1625,7 @@
   },
   {
     "name": "Largetooth sawfish",
-    "votes": 3,
+    "votes": 4,
     "habitatType": "Aquarium",
     "animalCategory": "Fish",
     "isReturning": false
@@ -1639,7 +1639,7 @@
   },
   {
     "name": "Ocellate river stingray",
-    "votes": 1,
+    "votes": 2,
     "habitatType": "Aquarium",
     "animalCategory": "Fish",
     "isReturning": false
@@ -1674,7 +1674,7 @@
   },
   {
     "name": "Thornback ray",
-    "votes": 0,
+    "votes": 1,
     "habitatType": "Aquarium",
     "animalCategory": "Fish",
     "isReturning": false
@@ -1807,7 +1807,7 @@
   },
   {
     "name": "Electric eel",
-    "votes": 4,
+    "votes": 5,
     "habitatType": "Aquarium",
     "animalCategory": "Fish",
     "isReturning": false
@@ -1996,7 +1996,7 @@
   },
   {
     "name": "Mbu pufferfish",
-    "votes": 0,
+    "votes": 1,
     "habitatType": "Aquarium",
     "animalCategory": "Fish",
     "isReturning": false
@@ -2178,7 +2178,7 @@
   },
   {
     "name": "Spot fin porcupinefish",
-    "votes": 0,
+    "votes": 1,
     "habitatType": "Aquarium",
     "animalCategory": "Fish",
     "isReturning": false
@@ -2311,7 +2311,7 @@
   },
   {
     "name": "Chambered nautilus",
-    "votes": 3,
+    "votes": 4,
     "habitatType": "Aquarium",
     "animalCategory": "Invertebrates",
     "isReturning": false
@@ -2423,7 +2423,7 @@
   },
   {
     "name": "European pond turtle",
-    "votes": 0,
+    "votes": 1,
     "habitatType": "Exhibit",
     "animalCategory": "Reptiles",
     "isReturning": false
@@ -2752,7 +2752,7 @@
   },
   {
     "name": "West African fiddler crab",
-    "votes": 0,
+    "votes": 1,
     "habitatType": "Exhibit",
     "animalCategory": "Invertebrates",
     "isReturning": false
@@ -2864,7 +2864,7 @@
   },
   {
     "name": "Atlantic mudskipper",
-    "votes": 1,
+    "votes": 2,
     "habitatType": "Exhibit",
     "animalCategory": "Fish",
     "isReturning": false
@@ -2948,7 +2948,7 @@
   },
   {
     "name": "Long snouted seahorse",
-    "votes": 0,
+    "votes": 1,
     "habitatType": "Exhibit",
     "animalCategory": "Fish",
     "isReturning": false
@@ -3053,7 +3053,7 @@
   },
   {
     "name": "Mimic poison frog",
-    "votes": 0,
+    "votes": 1,
     "habitatType": "Exhibit",
     "animalCategory": "Amphibians",
     "isReturning": false
@@ -3389,7 +3389,7 @@
   },
   {
     "name": "Tokay gecko",
-    "votes": 0,
+    "votes": 1,
     "habitatType": "Exhibit",
     "animalCategory": "Reptiles",
     "isReturning": false
@@ -3438,7 +3438,7 @@
   },
   {
     "name": "Black headed python",
-    "votes": 0,
+    "votes": 1,
     "habitatType": "Exhibit",
     "animalCategory": "Reptiles",
     "isReturning": false
@@ -3473,7 +3473,7 @@
   },
   {
     "name": "Jackson's chameleon",
-    "votes": 3,
+    "votes": 4,
     "habitatType": "Exhibit",
     "animalCategory": "Reptiles",
     "isReturning": false
@@ -3487,7 +3487,7 @@
   },
   {
     "name": "Mata mata",
-    "votes": 1,
+    "votes": 2,
     "habitatType": "Exhibit",
     "animalCategory": "Reptiles",
     "isReturning": false
@@ -3585,14 +3585,14 @@
   },
   {
     "name": "Andean condor",
-    "votes": 2,
+    "votes": 3,
     "habitatType": "Aviary",
     "animalCategory": "Birds",
     "isReturning": false
   },
   {
     "name": "Bearded vulture",
-    "votes": 3,
+    "votes": 4,
     "habitatType": "Aviary",
     "animalCategory": "Birds",
     "isReturning": false
@@ -3949,14 +3949,14 @@
   },
   {
     "name": "Great cormorant",
-    "votes": 2,
+    "votes": 3,
     "habitatType": "Aviary",
     "animalCategory": "Birds",
     "isReturning": false
   },
   {
     "name": "Atlantic puffin",
-    "votes": 9,
+    "votes": 10,
     "habitatType": "Aviary",
     "animalCategory": "Birds",
     "isReturning": false
@@ -4061,7 +4061,7 @@
   },
   {
     "name": "Kea",
-    "votes": 4,
+    "votes": 5,
     "habitatType": "Aviary",
     "animalCategory": "Birds",
     "isReturning": false
@@ -4397,7 +4397,7 @@
   },
   {
     "name": "Western capercaillie",
-    "votes": 1,
+    "votes": 2,
     "habitatType": "Aviary",
     "animalCategory": "Birds",
     "isReturning": false
@@ -4418,21 +4418,21 @@
   },
   {
     "name": "Andean cock-of-the rock",
-    "votes": 0,
+    "votes": 1,
     "habitatType": "Aviary",
     "animalCategory": "Birds",
     "isReturning": false
   },
   {
     "name": "Andean motmot",
-    "votes": 0,
+    "votes": 1,
     "habitatType": "Aviary",
     "animalCategory": "Birds",
     "isReturning": false
   },
   {
     "name": "Blyth's or Papuan hornbill",
-    "votes": 0,
+    "votes": 1,
     "habitatType": "Aviary",
     "animalCategory": "Birds",
     "isReturning": false
@@ -4446,14 +4446,14 @@
   },
   {
     "name": "Masked trogon",
-    "votes": 0,
+    "votes": 1,
     "habitatType": "Aviary",
     "animalCategory": "Birds",
     "isReturning": false
   },
   {
     "name": "Plate billed mountain toucan",
-    "votes": 0,
+    "votes": 1,
     "habitatType": "Aviary",
     "animalCategory": "Birds",
     "isReturning": false
@@ -5790,7 +5790,7 @@
   },
   {
     "name": "Great grey owl",
-    "votes": 1,
+    "votes": 2,
     "habitatType": "Aviary",
     "animalCategory": "Birds",
     "isReturning": false
@@ -6200,5 +6200,40 @@
     "habitatType": "Terrestrial",
     "animalCategory": "Mamals",
     "isReturning": true
+  },
+  {
+    "name": "Barnacle goose",
+    "votes": 1,
+    "habitatType": "Aviary",
+    "animalCategory": "Birds",
+    "isReturning": false
+  },
+  {
+    "name": "Great blue turaco",
+    "votes": 1,
+    "habitatType": "Aviary",
+    "animalCategory": "Birds",
+    "isReturning": false
+  },
+  {
+    "name": "Large hairy armadillo",
+    "votes": 1,
+    "habitatType": "Terrestrial",
+    "animalCategory": "Mamals",
+    "isReturning": false
+  },
+  {
+    "name": "Hammerhead bat",
+    "votes": 1,
+    "habitatType": "Aviary",
+    "animalCategory": "Mamals",
+    "isReturning": false
+  },
+  {
+    "name": "Atlantic harlequin duck",
+    "votes": 1,
+    "habitatType": "Aviary",
+    "animalCategory": "Birds",
+    "isReturning": false
   }
 ]
