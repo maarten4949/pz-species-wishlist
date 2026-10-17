@@ -155,7 +155,7 @@
   },
   {
     "name": "Serval",
-    "votes": 8,
+    "votes": 9,
     "habitatType": "Terrestrial",
     "animalCategory": "Mammals",
     "isReturning": false
@@ -5671,7 +5671,7 @@
   },
   {
     "name": "European fallow deer",
-    "votes": 1,
+    "votes": 2,
     "habitatType": "Terrestrial",
     "animalCategory": "Mammals",
     "isReturning": true
@@ -5680,13 +5680,6 @@
     "name": "Egyptian fruit bat",
     "votes": 4,
     "habitatType": "Aviary",
-    "animalCategory": "Mammals",
-    "isReturning": true
-  },
-  {
-    "name": "European fallow deer",
-    "votes": 1,
-    "habitatType": "Terrestrial",
     "animalCategory": "Mammals",
     "isReturning": true
   },
@@ -7515,7 +7508,7 @@
     "votes": 2,
     "habitatType": "Aviary",
     "animalCategory": "Birds",
-    "isReturning": true
+    "isReturning": false
   },
   {
     "name": "Titan triggerfish",
