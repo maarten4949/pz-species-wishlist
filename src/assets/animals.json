@@ -1275,7 +1275,7 @@
   },
   {
     "name": "False gharial",
-    "votes": 3,
+    "votes": 6,
     "habitatType": "Terrestrial",
     "animalCategory": "Reptiles",
     "isReturning": false
@@ -4911,13 +4911,6 @@
     "votes": 1,
     "habitatType": "Aquarium",
     "animalCategory": "Fish",
-    "isReturning": false
-  },
-  {
-    "name": "Tomistoma",
-    "votes": 3,
-    "habitatType": "Terrestrial",
-    "animalCategory": "Reptiles",
     "isReturning": false
   },
   {
