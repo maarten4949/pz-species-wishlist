@@ -1,11 +1,14 @@
 <script setup>
 import InputGroup from './InputGroup.vue';
 const searchInput = defineModel({ default: "" });
+const props = defineProps({
+  onSearch: Function
+})
 </script>
 <template>
     <InputGroup>
         <label for="search">Search:</label>
-        <input aria-label="Search" id="search" name="search" type="text" v-model="searchInput" placeholder="Search an animal" class="input-field big">
+        <input aria-label="Search" id="search" @input="onSearch()" name="search" type="text" v-model="searchInput" placeholder="Search an animal" class="input-field big">
     </InputGroup>
 </template>
 

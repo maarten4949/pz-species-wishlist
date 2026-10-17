@@ -6,7 +6,7 @@
             :habitatTypes="habitatTypes"
         />
         <SearchBarGroup>
-            <SearchBar v-model="searchInput" />
+            <SearchBar v-model="searchInput" v-on:search="resetCurrentPage"/>
             <PageControls
                 v-model:currentPage="currentPage"
                 v-model:animalCount="animalCount"
@@ -119,7 +119,9 @@ try {
     console.error("Failed to load animal data:", err);
     errorMessage.value = "Failed to load animal data.";
 }
-
+const resetCurrentPage = () => {
+  currentPage.value = 1;
+}
 const filteredAnimals = computed(() => {
     let animalsFiltered = removeAnimalsWithNoVotes(animals.value);
     let prevAnimalsFiltered = prevanimals.value;

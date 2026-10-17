@@ -1,7 +1,7 @@
 <script setup>
 const animalCount = defineModel('animalCount')
 const totalVotes = defineModel('totalVotes')
-const totalPeople = 0;
+const totalPeople = 63;
 </script>
 
 <template>

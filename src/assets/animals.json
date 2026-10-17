@@ -14,7 +14,7 @@
     "isReturning": false
   },
   {
-    "name": "Giant Otter",
+    "name": "Giant otter",
     "votes": 13,
     "habitatType": "Terrestrial",
     "animalCategory": "Mammals",
@@ -28,7 +28,7 @@
     "isReturning": true
   },
   {
-    "name": "Amur Leopard",
+    "name": "Amur leopard",
     "votes": 12,
     "habitatType": "Terrestrial",
     "animalCategory": "Mammals",
@@ -189,7 +189,7 @@
     "isReturning": false
   },
   {
-    "name": "South American sea lion",
+    "name": "South american sea lion",
     "votes": 3,
     "habitatType": "Terrestrial",
     "animalCategory": "Mammals",
@@ -546,7 +546,7 @@
     "isReturning": false
   },
   {
-    "name": "Dülmen wild pony",
+    "name": "Dulmen wild pony",
     "votes": 1,
     "habitatType": "Terrestrial",
     "animalCategory": "Mammals",
@@ -2240,7 +2240,7 @@
     "isReturning": false
   },
   {
-    "name": "Pacific White-sided dolphin",
+    "name": "Pacific white-sided dolphin",
     "votes": 6,
     "habitatType": "Aquarium",
     "animalCategory": "Mammals",
@@ -2920,7 +2920,7 @@
   },
   {
     "name": "Yellow banded pipefish",
-    "votes": 1,
+    "votes": 2,
     "habitatType": "Exhibit",
     "animalCategory": "Fish",
     "isReturning": false
@@ -7112,7 +7112,7 @@
     "isReturning": false
   },
   {
-    "name": "Burton's legless-lizard ",
+    "name": "Burton's legless-lizard",
     "votes": 1,
     "habitatType": "Exhibit",
     "animalCategory": "Reptiles",
@@ -7157,13 +7157,6 @@
     "name": "Black Ghost Knifefish",
     "votes": 1,
     "habitatType": "Aquarium",
-    "animalCategory": "Fish",
-    "isReturning": false
-  },
-  {
-    "name": "Yellow banded pipefish",
-    "votes": 1,
-    "habitatType": "Exhibit",
     "animalCategory": "Fish",
     "isReturning": false
   },
@@ -7315,7 +7308,7 @@
     "isReturning": false
   },
   {
-    "name": "Wrinkled Hornbill",
+    "name": "Wrinkled hornbill",
     "votes": 1,
     "habitatType": "Aviary",
     "animalCategory": "Birds",
@@ -7665,7 +7658,7 @@
     "isReturning": true
   },
   {
-    "name": "Ring-necked Pheasant",
+    "name": "Ring-necked pheasant",
     "votes": 1,
     "habitatType": "Aviary",
     "animalCategory": "Birds",
