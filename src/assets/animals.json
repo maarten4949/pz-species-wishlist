@@ -5607,13 +5607,6 @@
     "isReturning": false
   },
   {
-    "name": "Amur tiger",
-    "votes": 3,
-    "habitatType": "Terrestrial",
-    "animalCategory": "Mammals",
-    "isReturning": true
-  },
-  {
     "name": "Sloth bear",
     "votes": 2,
     "habitatType": "Terrestrial",
@@ -6133,7 +6126,7 @@
   },
   {
     "name": "Siberian Tiger",
-    "votes": 7,
+    "votes": 10,
     "habitatType": "Terrestrial",
     "animalCategory": "Mammals",
     "isReturning": true
