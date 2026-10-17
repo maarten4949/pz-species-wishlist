@@ -400,7 +400,7 @@
   },
   {
     "name": "Common Squirrel monkey",
-    "votes": 10,
+    "votes": 11,
     "habitatType": "Terrestrial",
     "animalCategory": "Mammals",
     "isReturning": false
@@ -6759,13 +6759,6 @@
     "votes": 2,
     "habitatType": "Aquarium",
     "animalCategory": "Fish",
-    "isReturning": false
-  },
-  {
-    "name": "Guianan squirrel monkey",
-    "votes": 1,
-    "habitatType": "Terrestrial",
-    "animalCategory": "Mammals",
     "isReturning": false
   },
   {
