@@ -2282,13 +2282,6 @@
     "isReturning": false
   },
   {
-    "name": "Fly river turtle",
-    "votes": 5,
-    "habitatType": "Aquarium",
-    "animalCategory": "Reptiles",
-    "isReturning": false
-  },
-  {
     "name": "Japanese spider crab",
     "votes": 9,
     "habitatType": "Aquarium",
@@ -3508,7 +3501,7 @@
   },
   {
     "name": "Pig-nosed turtle",
-    "votes": 2,
+    "votes": 7,
     "habitatType": "Exhibit",
     "animalCategory": "Reptiles",
     "isReturning": false
