@@ -16,6 +16,7 @@
         <MetadataContainer
             v-model:animalCount="animalCount"
             v-model:totalVotes="totalVotes"
+            :totalPeople="totalPeople"
         />
         <ErrorMessage :message="errorMessage" />
         <ul class="animal-list" v-if="animalsWithVotes.length > 0">
@@ -24,6 +25,7 @@
                 :key="animal.name"
                 v-model:activeFilters="activeFilters"
                 :animal="animal"
+                :totalPeople="totalPeople"
                 :style="{ clipPath: `url(#${animal.name.replace(/\s/g, '')})` }"
             />
         </ul>
@@ -69,6 +71,7 @@ import animalsJson from "../assets/animals.json";
 import prevAnimalsJson from "../assets/prev-animals.json";
 
 // variable definition
+const totalPeople = 131;
 const animals = ref(structuredClone(animalsJson));
 const prevanimals = ref(structuredClone(prevAnimalsJson));
 const searchInput = ref("");
@@ -87,6 +90,7 @@ const activeFilters = ref({
     habitatTypeFilters: "",
     animalCategoryFilters: "",
     returningAnimalsFilter: "ALL",
+    isPercentage: "NUM"
 });
 
 

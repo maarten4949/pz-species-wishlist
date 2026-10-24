@@ -7,7 +7,7 @@ const props = defineProps({
   dlcs: Array
 })
 const filters = defineModel({
-  default: () => ({ sortDropdown: '', animalPositionDropdown: '', habitatTypeFilters: '', animalCategoryFilters: '', returningAnimalsFilter: '', dlcPackFilter: '' })
+  default: () => ({ sortDropdown: '', animalPositionDropdown: '', habitatTypeFilters: '', animalCategoryFilters: '', returningAnimalsFilter: '', isPercentage: '', dlcPackFilter: '' })
 })
 </script>
 
@@ -56,6 +56,13 @@ const filters = defineModel({
                     <option value="ALL">All animals</option>
                     <option value="RET">Only Returning Animals</option>
                     <option value="NEW">Only New Animals</option>
+                </select>
+            </InputGroup>
+            <InputGroup>
+                <label for="isPercentage">Show votes in:</label>
+                <select name="isPercentage" id="isPercentage" v-model="filters.isPercentage">
+                    <option value="NUM">Numbers</option>
+                    <option value="PER">Percentage of people</option>
                 </select>
             </InputGroup>
             <InputGroup v-if="dlcs && dlcs.length > 0">

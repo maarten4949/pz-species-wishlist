@@ -12,7 +12,8 @@ import sitemap from '@astrojs/sitemap';
 export default defineConfig({
   integrations: [vue(), sitemap()],
   site: "https://pz2-metawishlist.maarten494.workers.dev/",
-  fonts: [{
+  fonts: [
+    {
       provider: fontProviders.local(),
       name: "EagleBold",
       cssVariable: "--font-eagle-bold",
@@ -36,8 +37,23 @@ export default defineConfig({
           weight: 'normal, 600, 700, 800',
           style: 'normal'
         }]
-      }
-    }],
+      },
+
+    },
+    {
+      provider: fontProviders.local(),
+      name: "Eagle",
+      cssVariable: "--font-eagle",
+      fallbacks: ["sans-serif"],
+      options: {
+        variants: [{
+          src: ['./src/assets/fonts/EagleBold.otf'],
+          weight: 'normal, 600, 700, 800',
+          style: 'normal'
+        }]
+      },
+    }
+  ],
 
   adapter: cloudflare(),
 });

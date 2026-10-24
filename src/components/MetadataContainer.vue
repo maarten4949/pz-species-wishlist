@@ -1,13 +1,15 @@
 <script setup>
 const animalCount = defineModel('animalCount')
 const totalVotes = defineModel('totalVotes')
-const totalPeople = 63;
+const props = defineProps({
+  totalPeople: Number,
+})
 </script>
 
 <template>
     <div class="metadata-container">
         <span class="animal-count">{{animalCount}} animals</span>
-        <span class="total-votes">{{totalVotes}} votes ({{ totalPeople }} people)</span>
+        <span class="total-votes">{{totalVotes}} votes ({{ props.totalPeople }} people)</span>
     </div>
 </template>
 <style>

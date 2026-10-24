@@ -1,6 +1,7 @@
 <script setup>
 const props = defineProps({
   animal: Object,
+  totalPeople: Number
 })
 console.log(props.animal)
 const activeFilters = defineModel("activeFilters")
@@ -101,7 +102,7 @@ const getRankDifference = (animal) => {
                 </div>
         </div>
     </div>
-    <span class="votes">{{animal.votes}}</span>
+    <span class="votes">{{activeFilters.isPercentage == "NUM" ? animal.votes : (animal.votes / props.totalPeople * 100).toFixed(2).toString() + "%"  }}</span>
      </div>
 </div>
 
@@ -196,8 +197,8 @@ const getRankDifference = (animal) => {
     }
     & .votes{
         padding: var(--spacing-04) var(--spacing-08);
-        font-family: var(--font-eagle-bold);
-        font-size: var(--type-08);
+        font-family: var(--font-eagle);
+        font-size: var(--type-09);
         line-height: var(--spacing-08);
     }
     & .title-container {
