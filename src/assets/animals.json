@@ -4230,13 +4230,6 @@
     "isReturning": false
   },
   {
-    "name": "Hawaiian Goose",
-    "votes": 1,
-    "habitatType": "Aviary",
-    "animalCategory": "Birds",
-    "isReturning": false
-  },
-  {
     "name": "Eastern spot billed duck",
     "votes": 0,
     "habitatType": "Aviary",
@@ -8991,7 +8984,7 @@
   },
   {
     "name": "Nene",
-    "votes": 2,
+    "votes": 3,
     "habitatType": "Aviary",
     "animalCategory": "Birds",
     "isReturning": false
@@ -9005,13 +8998,6 @@
   },
   {
     "name": "Australasian Swamphen",
-    "votes": 1,
-    "habitatType": "Aviary",
-    "animalCategory": "Birds",
-    "isReturning": false
-  },
-  {
-    "name": "Beautiful fruit-dove",
     "votes": 1,
     "habitatType": "Aviary",
     "animalCategory": "Birds",
@@ -9425,7 +9411,7 @@
   },
   {
     "name": "Beautiful fruit dove",
-    "votes": 1,
+    "votes": 2,
     "habitatType": "Aviary",
     "animalCategory": "Birds",
     "isReturning": false
