@@ -5956,7 +5956,7 @@
     "votes": 1,
     "habitatType": "Terrestrial",
     "animalCategory": "Mammals",
-    "isReturning": true
+    "isReturning": false
   },
   {
     "name": "Barbary sheep",
@@ -9365,7 +9365,7 @@
     "votes": 1,
     "habitatType": "Terrestrial",
     "animalCategory": "Mammals",
-    "isReturning": true
+    "isReturning": false
   },
   {
     "name": "Afro-Australian fur seal",
