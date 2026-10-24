@@ -99,7 +99,7 @@ select {
 .filter-container>.filter-container-button span.icon {
   width: 24px;
   height: 24px;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.2s ease-in-out;
   margin-left: auto;
 }
 .filter-container[open] .filter-container-button span.icon {
@@ -108,8 +108,11 @@ select {
 
 .filter-container-button {
   display: flex;
+  align-items: center;
   cursor: pointer;
   padding: var(--spacing-04) var(--spacing-05);
+  font-family: var(--font-eagle);
+  vertical-align:middle;
 }
 
 .filter-container-button::-webkit-details-marker {

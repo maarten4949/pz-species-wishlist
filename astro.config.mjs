@@ -20,7 +20,7 @@ export default defineConfig({
       fallbacks: ["sans-serif"],
       options: {
         variants: [{
-          src: ['./src/assets/fonts/EagleBold.ttf'],
+          src: ['./src/assets/fonts/EagleBold.otf'],
           weight: 'normal',
           style: 'normal'
         }]
@@ -47,7 +47,7 @@ export default defineConfig({
       fallbacks: ["sans-serif"],
       options: {
         variants: [{
-          src: ['./src/assets/fonts/EagleBold.otf'],
+          src: ['./src/assets/fonts/EagleBook.otf'],
           weight: 'normal, 600, 700, 800',
           style: 'normal'
         }]

@@ -71,7 +71,7 @@ import animalsJson from "../assets/animals.json";
 import prevAnimalsJson from "../assets/prev-animals.json";
 
 // variable definition
-const totalPeople = 131;
+const totalPeople = 132;
 const animals = ref(structuredClone(animalsJson));
 const prevanimals = ref(structuredClone(prevAnimalsJson));
 const searchInput = ref("");

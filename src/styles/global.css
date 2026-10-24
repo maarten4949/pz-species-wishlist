@@ -103,11 +103,14 @@ h1 {
     font-size: var(--type-12);
     font-family: var(--font-eagle-bold);
     text-align: center;
+    text-transform: uppercase;
 }
 h2 {
     font-family: var(--font-eagle-bold);
     font-size: var(--type-08);
     line-height: var(--spacing-08);
+    text-transform: uppercase;
+
 }
 p {
     font-size: var(--type-03);

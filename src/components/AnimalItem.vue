@@ -97,7 +97,7 @@ const getRankDifference = (animal) => {
             <div class = "title-container">
                 <h2 class= "animal-name">{{animal.name}}</h2>
                 <div class= "subtitle">
-                    <span class="animal-habitat">{{animal.habitatType}}</span>
+                    <span class="animal-habitat">{{animal.habitatType}} - </span>
                     <span class="animal-category">{{animal.animalCategory}} {{animal.animalSubCategory ? " - " + animal.animalSubCategory : ""}}</span>
                 </div>
         </div>
@@ -197,7 +197,7 @@ const getRankDifference = (animal) => {
     }
     & .votes{
         padding: var(--spacing-04) var(--spacing-08);
-        font-family: var(--font-eagle);
+        font-family: var(--font-eagle-bold);
         font-size: var(--type-09);
         line-height: var(--spacing-08);
     }
