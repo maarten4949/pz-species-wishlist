@@ -4574,7 +4574,7 @@
   },
   {
     "name": "Major Mitchell's cockatoo",
-    "votes": 4,
+    "votes": 6,
     "habitatType": "Aviary",
     "animalCategory": "Birds",
     "isReturning": false
@@ -4596,13 +4596,6 @@
   {
     "name": "Palm cockatoo",
     "votes": 19,
-    "habitatType": "Aviary",
-    "animalCategory": "Birds",
-    "isReturning": false
-  },
-  {
-    "name": "Pink cockatoo",
-    "votes": 2,
     "habitatType": "Aviary",
     "animalCategory": "Birds",
     "isReturning": false
