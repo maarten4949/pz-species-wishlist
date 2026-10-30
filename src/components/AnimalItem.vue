@@ -1,7 +1,9 @@
 <script setup>
+import { computed } from 'vue';
 const props = defineProps({
   animal: Object,
-  totalPeople: Number
+  totalPeople: Number,
+  prevTotalPeople: Number
 })
 console.log(props.animal)
 const activeFilters = defineModel("activeFilters")
@@ -69,6 +71,30 @@ const getRankDifference = (animal) => {
         ? animal.rankDifference
         : animal.relativeRankDifference;
 };
+// const percentageVoteDifference = computed(() => {
+//     if (props.animal == undefined) return 0
+//   return ((props.animal.votes / props.totalPeople * 100) - (props.animal.prevVotes / props.prevTotalPeople * 100))
+// })
+const percentageDifferenceSign = computed(() => {
+  if (props.animal.percentageVoteDifference == undefined) return ""
+  console.log(props.animal.percentageVoteDifference)
+  if (props.animal.percentageVoteDifference > 0) return "+"
+  if (props.animal.percentageVoteDifference == 0) return ""
+  return "-"
+})
+const getVoteDifferenceSign = (animal) => {
+  if (animal.voteDifference == undefined) return ""
+  console.log(animal.voteDifference)
+  if (animal.voteDifference > 0) return "+"
+  if (animal.voteDifference == 0) return ""
+  return "-"
+}
+const getVoteDifferenceClass = (animal) => {
+  if (activeFilters.value.isPercentage == "NUM") return ""
+  if (animal.percentageVoteDifference > 0) return "positive"
+  if (animal.percentageVoteDifference == 0) return "neutral"
+  return "negative"
+}
 </script>
 
 <template>
@@ -102,7 +128,10 @@ const getRankDifference = (animal) => {
                 </div>
         </div>
     </div>
-    <span class="votes">{{activeFilters.isPercentage == "NUM" ? animal.votes : (animal.votes / props.totalPeople * 100).toFixed(2).toString() + "%"  }}</span>
+    <div class="vote-container">
+        <span class="votes">{{activeFilters.isPercentage == "NUM" ? animal.votes : (animal.votes / props.totalPeople * 100).toFixed(2).toString() + "%"  }}</span>
+        <span :class="`vote-difference ${getVoteDifferenceClass(animal)}`">{{activeFilters.isPercentage == "NUM" ? getVoteDifferenceSign(animal) + Math.abs(animal.voteDifference) : percentageDifferenceSign + Math.abs(animal.percentageVoteDifference).toFixed(2).toString() + "%"  }}</span>
+    </div>
      </div>
 </div>
 
@@ -195,11 +224,28 @@ const getRankDifference = (animal) => {
         z-index: 2;
         color: var(--text-white);
     }
-    & .votes{
-        padding: var(--spacing-04) var(--spacing-08);
-        font-family: var(--font-eagle-bold);
-        font-size: var(--type-09);
-        line-height: var(--spacing-08);
+    & .vote-container{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+            padding: var(--spacing-04) var(--spacing-08);
+        & .votes{
+            font-family: var(--font-eagle-bold);
+            font-size: var(--type-09);
+            line-height: var(--spacing-08);
+        }
+        & .vote-difference {
+            color: var(--text-soft);
+            &.positive {
+                color: var(--green);
+            }
+            &.negative {
+                color: var(--red);
+            }
+            &.neutral {
+                color: var(--text-soft-inverted);
+            }
+        }
     }
     & .title-container {
         & .animal-name {

@@ -26,6 +26,7 @@
                 v-model:activeFilters="activeFilters"
                 :animal="animal"
                 :totalPeople="totalPeople"
+                :prevTotalPeople="prevTotalPeople"
                 :style="{ clipPath: `url(#${animal.name.replace(/\s/g, '')})` }"
             />
         </ul>
@@ -72,6 +73,7 @@ import prevAnimalsJson from "../assets/prev-animals.json";
 
 // variable definition
 const totalPeople = 172;
+const prevTotalPeople = 132;
 const animals = ref(structuredClone(animalsJson));
 const prevanimals = ref(structuredClone(prevAnimalsJson));
 const searchInput = ref("");
@@ -105,15 +107,20 @@ try {
     });
 
     animals.value.sort(compareAnimals);
-    animals.value.forEach((animal, index) => {
-        animal.rank = index + 1;
-        const prevAnimalLookup = prevanimals.value.find(
-            (prevAnimal) => prevAnimal.name === animal.name,
-        );
-        if (prevAnimalLookup?.votes == 0) {
-            animal.rankDifference = undefined;
-        } else {
-            animal.rankDifference = prevAnimalLookup?.rank - animal.rank;
+  animals.value.forEach((animal, index) => {
+    animal.rank = index + 1;
+    const prevAnimalLookup = prevanimals.value.find(
+      (prevAnimal) => prevAnimal.name === animal.name,
+    );
+    if (prevAnimalLookup?.votes == 0) {
+      animal.rankDifference = undefined;
+      animal.voteDifference = undefined;
+      animal.prevVotes = undefined;
+    } else {
+      animal.rankDifference = prevAnimalLookup?.rank - animal.rank;
+      animal.voteDifference = animal.votes - prevAnimalLookup?.votes;
+      animal.prevVotes = prevAnimalLookup?.votes;
+      animal.percentageVoteDifference = (animal.votes / totalPeople * 100) - (animal.prevVotes / prevTotalPeople * 100);
         }
     });
 
@@ -149,11 +156,12 @@ const filteredAnimals = computed(() => {
         activeFilters.value.animalCategoryFilters,
         animalsFiltered,
         prevAnimalsFiltered,
-    ));
+  ));
+    const isPercentage = activeFilters.value.isPercentage == "PER" ? true : false
     animalsFiltered = sortAnimals(
         activeFilters.value.sortDropdown,
         animalsFiltered,
-        prevAnimalsFiltered,
+        isPercentage,
     );
 
     animalCount.value = animalsFiltered.length;

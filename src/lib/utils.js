@@ -24,11 +24,9 @@ const calculateRelativeRank = (animals, prevAnimals) => {
     const prevAnimal = prevAnimals.find(
       (prevAnimal) => prevAnimal.name === animal.name,
     );
-    if (prevAnimal === undefined)
-    {
+    if (prevAnimal === undefined) {
       animal.relativeRankDifference = undefined;
-    }
-    else if (prevAnimal.votes == 0) {
+    } else if (prevAnimal.votes == 0) {
       animal.relativeRankDifference = undefined;
     } else {
       animal.relativeRankDifference =
@@ -117,7 +115,7 @@ const filterAnimalCategories = (
   }
   return { animalsFiltered, prevAnimalsFiltered };
 };
-const sortAnimals = (sortValue, animalsFiltered) => {
+const sortAnimals = (sortValue, animalsFiltered, isPercentage) => {
   if (sortValue != undefined) {
     const newAnimals = animalsFiltered.filter((animal) =>
       isNaN(animal.rankDifference),
@@ -125,6 +123,13 @@ const sortAnimals = (sortValue, animalsFiltered) => {
     if (sortValue === "GAIN-DESC" || sortValue === "GAIN-ASC") {
       animalsFiltered = animalsFiltered.filter(
         (animal) => !isNaN(animal.rankDifference),
+      );
+    }
+    if (sortValue === "VOTE-GAIN-DESC" || sortValue === "VOTE-GAIN-ASC") {
+      animalsFiltered = animalsFiltered.filter(
+        (animal) =>
+          !isNaN(animal.voteDifference) ||
+          !isNaN(animal.percentageVoteDifference),
       );
     }
     animalsFiltered = animalsFiltered.sort((a, b) => {
@@ -142,6 +147,28 @@ const sortAnimals = (sortValue, animalsFiltered) => {
         return (
           a.rankDifference - b.rankDifference || b.name.localeCompare(a.name)
         );
+      if (sortValue === "VOTE-GAIN-DESC") {
+        if (isPercentage) {
+          return (
+            b.percentageVoteDifference - a.percentageVoteDifference ||
+            a.name.localeCompare(b.name)
+          );
+        }
+        return (
+          b.voteDifference - a.voteDifference || a.name.localeCompare(b.name)
+        );
+      }
+      if (sortValue === "VOTE-GAIN-ASC") {
+        if (isPercentage) {
+          return (
+            a.percentageVoteDifference - b.percentageVoteDifference ||
+            b.name.localeCompare(a.name)
+          );
+        }
+        return (
+          a.voteDifference - b.voteDifference || b.name.localeCompare(a.name)
+        );
+      }
       return 0;
     });
     if (sortValue === "GAIN-DESC" || sortValue === "GAIN-ASC") {
