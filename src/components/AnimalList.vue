@@ -72,7 +72,7 @@ import animalsJson from "../assets/animals.json";
 import prevAnimalsJson from "../assets/prev-animals.json";
 
 // variable definition
-const totalPeople = 172;
+const totalPeople = 174;
 const prevTotalPeople = 132;
 const animals = ref(structuredClone(animalsJson));
 const prevanimals = ref(structuredClone(prevAnimalsJson));
