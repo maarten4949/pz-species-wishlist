@@ -1395,7 +1395,7 @@
   },
   {
     "name": "Virginia opossum",
-    "votes": 2,
+    "votes": 6,
     "habitatType": "Terrestrial",
     "animalCategory": "Mammals",
     "isReturning": false
@@ -9798,13 +9798,6 @@
     "votes": 1,
     "habitatType": "Aviary",
     "animalCategory": "Birds",
-    "isReturning": false
-  },
-  {
-    "name": "Yellow-backed duiker",
-    "votes": 1,
-    "habitatType": "Terrestrial",
-    "animalCategory": "Mammals",
     "isReturning": false
   },
   {

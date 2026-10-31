@@ -27,8 +27,8 @@ const filters = defineModel({
                     <option value="NAMES-ASC">Names Ascending</option>
                     <option value="GAIN-DESC">Position Gain Descending</option>
                     <option value="GAIN-ASC">Position Gain Ascending</option>
-                    <option value="VOTE-GAIN-DESC">Vote Gain Share Descending</option>
-                    <option value="VOTE-GAIN-ASC">Vote Gain Share Ascending</option>
+                    <option value="VOTE-GAIN-DESC">Vote Gain Descending</option>
+                    <option value="VOTE-GAIN-ASC">Vote Gain Ascending</option>
                 </select>
             </InputGroup>
             <InputGroup>
