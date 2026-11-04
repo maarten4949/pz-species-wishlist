@@ -310,7 +310,7 @@ const getAnimalVoteDifferenceValue = (animal) => {
                 font-size: var(--type-02);
             }
         }
-        & .votes {
+        & .vote-container {
             padding: var(--spacing-04) var(--spacing-06);
             padding-left: 0;
         }
@@ -351,7 +351,7 @@ const getAnimalVoteDifferenceValue = (animal) => {
             gap: calc(var(--spacing-12) + var(--spacing-02));
 
         }
-        & .votes {
+        & .vote-container {
             padding: var(--spacing-04) var(--spacing-05);
             padding-left: 0;
         }
@@ -393,7 +393,7 @@ const getAnimalVoteDifferenceValue = (animal) => {
                 font-size: var(--type-02);
             }
         }
-        & .votes {
+        & .vote-container {
             padding: var(--spacing-04) var(--spacing-04);
             padding-left: 0;
         }
@@ -432,8 +432,13 @@ const getAnimalVoteDifferenceValue = (animal) => {
                 font-size: var(--type-01);
             }
         }
-        & .votes {
-            font-size: var(--type-07)
+        & .vote-container {
+            & .votes{
+                font-size: var(--type-06);
+            }
+            & .vote-difference {
+                font-size: var(--type-01);
+            }
         }
 
     }
