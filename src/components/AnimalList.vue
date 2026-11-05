@@ -135,7 +135,7 @@ const resetCurrentPage = () => {
 }
 const filteredAnimals = computed(() => {
     let animalsFiltered = removeAnimalsWithNoVotes(animals.value);
-    let prevAnimalsFiltered = prevanimals.value;
+    let prevAnimalsFiltered = removeAnimalsWithNoVotes(prevanimals.value);
 
     ({ animalsFiltered, prevAnimalsFiltered } = filterAnimalsSearch(
         searchInput.value,
@@ -157,18 +157,31 @@ const filteredAnimals = computed(() => {
         animalsFiltered,
         prevAnimalsFiltered,
   ));
-    const isPercentage = activeFilters.value.isPercentage == "PER" ? true : false
+  const isPercentage = activeFilters.value.isPercentage == "PER" ? true : false
+  // console.log("animalsFiltered before sort: ", animalsFiltered)
+  // console.log("prevanimalsFiltered before sort: ", prevAnimalsFiltered)
     animalsFiltered = sortAnimals(
         activeFilters.value.sortDropdown,
         animalsFiltered,
         isPercentage,
     );
+    prevAnimalsFiltered = sortAnimals(
+        activeFilters.value.sortDropdown,
+        prevAnimalsFiltered,
+        isPercentage,
+    );
 
-    animalCount.value = animalsFiltered.length;
+  animalCount.value = animalsFiltered.length;
+    // console.log("animalsFiltered before relative rank: ", animalsFiltered)
+    // console.log("prevanimalsFiltered before relative rank: ", prevAnimalsFiltered)
     animalsFiltered = calculateRelativeRank(
         animalsFiltered,
         prevAnimalsFiltered,
     );
+  // console.log("animalsFiltered after relative rank: ", animalsFiltered)
+  // console.log("prevanimalsFiltered after relative rank: ", prevAnimalsFiltered)
+
+
     animalsFiltered = animalsFiltered.slice(
         (currentPage.value - 1) * pageSize.value,
         currentPage.value * pageSize.value,

@@ -5,7 +5,7 @@ const props = defineProps({
   totalPeople: Number,
   prevTotalPeople: Number
 })
-console.log(props.animal)
+// console.log(props.animal)
 const activeFilters = defineModel("activeFilters")
 
 const getAnimalRankDifference = (animal) => {
@@ -63,7 +63,7 @@ const getAnimalRankDifferenceValue = (animal) => {
 
 const getRank = (animal) => {
   const rank = activeFilters.value.animalPositionDropdown === "ABS" ? animal.rank : animal.relativeRank;
-  console.log("rank", rank);
+  // console.log("rank", rank);
   return rank;
 }
 const getRankDifference = (animal) => {
@@ -77,14 +77,14 @@ const getRankDifference = (animal) => {
 // })
 const percentageDifferenceSign = computed(() => {
   if (props.animal.percentageVoteDifference == undefined) return ""
-  console.log(props.animal.percentageVoteDifference)
+  // console.log(props.animal.percentageVoteDifference)
   if (props.animal.percentageVoteDifference > 0) return "+"
   if (props.animal.percentageVoteDifference == 0) return ""
   return "-"
 })
 const getVoteDifferenceSign = (animal) => {
   if (animal.voteDifference == undefined || isNaN(animal.voteDifference)) return ""
-  console.log(animal.voteDifference)
+  // console.log(animal.voteDifference)
   if (animal.voteDifference > 0) return "+"
   if (animal.voteDifference == 0) return ""
   return "-"
