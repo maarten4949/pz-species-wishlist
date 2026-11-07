@@ -115,7 +115,7 @@ const getAnimalVoteDifferenceValue = (animal) => {
       {
           return '~'
       }
-      return Math.abs(animal.percentageVoteDifference);
+      return (Math.abs(animal.percentageVoteDifference)).toFixed(2).toString() + "%";
   }
 }
 </script>
@@ -153,7 +153,7 @@ const getAnimalVoteDifferenceValue = (animal) => {
     </div>
     <div class="vote-container">
         <span class="votes">{{activeFilters.isPercentage == "NUM" ? animal.votes : (animal.votes / props.totalPeople * 100).toFixed(2).toString() + "%"  }}</span>
-        <span :class="`vote-difference ${getVoteDifferenceClass(animal)}`">{{activeFilters.isPercentage == "NUM" ? getVoteDifferenceSign(animal) + getAnimalVoteDifferenceValue(animal) : percentageDifferenceSign + getAnimalVoteDifferenceValue(animal).toFixed(2).toString() + "%"  }}</span>
+        <span :class="`vote-difference ${getVoteDifferenceClass(animal)}`">{{activeFilters.isPercentage == "NUM" ? getVoteDifferenceSign(animal) + getAnimalVoteDifferenceValue(animal) : percentageDifferenceSign + getAnimalVoteDifferenceValue(animal) }}</span>
     </div>
      </div>
 </div>

@@ -6,7 +6,7 @@
             :habitatTypes="habitatTypes"
         />
         <SearchBarGroup>
-            <SearchBar v-model="searchInput" v-on:search="resetCurrentPage"/>
+            <SearchBar v-model="searchInput" v-on:search="resetCurrentPage" />
             <PageControls
                 v-model:currentPage="currentPage"
                 v-model:animalCount="animalCount"
@@ -70,12 +70,14 @@ import {
 } from "../lib/utils.js";
 import animalsJson from "../assets/animals.json";
 import prevAnimalsJson from "../assets/prev-animals.json";
-
+import prevPrevAnimalsJson from "../assets/prev-prev-animals.json";
 // variable definition
-const totalPeople = 174;
-const prevTotalPeople = 132;
+const totalPeople = 190;
+const prevTotalPeople = 174;
+const prevPrevTotalPeople = 132;
 const animals = ref(structuredClone(animalsJson));
 const prevanimals = ref(structuredClone(prevAnimalsJson));
+const prevPrevAnimals = ref(structuredClone(prevPrevAnimalsJson));
 const searchInput = ref("");
 const animalsWithVotes = ref(animals);
 const currentPage = ref(1);
@@ -92,35 +94,55 @@ const activeFilters = ref({
     habitatTypeFilters: "",
     animalCategoryFilters: "",
     returningAnimalsFilter: "ALL",
-    isPercentage: "NUM"
+    isPercentage: "NUM",
 });
-
 
 try {
     animalsWithVotes.value = removeAnimalsWithNoVotes(animals.value);
     animalCategories.value = getAnimalCategories(animals.value);
     habitatTypes.value = getHabitatTypes(animals.value);
-
-    prevanimals.value.sort(compareAnimals);
-    prevanimals.value.forEach((animal, index) => {
+    prevPrevAnimals.value.sort(compareAnimals);
+    prevPrevAnimals.value.forEach((animal, index) => {
         animal.rank = index + 1;
     });
 
+    prevanimals.value.sort(compareAnimals);
+    prevanimals.value.forEach((animal, index) => {
+      animal.rank = index + 1;
+      const prevPrevAnimalLookup = prevPrevAnimals.value.find(
+          (prevPrevAnimal) => prevPrevAnimal.name === animal.name,
+      );
+      if (prevPrevAnimalLookup?.votes == 0) {
+          animal.rankDifference = undefined;
+          animal.voteDifference = undefined;
+          animal.prevVotes = undefined;
+      } else {
+          animal.rankDifference = prevPrevAnimalLookup?.rank - animal.rank;
+          animal.voteDifference = animal.votes - prevPrevAnimalLookup?.votes;
+          animal.prevVotes = prevPrevAnimalLookup?.votes;
+          animal.percentageVoteDifference =
+              (animal.votes / prevTotalPeople) * 100 -
+              (animal.prevVotes / prevPrevTotalPeople) * 100;
+      }
+    });
+
     animals.value.sort(compareAnimals);
-  animals.value.forEach((animal, index) => {
-    animal.rank = index + 1;
-    const prevAnimalLookup = prevanimals.value.find(
-      (prevAnimal) => prevAnimal.name === animal.name,
-    );
-    if (prevAnimalLookup?.votes == 0) {
-      animal.rankDifference = undefined;
-      animal.voteDifference = undefined;
-      animal.prevVotes = undefined;
-    } else {
-      animal.rankDifference = prevAnimalLookup?.rank - animal.rank;
-      animal.voteDifference = animal.votes - prevAnimalLookup?.votes;
-      animal.prevVotes = prevAnimalLookup?.votes;
-      animal.percentageVoteDifference = (animal.votes / totalPeople * 100) - (animal.prevVotes / prevTotalPeople * 100);
+    animals.value.forEach((animal, index) => {
+        animal.rank = index + 1;
+        const prevAnimalLookup = prevanimals.value.find(
+            (prevAnimal) => prevAnimal.name === animal.name,
+        );
+        if (prevAnimalLookup?.votes == 0) {
+            animal.rankDifference = undefined;
+            animal.voteDifference = undefined;
+            animal.prevVotes = undefined;
+        } else {
+            animal.rankDifference = prevAnimalLookup?.rank - animal.rank;
+            animal.voteDifference = animal.votes - prevAnimalLookup?.votes;
+            animal.prevVotes = prevAnimalLookup?.votes;
+            animal.percentageVoteDifference =
+                (animal.votes / totalPeople) * 100 -
+                (animal.prevVotes / prevTotalPeople) * 100;
         }
     });
 
@@ -131,11 +153,12 @@ try {
     errorMessage.value = "Failed to load animal data.";
 }
 const resetCurrentPage = () => {
-  currentPage.value = 1;
-}
+    currentPage.value = 1;
+};
 const filteredAnimals = computed(() => {
     let animalsFiltered = removeAnimalsWithNoVotes(animals.value);
-    let prevAnimalsFiltered = removeAnimalsWithNoVotes(prevanimals.value);
+  let prevAnimalsFiltered = removeAnimalsWithNoVotes(prevanimals.value);
+  let prevPrevAnimalsFiltered = removeAnimalsWithNoVotes(prevPrevAnimals.value);
 
     ({ animalsFiltered, prevAnimalsFiltered } = filterAnimalsSearch(
         searchInput.value,
@@ -156,10 +179,11 @@ const filteredAnimals = computed(() => {
         activeFilters.value.animalCategoryFilters,
         animalsFiltered,
         prevAnimalsFiltered,
-  ));
-  const isPercentage = activeFilters.value.isPercentage == "PER" ? true : false
-  // console.log("animalsFiltered before sort: ", animalsFiltered)
-  // console.log("prevanimalsFiltered before sort: ", prevAnimalsFiltered)
+    ));
+    const isPercentage =
+        activeFilters.value.isPercentage == "PER" ? true : false;
+    // console.log("animalsFiltered before sort: ", animalsFiltered)
+    // console.log("prevanimalsFiltered before sort: ", prevAnimalsFiltered)
     animalsFiltered = sortAnimals(
         activeFilters.value.sortDropdown,
         animalsFiltered,
@@ -171,16 +195,15 @@ const filteredAnimals = computed(() => {
         isPercentage,
     );
 
-  animalCount.value = animalsFiltered.length;
-    // console.log("animalsFiltered before relative rank: ", animalsFiltered)
-    // console.log("prevanimalsFiltered before relative rank: ", prevAnimalsFiltered)
+    animalCount.value = animalsFiltered.length;
+    console.log("animalsFiltered before relative rank: ", animalsFiltered)
+    console.log("prevanimalsFiltered before relative rank: ", prevAnimalsFiltered)
     animalsFiltered = calculateRelativeRank(
         animalsFiltered,
         prevAnimalsFiltered,
     );
-  // console.log("animalsFiltered after relative rank: ", animalsFiltered)
-  // console.log("prevanimalsFiltered after relative rank: ", prevAnimalsFiltered)
-
+    // console.log("animalsFiltered after relative rank: ", animalsFiltered)
+    // console.log("prevanimalsFiltered after relative rank: ", prevAnimalsFiltered)
 
     animalsFiltered = animalsFiltered.slice(
         (currentPage.value - 1) * pageSize.value,
