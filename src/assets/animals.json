@@ -85,7 +85,7 @@
   },
   {
     "name": "Polar Bear",
-    "votes": 77,
+    "votes": 78,
     "habitatType": "Terrestrial",
     "animalCategory": "Mammals",
     "isReturning": true
@@ -162,7 +162,7 @@
   },
   {
     "name": "Canadian lynx",
-    "votes": 7,
+    "votes": 8,
     "habitatType": "Terrestrial",
     "animalCategory": "Mammals",
     "isReturning": false
@@ -218,7 +218,7 @@
   },
   {
     "name": "Steller sea lion",
-    "votes": 15,
+    "votes": 16,
     "habitatType": "Terrestrial",
     "animalCategory": "Mammals",
     "isReturning": false
@@ -239,14 +239,14 @@
   },
   {
     "name": "American black bear",
-    "votes": 30,
+    "votes": 31,
     "habitatType": "Terrestrial",
     "animalCategory": "Mammals",
     "isReturning": false
   },
   {
     "name": "Kodiak brown bear",
-    "votes": 1,
+    "votes": 2,
     "habitatType": "Terrestrial",
     "animalCategory": "Mammals",
     "isReturning": false
@@ -429,7 +429,7 @@
   },
   {
     "name": "Sea otter",
-    "votes": 55,
+    "votes": 56,
     "habitatType": "Terrestrial",
     "animalCategory": "Mammals",
     "isReturning": false
@@ -849,14 +849,14 @@
   },
   {
     "name": "Rocky mountain elk",
-    "votes": 22,
+    "votes": 23,
     "habitatType": "Terrestrial",
     "animalCategory": "Mammals",
     "isReturning": false
   },
   {
     "name": "Rocky mountain goat",
-    "votes": 6,
+    "votes": 7,
     "habitatType": "Terrestrial",
     "animalCategory": "Mammals",
     "isReturning": false
@@ -2410,7 +2410,7 @@
   },
   {
     "name": "Beluga sturgeon",
-    "votes": 17,
+    "votes": 18,
     "habitatType": "Aquarium",
     "animalCategory": "Fish",
     "isReturning": false
@@ -2711,7 +2711,7 @@
   },
   {
     "name": "Atlantic Bottlenose dolphin",
-    "votes": 28,
+    "votes": 29,
     "habitatType": "Aquarium",
     "animalCategory": "Mammals",
     "isReturning": false
@@ -2753,7 +2753,7 @@
   },
   {
     "name": "Orca",
-    "votes": 44,
+    "votes": 45,
     "habitatType": "Aquarium",
     "animalCategory": "Mammals",
     "isReturning": false
@@ -4384,7 +4384,7 @@
   },
   {
     "name": "Fiery-throated hummingbird",
-    "votes": 6,
+    "votes": 7,
     "habitatType": "Exhibit",
     "animalCategory": "Birds",
     "isReturning": false
@@ -4650,7 +4650,7 @@
   },
   {
     "name": "Bald eagle",
-    "votes": 45,
+    "votes": 46,
     "habitatType": "Aviary",
     "animalCategory": "Birds",
     "isReturning": false
@@ -4755,7 +4755,7 @@
   },
   {
     "name": "Canadian goose",
-    "votes": 17,
+    "votes": 18,
     "habitatType": "Aviary",
     "animalCategory": "Birds",
     "isReturning": false
@@ -6442,7 +6442,7 @@
   },
   {
     "name": "Grey seal",
-    "votes": 28,
+    "votes": 29,
     "habitatType": "Terrestrial",
     "animalCategory": "Mammals",
     "isReturning": true
@@ -6876,7 +6876,7 @@
   },
   {
     "name": "Chinook salmon",
-    "votes": 3,
+    "votes": 4,
     "habitatType": "Aquarium",
     "animalCategory": "Fish",
     "isReturning": false
@@ -10691,14 +10691,14 @@
   },
   {
     "name": "Humpback Whale",
-    "votes": 1,
+    "votes": 2,
     "habitatType": "Aquarium",
     "animalCategory": "Mammals",
     "isReturning": false
   },
   {
     "name": "Common minke whale",
-    "votes": 1,
+    "votes": 2,
     "habitatType": "Aquarium",
     "animalCategory": "Mammals",
     "isReturning": false
@@ -10884,5 +10884,98 @@
     "habitatType": "Terrestrial",
     "animalCategory": "Mammals",
     "isReturning": false
-  }
+  },
+  {
+    "name": "Snow goose",
+    "votes": 1,
+    "habitatType": "Aviary",
+    "animalCategory": "Birds",
+    "isReturning": false
+  },
+  {
+    "name": "Great basin gopher snake",
+    "votes": 1,
+    "habitatType": "Exhibit",
+    "animalCategory": "Reptiles",
+    "isReturning": false
+  },
+  {
+    "name": "Rubber boa",
+    "votes": 1,
+    "habitatType": "Exhibit",
+    "animalCategory": "Reptiles",
+    "isReturning": false
+  },
+  {
+    "name": "Northwestern garter snake",
+    "votes": 1,
+    "habitatType": "Exhibit",
+    "animalCategory": "Reptiles",
+    "isReturning": false
+  },
+  {
+    "name": "Western skink",
+    "votes": 1,
+    "habitatType": "Exhibit",
+    "animalCategory": "Reptiles",
+    "isReturning": false
+  },
+  {
+    "name": "Pygmy short-horned lizard",
+    "votes": 1,
+    "habitatType": "Exhibit",
+    "animalCategory": "Reptiles",
+    "isReturning": false
+  },
+  {
+    "name": "Eastern yellow-bellied racer",
+    "votes": 1,
+    "habitatType": "Exhibit",
+    "animalCategory": "Reptiles",
+    "isReturning": false
+  },
+  {
+    "name": "Common wall lizard",
+    "votes": 1,
+    "habitatType": "Exhibit",
+    "animalCategory": "Reptiles",
+    "isReturning": false
+  },
+  {
+    "name": "Pacific pond turtle",
+    "votes": 1,
+    "habitatType": "Exhibit",
+    "animalCategory": "Reptiles",
+    "isReturning": false
+  },
+  {
+    "name": "Sharp-tailed snake",
+    "votes": 1,
+    "habitatType": "Exhibit",
+    "animalCategory": "Reptiles",
+    "isReturning": false
+  },
+  {
+    "name": "Common garter snake",
+    "votes": 1,
+    "habitatType": "Exhibit",
+    "animalCategory": "Reptiles",
+    "isReturning": false
+  },
+  {
+    "name": "Banded alder borer",
+    "votes": 1,
+    "habitatType": "Exhibit",
+    "animalCategory": "Invertebrates",
+    "isReturning": false
+  },
+  {
+    "name": "Brown marmorated stink bug",
+    "votes": 1,
+    "habitatType": "Exhibit",
+    "animalCategory": "Invertebrates",
+    "isReturning": false
+  },
+
+
 ]
