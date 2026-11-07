@@ -3354,13 +3354,6 @@
     "isReturning": false
   },
   {
-    "name": "Western honeybee",
-    "votes": 3,
-    "habitatType": "Exhibit",
-    "animalCategory": "Invertebrates",
-    "isReturning": false
-  },
-  {
     "name": "Hairy-headed leafcutter ant",
     "votes": 5,
     "habitatType": "Exhibit",
@@ -11454,14 +11447,7 @@
   },
   {
     "name": "western honey bee",
-    "votes": 2,
-    "habitatType": "Exhibit",
-    "animalCategory": "Invertebrates",
-    "isReturning": false
-  },
-  {
-    "name": "western honey bee",
-    "votes": 1,
+    "votes": 5,
     "habitatType": "Exhibit",
     "animalCategory": "Invertebrates",
     "isReturning": false
