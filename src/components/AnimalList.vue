@@ -46,7 +46,7 @@
 </template>
 <script setup>
 // imports
-import { ref, computed } from "vue";
+import { ref, computed, watch } from "vue";
 import Filters from "./Filters.vue";
 import SearchBar from "./SearchBar.vue";
 import PageControls from "./PageControls.vue";
@@ -152,13 +152,19 @@ try {
     console.error("Failed to load animal data:", err);
     errorMessage.value = "Failed to load animal data.";
 }
+watch(() => activeFilters.value.animalCategoryFilters, () => resetCurrentPage());
+watch(() => activeFilters.value.habitatTypeFilters, () => resetCurrentPage());
+watch(() => activeFilters.value.sortDropdown, () => resetCurrentPage());
+watch(() => activeFilters.value.returningAnimalsFilter, () => resetCurrentPage());
+
 const resetCurrentPage = () => {
+  console.log("resetting current page");
     currentPage.value = 1;
 };
 const filteredAnimals = computed(() => {
     let animalsFiltered = removeAnimalsWithNoVotes(animals.value);
   let prevAnimalsFiltered = removeAnimalsWithNoVotes(prevanimals.value);
-  let prevPrevAnimalsFiltered = removeAnimalsWithNoVotes(prevPrevAnimals.value);
+  // let prevPrevAnimalsFiltered = removeAnimalsWithNoVotes(prevPrevAnimals.value);
 
     ({ animalsFiltered, prevAnimalsFiltered } = filterAnimalsSearch(
         searchInput.value,

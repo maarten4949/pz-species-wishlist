@@ -76,8 +76,7 @@ const getRankDifference = (animal) => {
 //   return ((props.animal.votes / props.totalPeople * 100) - (props.animal.prevVotes / props.prevTotalPeople * 100))
 // })
 const percentageDifferenceSign = computed(() => {
-  if (props.animal.percentageVoteDifference == undefined) return ""
-  // console.log(props.animal.percentageVoteDifference)
+  if (props.animal.percentageVoteDifference == undefined || isNaN(props.animal.percentageVoteDifference)) return ""
   if (props.animal.percentageVoteDifference > 0) return "+"
   if (props.animal.percentageVoteDifference == 0) return ""
   return "-"
@@ -92,7 +91,7 @@ const getVoteDifferenceSign = (animal) => {
 const getVoteDifferenceClass = (animal) => {
   if (activeFilters.value.isPercentage == "NUM") return ""
   if (animal.percentageVoteDifference > 0) return "positive"
-  if (animal.percentageVoteDifference == 0) return "neutral"
+  if (animal.percentageVoteDifference == 0 || animal.percentageVoteDifference == undefined || isNaN(animal.percentageVoteDifference)) return "neutral"
   return "negative"
 }
 const getAnimalVoteDifferenceValue = (animal) => {
