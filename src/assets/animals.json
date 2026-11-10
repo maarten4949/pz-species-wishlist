@@ -176,7 +176,7 @@
   },
   {
     "name": "Serval",
-    "votes": 33,
+    "votes": 34,
     "habitatType": "Terrestrial",
     "animalCategory": "Mammals",
     "isReturning": false
@@ -239,7 +239,7 @@
   },
   {
     "name": "American black bear",
-    "votes": 33,
+    "votes": 34,
     "habitatType": "Terrestrial",
     "animalCategory": "Mammals",
     "isReturning": false
@@ -1395,7 +1395,7 @@
   },
   {
     "name": "Numbat",
-    "votes": 12,
+    "votes": 13,
     "habitatType": "Terrestrial",
     "animalCategory": "Mammals",
     "isReturning": false
@@ -4657,7 +4657,7 @@
   },
   {
     "name": "Bald eagle",
-    "votes": 53,
+    "votes": 54,
     "habitatType": "Aviary",
     "animalCategory": "Birds",
     "isReturning": false
@@ -4958,7 +4958,7 @@
   },
   {
     "name": "Grey heron",
-    "votes": 6,
+    "votes": 7,
     "habitatType": "Aviary",
     "animalCategory": "Birds",
     "isReturning": false
@@ -5014,7 +5014,7 @@
   },
   {
     "name": "Great cormorant",
-    "votes": 9,
+    "votes": 10,
     "habitatType": "Aviary",
     "animalCategory": "Birds",
     "isReturning": false
@@ -5287,7 +5287,7 @@
   },
   {
     "name": "Bali myna",
-    "votes": 18,
+    "votes": 19,
     "habitatType": "Aviary",
     "animalCategory": "Birds",
     "isReturning": false
@@ -6099,7 +6099,7 @@
   },
   {
     "name": "Tasmanian devil",
-    "votes": 42,
+    "votes": 43,
     "habitatType": "Terrestrial",
     "animalCategory": "Mammals",
     "isReturning": true
@@ -6330,7 +6330,7 @@
   },
   {
     "name": "Cougar",
-    "votes": 58,
+    "votes": 59,
     "habitatType": "Terrestrial",
     "animalCategory": "Mammals",
     "isReturning": true
@@ -8332,7 +8332,7 @@
   },
   {
     "name": "American mustang",
-    "votes": 8,
+    "votes": 9,
     "habitatType": "Terrestrial",
     "animalCategory": "Mammals",
     "isReturning": false
@@ -8542,7 +8542,7 @@
   },
   {
     "name": "Caracal",
-    "votes": 10,
+    "votes": 11,
     "habitatType": "Terrestrial",
     "animalCategory": "Mammals",
     "isReturning": true
@@ -11440,7 +11440,7 @@
   },
   {
     "name": "Iberian Wolf",
-    "votes": 1,
+    "votes": 2,
     "habitatType": "Terrestrial",
     "animalCategory": "Mammals",
     "isReturning": false
@@ -11576,6 +11576,27 @@
     "votes": 1,
     "habitatType": "Aviary",
     "animalCategory": "Birds",
+    "isReturning": false
+  },
+  {
+    "name": "Sorraia",
+    "votes": 1,
+    "habitatType": "Terrestrial",
+    "animalCategory": "Mammals",
+    "isReturning": false
+  },
+  {
+    "name": "Northwestern wolf",
+    "votes": 1,
+    "habitatType": "Terrestrial",
+    "animalCategory": "Mammals",
+    "isReturning": false
+  },
+  {
+    "name": "Darwin's fox",
+    "votes": 1,
+    "habitatType": "Terrestrial",
+    "animalCategory": "Mammals",
     "isReturning": false
   }
 ]
