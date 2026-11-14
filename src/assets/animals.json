@@ -85,7 +85,7 @@
   },
   {
     "name": "Polar Bear",
-    "votes": 88,
+    "votes": 89,
     "habitatType": "Terrestrial",
     "animalCategory": "Mammals",
     "isReturning": true
@@ -99,21 +99,21 @@
   },
   {
     "name": "Red Wolf",
-    "votes": 15,
+    "votes": 16,
     "habitatType": "Terrestrial",
     "animalCategory": "Mammals",
     "isReturning": false
   },
   {
     "name": "Asian leopard cat",
-    "votes": 2,
+    "votes": 3,
     "habitatType": "Terrestrial",
     "animalCategory": "Mammals",
     "isReturning": false
   },
   {
     "name": "Asian golden cat",
-    "votes": 9,
+    "votes": 10,
     "habitatType": "Terrestrial",
     "animalCategory": "Mammals",
     "isReturning": false
@@ -134,21 +134,21 @@
   },
   {
     "name": "European Wildcat",
-    "votes": 9,
+    "votes": 10,
     "habitatType": "Terrestrial",
     "animalCategory": "Mammals",
     "isReturning": false
   },
   {
     "name": "Fishing cat",
-    "votes": 9,
+    "votes": 10,
     "habitatType": "Terrestrial",
     "animalCategory": "Mammals",
     "isReturning": false
   },
   {
     "name": "Marbled cat",
-    "votes": 1,
+    "votes": 2,
     "habitatType": "Terrestrial",
     "animalCategory": "Mammals",
     "isReturning": false
@@ -218,7 +218,7 @@
   },
   {
     "name": "Steller sea lion",
-    "votes": 23,
+    "votes": 24,
     "habitatType": "Terrestrial",
     "animalCategory": "Mammals",
     "isReturning": false
@@ -232,7 +232,7 @@
   },
   {
     "name": "Maned Wolf",
-    "votes": 57,
+    "votes": 58,
     "habitatType": "Terrestrial",
     "animalCategory": "Mammals",
     "isReturning": true
@@ -310,7 +310,7 @@
 
   {
     "name": "Aardwolf",
-    "votes": 11,
+    "votes": 12,
     "habitatType": "Terrestrial",
     "animalCategory": "Mammals",
     "isReturning": false
@@ -429,7 +429,7 @@
   },
   {
     "name": "Sea otter",
-    "votes": 71,
+    "votes": 72,
     "habitatType": "Terrestrial",
     "animalCategory": "Mammals",
     "isReturning": false
@@ -975,7 +975,7 @@
   },
   {
     "name": "African golden cat",
-    "votes": 1,
+    "votes": 2,
     "habitatType": "Terrestrial",
     "animalCategory": "Mammals",
     "isReturning": false
@@ -2067,7 +2067,7 @@
   },
   {
     "name": "Whale shark",
-    "votes": 78,
+    "votes": 79,
     "habitatType": "Aquarium",
     "animalCategory": "Fish",
     "isReturning": false
@@ -2718,14 +2718,14 @@
   },
   {
     "name": "Atlantic Bottlenose dolphin",
-    "votes": 47,
+    "votes": 48,
     "habitatType": "Aquarium",
     "animalCategory": "Mammals",
     "isReturning": false
   },
   {
     "name": "Beluga",
-    "votes": 56,
+    "votes": 57,
     "habitatType": "Aquarium",
     "animalCategory": "Mammals",
     "isReturning": false
@@ -2760,14 +2760,14 @@
   },
   {
     "name": "Orca",
-    "votes": 66,
+    "votes": 67,
     "habitatType": "Aquarium",
     "animalCategory": "Mammals",
     "isReturning": false
   },
   {
     "name": "Pacific white-sided dolphin",
-    "votes": 22,
+    "votes": 23,
     "habitatType": "Aquarium",
     "animalCategory": "Mammals",
     "isReturning": false
@@ -3565,7 +3565,7 @@
   },
   {
     "name": "Bush Dog",
-    "votes": 7,
+    "votes": 8,
     "habitatType": "Terrestrial",
     "animalCategory": "Mammals",
     "isReturning": true
@@ -6302,7 +6302,7 @@
   },
   {
     "name": "Jungle cat",
-    "votes": 2,
+    "votes": 3,
     "habitatType": "Terrestrial",
     "animalCategory": "Mammals",
     "isReturning": false
@@ -6330,7 +6330,7 @@
   },
   {
     "name": "Cougar",
-    "votes": 62,
+    "votes": 63,
     "habitatType": "Terrestrial",
     "animalCategory": "Mammals",
     "isReturning": true
@@ -6449,7 +6449,7 @@
   },
   {
     "name": "Grey seal",
-    "votes": 37,
+    "votes": 38,
     "habitatType": "Terrestrial",
     "animalCategory": "Mammals",
     "isReturning": true
@@ -6771,7 +6771,7 @@
   },
   {
     "name": "Okapi",
-    "votes": 65,
+    "votes": 66,
     "habitatType": "Terrestrial",
     "animalCategory": "Mammals",
     "isReturning": true
@@ -7681,7 +7681,7 @@
   },
   {
     "name": "Black-tailed prairie dog",
-    "votes": 19,
+    "votes": 20,
     "habitatType": "Terrestrial",
     "animalCategory": "Mammals",
     "isReturning": true
@@ -7695,7 +7695,7 @@
   },
   {
     "name": "Bobcat",
-    "votes": 10,
+    "votes": 11,
     "habitatType": "Terrestrial",
     "animalCategory": "Mammals",
     "isReturning": false
@@ -8143,7 +8143,7 @@
   },
   {
     "name": "Indo-Pacifc Bottlenose dolphin",
-    "votes": 3,
+    "votes": 4,
     "habitatType": "Aquarium",
     "animalCategory": "Mammals",
     "isReturning": false
@@ -8339,7 +8339,7 @@
   },
   {
     "name": "Australian sea lion",
-    "votes": 4,
+    "votes": 5,
     "habitatType": "Terrestrial",
     "animalCategory": "Mammals",
     "isReturning": false
@@ -8549,7 +8549,7 @@
   },
   {
     "name": "Sand cat",
-    "votes": 12,
+    "votes": 13,
     "habitatType": "Terrestrial",
     "animalCategory": "Mammals",
     "isReturning": true
@@ -8654,7 +8654,7 @@
   },
   {
     "name": "Pallas's cat",
-    "votes": 23,
+    "votes": 24,
     "habitatType": "Terrestrial",
     "animalCategory": "Mammals",
     "isReturning": true
@@ -8703,7 +8703,7 @@
   },
   {
     "name": "Scottish wildcat",
-    "votes": 5,
+    "votes": 6,
     "habitatType": "Terrestrial",
     "animalCategory": "Mammals",
     "isReturning": false
@@ -9522,7 +9522,7 @@
   },
   {
     "name": "Japanese raccoon dog",
-    "votes": 11,
+    "votes": 12,
     "habitatType": "Terrestrial",
     "animalCategory": "Mammals",
     "isReturning": true
@@ -9557,14 +9557,14 @@
   },
   {
     "name": "Ethiopian wolf",
-    "votes": 3,
+    "votes": 4,
     "habitatType": "Terrestrial",
     "animalCategory": "Mammals",
     "isReturning": false
   },
   {
     "name": "Arctic wolf",
-    "votes": 6,
+    "votes": 7,
     "habitatType": "Terrestrial",
     "animalCategory": "Mammals",
     "isReturning": true
@@ -9949,7 +9949,7 @@
   },
   {
     "name": "Mexican Wolf",
-    "votes": 1,
+    "votes": 2,
     "habitatType": "Terrestrial",
     "animalCategory": "Mammals",
     "isReturning": false
@@ -10005,7 +10005,7 @@
   },
   {
     "name": "New Guinea singing dog",
-    "votes": 1,
+    "votes": 2,
     "habitatType": "Terrestrial",
     "animalCategory": "Mammals",
     "isReturning": false
@@ -10607,7 +10607,7 @@
   },
   {
     "name": "Marbled polecat",
-    "votes": 1,
+    "votes": 2,
     "habitatType": "Terrestrial",
     "animalCategory": "Mammals",
     "isReturning": false
@@ -10628,7 +10628,7 @@
   },
   {
     "name": "Iriomote cat",
-    "votes": 1,
+    "votes": 2,
     "habitatType": "Terrestrial",
     "animalCategory": "Mammals",
     "isReturning": false
@@ -11426,42 +11426,42 @@
   },
   {
     "name": "British Columbia wolf",
-    "votes": 1,
-    "habitatType": "Terrestrial",
-    "animalCategory": "Mammals",
-    "isReturning": false
-  },
-  {
-    "name": "Mongolian Wolf",
-    "votes": 1,
-    "habitatType": "Terrestrial",
-    "animalCategory": "Mammals",
-    "isReturning": false
-  },
-  {
-    "name": "Iberian Wolf",
     "votes": 2,
     "habitatType": "Terrestrial",
     "animalCategory": "Mammals",
     "isReturning": false
   },
   {
+    "name": "Mongolian Wolf",
+    "votes": 2,
+    "habitatType": "Terrestrial",
+    "animalCategory": "Mammals",
+    "isReturning": false
+  },
+  {
+    "name": "Iberian Wolf",
+    "votes": 3,
+    "habitatType": "Terrestrial",
+    "animalCategory": "Mammals",
+    "isReturning": false
+  },
+  {
     "name": "Indian Wolf",
-    "votes": 1,
+    "votes": 2,
     "habitatType": "Terrestrial",
     "animalCategory": "Mammals",
     "isReturning": false
   },
   {
     "name": "Greenland Wolf",
-    "votes": 1,
+    "votes": 2,
     "habitatType": "Terrestrial",
     "animalCategory": "Mammals",
     "isReturning": false
   },
   {
     "name": "Tundra Wolf",
-    "votes": 1,
+    "votes": 2,
     "habitatType": "Terrestrial",
     "animalCategory": "Mammals",
     "isReturning": false
@@ -12175,16 +12175,30 @@
   },
   {
     "name": "Nelma",
-    "votes": 2,
+    "votes": 1,
     "habitatType": "Aquarium",
     "animalCategory": "Fish",
     "isReturning": false
   },
   {
     "name": "Signal Crayfish",
-    "votes": 2,
+    "votes": 1,
     "habitatType": "Aquarium",
     "animalCategory": "Invertebrates",
+    "isReturning": false
+  },
+  {
+    "name": "Galapagos sea lion",
+    "votes": 1,
+    "habitatType": "Terrestrial",
+    "animalCategory": "Mammals",
+    "isReturning": false
+  },
+  {
+    "name": "New Zealand sea lion",
+    "votes": 1,
+    "habitatType": "Terrestrial",
+    "animalCategory": "Mammals",
     "isReturning": false
   },
 ]
