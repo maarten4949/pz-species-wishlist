@@ -50,7 +50,7 @@
   },
   {
     "name": "Capybara",
-    "votes": 73,
+    "votes": 74,
     "habitatType": "Terrestrial",
     "animalCategory": "Mammals",
     "isReturning": true
@@ -85,7 +85,7 @@
   },
   {
     "name": "Polar Bear",
-    "votes": 85,
+    "votes": 86,
     "habitatType": "Terrestrial",
     "animalCategory": "Mammals",
     "isReturning": true
@@ -190,7 +190,7 @@
   },
   {
     "name": "Harbour seal",
-    "votes": 34,
+    "votes": 35,
     "habitatType": "Terrestrial",
     "animalCategory": "Mammals",
     "isReturning": false
@@ -232,7 +232,7 @@
   },
   {
     "name": "Maned Wolf",
-    "votes": 56,
+    "votes": 57,
     "habitatType": "Terrestrial",
     "animalCategory": "Mammals",
     "isReturning": true
@@ -429,7 +429,7 @@
   },
   {
     "name": "Sea otter",
-    "votes": 66,
+    "votes": 67,
     "habitatType": "Terrestrial",
     "animalCategory": "Mammals",
     "isReturning": false
@@ -485,7 +485,7 @@
   },
   {
     "name": "Black Howler",
-    "votes": 30,
+    "votes": 31,
     "habitatType": "Terrestrial",
     "animalCategory": "Mammals",
     "isReturning": false
@@ -520,7 +520,7 @@
   },
   {
     "name": "Common Squirrel monkey",
-    "votes": 23,
+    "votes": 24,
     "habitatType": "Terrestrial",
     "animalCategory": "Mammals",
     "isReturning": false
@@ -569,14 +569,14 @@
   },
   {
     "name": "Golden snub-nosed monkey",
-    "votes": 17,
+    "votes": 18,
     "habitatType": "Terrestrial",
     "animalCategory": "Mammals",
     "isReturning": false
   },
   {
     "name": "Geoffroy's spider monkey",
-    "votes": 18,
+    "votes": 19,
     "habitatType": "Terrestrial",
     "animalCategory": "Mammals",
     "isReturning": false
@@ -1045,7 +1045,7 @@
   },
   {
     "name": "Black headed spider monkey",
-    "votes": 4,
+    "votes": 5,
     "habitatType": "Terrestrial",
     "animalCategory": "Mammals",
     "isReturning": false
@@ -1066,7 +1066,7 @@
   },
   {
     "name": "Bolivian squirrel monkey",
-    "votes": 1,
+    "votes": 2,
     "habitatType": "Terrestrial",
     "animalCategory": "Mammals",
     "isReturning": false
@@ -1094,7 +1094,7 @@
   },
   {
     "name": "Common patas monkey",
-    "votes": 3,
+    "votes": 4,
     "habitatType": "Terrestrial",
     "animalCategory": "Mammals",
     "isReturning": false
@@ -1122,7 +1122,7 @@
   },
   {
     "name": "De Brazzas monkey",
-    "votes": 5,
+    "votes": 6,
     "habitatType": "Terrestrial",
     "animalCategory": "Mammals",
     "isReturning": false
@@ -1185,7 +1185,7 @@
   },
   {
     "name": "Vervet monkey",
-    "votes": 2,
+    "votes": 3,
     "habitatType": "Terrestrial",
     "animalCategory": "Mammals",
     "isReturning": false
@@ -2067,7 +2067,7 @@
   },
   {
     "name": "Whale shark",
-    "votes": 72,
+    "votes": 73,
     "habitatType": "Aquarium",
     "animalCategory": "Fish",
     "isReturning": false
@@ -2417,7 +2417,7 @@
   },
   {
     "name": "Beluga sturgeon",
-    "votes": 27,
+    "votes": 28,
     "habitatType": "Aquarium",
     "animalCategory": "Fish",
     "isReturning": false
@@ -2718,14 +2718,14 @@
   },
   {
     "name": "Atlantic Bottlenose dolphin",
-    "votes": 42,
+    "votes": 43,
     "habitatType": "Aquarium",
     "animalCategory": "Mammals",
     "isReturning": false
   },
   {
     "name": "Beluga",
-    "votes": 51,
+    "votes": 52,
     "habitatType": "Aquarium",
     "animalCategory": "Mammals",
     "isReturning": false
@@ -2760,7 +2760,7 @@
   },
   {
     "name": "Orca",
-    "votes": 60,
+    "votes": 61,
     "habitatType": "Aquarium",
     "animalCategory": "Mammals",
     "isReturning": false
@@ -5455,7 +5455,7 @@
   },
   {
     "name": "Laughing kookaburra",
-    "votes": 57,
+    "votes": 58,
     "habitatType": "Aviary",
     "animalCategory": "Birds",
     "isReturning": false
@@ -6071,7 +6071,7 @@
   },
   {
     "name": "California sea lion",
-    "votes": 78,
+    "votes": 79,
     "habitatType": "Terrestrial",
     "animalCategory": "Mammals",
     "isReturning": true
@@ -6120,7 +6120,7 @@
   },
   {
     "name": "Proboscis monkey",
-    "votes": 6,
+    "votes": 7,
     "habitatType": "Terrestrial",
     "animalCategory": "Mammals",
     "isReturning": true
@@ -6134,7 +6134,7 @@
   },
   {
     "name": "White-faced saki",
-    "votes": 11,
+    "votes": 12,
     "habitatType": "Terrestrial",
     "animalCategory": "Mammals",
     "isReturning": true
@@ -6316,7 +6316,7 @@
   },
   {
     "name": "Lar Gibbon",
-    "votes": 23,
+    "votes": 24,
     "habitatType": "Terrestrial",
     "animalCategory": "Mammals",
     "isReturning": true
@@ -6386,7 +6386,7 @@
   },
   {
     "name": "Mandrill",
-    "votes": 29,
+    "votes": 30,
     "habitatType": "Terrestrial",
     "animalCategory": "Mammals",
     "isReturning": true
@@ -6449,7 +6449,7 @@
   },
   {
     "name": "Grey seal",
-    "votes": 33,
+    "votes": 34,
     "habitatType": "Terrestrial",
     "animalCategory": "Mammals",
     "isReturning": true
@@ -6617,7 +6617,7 @@
   },
   {
     "name": "Japanese macaque",
-    "votes": 15,
+    "votes": 16,
     "habitatType": "Terrestrial",
     "animalCategory": "Mammals",
     "isReturning": true
@@ -6652,7 +6652,7 @@
   },
   {
     "name": "Lion-tailed macaque",
-    "votes": 8,
+    "votes": 9,
     "habitatType": "Terrestrial",
     "animalCategory": "Mammals",
     "isReturning": true
@@ -7156,7 +7156,7 @@
   },
   {
     "name": "Coquerel's Sifaka",
-    "votes": 10,
+    "votes": 11,
     "habitatType": "Terrestrial",
     "animalCategory": "Mammals",
     "isReturning": true
@@ -7331,7 +7331,7 @@
   },
   {
     "name": "Hamadryas baboon",
-    "votes": 22,
+    "votes": 23,
     "habitatType": "Terrestrial",
     "animalCategory": "Mammals",
     "isReturning": true
@@ -7793,7 +7793,7 @@
   },
   {
     "name": "Colombian white-faced capuchin",
-    "votes": 11,
+    "votes": 12,
     "habitatType": "Terrestrial",
     "animalCategory": "Mammals",
     "isReturning": true
@@ -9963,7 +9963,7 @@
   },
   {
     "name": "White-bellied spider monkey",
-    "votes": 1,
+    "votes": 2,
     "habitatType": "Terrestrial",
     "animalCategory": "Mammals",
     "isReturning": false
@@ -9984,7 +9984,7 @@
   },
   {
     "name": "Mona Monkey",
-    "votes": 1,
+    "votes": 2,
     "habitatType": "Terrestrial",
     "animalCategory": "Mammals",
     "isReturning": false
@@ -10236,7 +10236,7 @@
   },
   {
     "name": "Red-faced spider monkey",
-    "votes": 1,
+    "votes": 2,
     "habitatType": "Terrestrial",
     "animalCategory": "Mammals",
     "isReturning": false
@@ -10271,7 +10271,7 @@
   },
   {
     "name": "Southern Bolivian Night Monkey",
-    "votes": 1,
+    "votes": 2,
     "habitatType": "Terrestrial",
     "animalCategory": "Mammals",
     "isReturning": false
