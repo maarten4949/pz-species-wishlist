@@ -22,7 +22,7 @@
   },
   {
     "name": "Giant otter",
-    "votes": 30,
+    "votes": 31,
     "habitatType": "Terrestrial",
     "animalCategory": "Mammals",
     "isReturning": true
@@ -50,7 +50,7 @@
   },
   {
     "name": "Capybara",
-    "votes": 70,
+    "votes": 71,
     "habitatType": "Terrestrial",
     "animalCategory": "Mammals",
     "isReturning": true
@@ -71,7 +71,7 @@
   },
   {
     "name": "Cheetah",
-    "votes": 84,
+    "votes": 85,
     "habitatType": "Terrestrial",
     "animalCategory": "Mammals",
     "isReturning": true
@@ -176,7 +176,7 @@
   },
   {
     "name": "Serval",
-    "votes": 34,
+    "votes": 35,
     "habitatType": "Terrestrial",
     "animalCategory": "Mammals",
     "isReturning": false
@@ -366,7 +366,7 @@
   },
   {
     "name": "Dwarf mongoose",
-    "votes": 1,
+    "votes": 2,
     "habitatType": "Terrestrial",
     "animalCategory": "Mammals",
     "isReturning": false
@@ -401,7 +401,7 @@
   },
   {
     "name": "Ring tailed coati",
-    "votes": 30,
+    "votes": 31,
     "habitatType": "Terrestrial",
     "animalCategory": "Mammals",
     "isReturning": false
@@ -520,7 +520,7 @@
   },
   {
     "name": "Common Squirrel monkey",
-    "votes": 22,
+    "votes": 23,
     "habitatType": "Terrestrial",
     "animalCategory": "Mammals",
     "isReturning": false
@@ -1759,7 +1759,7 @@
   },
   {
     "name": "Northern rockhopper penguin",
-    "votes": 6,
+    "votes": 7,
     "habitatType": "Terrestrial",
     "animalCategory": "Birds",
     "isReturning": false
@@ -1787,7 +1787,7 @@
   },
   {
     "name": "Giant manta ray",
-    "votes": 21,
+    "votes": 22,
     "habitatType": "Aquarium",
     "animalCategory": "Fish",
     "isReturning": false
@@ -1892,28 +1892,28 @@
   },
   {
     "name": "Atlantic nurse shark",
-    "votes": 15,
+    "votes": 17,
     "habitatType": "Aquarium",
     "animalCategory": "Fish",
     "isReturning": false
   },
   {
     "name": "shortfin mako shark",
-    "votes": 7,
+    "votes": 8,
     "habitatType": "Aquarium",
     "animalCategory": "Fish",
     "isReturning": false
   },
   {
     "name": "Bonnethead shark",
-    "votes": 1,
+    "votes": 2,
     "habitatType": "Aquarium",
     "animalCategory": "Fish",
     "isReturning": false
   },
   {
     "name": "Blue Shark",
-    "votes": 1,
+    "votes": 2,
     "habitatType": "Aquarium",
     "animalCategory": "Fish",
     "isReturning": false
@@ -1927,7 +1927,7 @@
   },
   {
     "name": "Sawshark",
-    "votes": 1,
+    "votes": 2,
     "habitatType": "Aquarium",
     "animalCategory": "Fish",
     "isReturning": false
@@ -1969,7 +1969,7 @@
   },
   {
     "name": "Epaulette shark",
-    "votes": 6,
+    "votes": 7,
     "habitatType": "Aquarium",
     "animalCategory": "Fish",
     "isReturning": false
@@ -1990,7 +1990,7 @@
   },
   {
     "name": "Port Jackson Shark",
-    "votes": 4,
+    "votes": 5,
     "habitatType": "Aquarium",
     "animalCategory": "Fish",
     "isReturning": false
@@ -2004,7 +2004,7 @@
   },
   {
     "name": "Horn shark",
-    "votes": 3,
+    "votes": 4,
     "habitatType": "Aquarium",
     "animalCategory": "Fish",
     "isReturning": false
@@ -2067,14 +2067,14 @@
   },
   {
     "name": "Whale shark",
-    "votes": 67,
+    "votes": 68,
     "habitatType": "Aquarium",
     "animalCategory": "Fish",
     "isReturning": false
   },
   {
     "name": "Greenland shark",
-    "votes": 1,
+    "votes": 2,
     "habitatType": "Aquarium",
     "animalCategory": "Fish",
     "isReturning": false
@@ -2830,7 +2830,7 @@
   },
   {
     "name": "Japanese spider crab",
-    "votes": 26,
+    "votes": 27,
     "habitatType": "Aquarium",
     "animalCategory": "Invertebrates",
     "isReturning": false
@@ -2872,7 +2872,7 @@
   },
   {
     "name": "Bowmouth guitarfish",
-    "votes": 2,
+    "votes": 3,
     "habitatType": "Aquarium",
     "animalCategory": "Fish",
     "isReturning": false
@@ -2886,7 +2886,7 @@
   },
   {
     "name": "Broadnose sevengill shark",
-    "votes": 4,
+    "votes": 5,
     "habitatType": "Aquarium",
     "animalCategory": "Fish",
     "isReturning": false
@@ -3418,7 +3418,7 @@
   },
   {
     "name": "Pacific giant octopus",
-    "votes": 54,
+    "votes": 55,
     "habitatType": "Exhibit",
     "animalCategory": "Invertebrates",
     "isReturning": false
@@ -3565,7 +3565,7 @@
   },
   {
     "name": "Bush Dog",
-    "votes": 6,
+    "votes": 7,
     "habitatType": "Terrestrial",
     "animalCategory": "Mammals",
     "isReturning": true
@@ -3621,7 +3621,7 @@
   },
   {
     "name": "Big-bellied seahorse",
-    "votes": 14,
+    "votes": 15,
     "habitatType": "Exhibit",
     "animalCategory": "Fish",
     "isReturning": false
@@ -4258,7 +4258,7 @@
   },
   {
     "name": "Turquoise dwarf gecko",
-    "votes": 5,
+    "votes": 6,
     "habitatType": "Exhibit",
     "animalCategory": "Reptiles",
     "isReturning": false
@@ -5049,7 +5049,7 @@
   },
   {
     "name": "African grey parrot",
-    "votes": 17,
+    "votes": 18,
     "habitatType": "Aviary",
     "animalCategory": "Birds",
     "isReturning": false
@@ -5112,7 +5112,7 @@
   },
   {
     "name": "Hyacinth macaw",
-    "votes": 46,
+    "votes": 47,
     "habitatType": "Aviary",
     "animalCategory": "Birds",
     "isReturning": false
@@ -5602,7 +5602,7 @@
   },
   {
     "name": "Victoria crowned pigeon",
-    "votes": 39,
+    "votes": 40,
     "habitatType": "Aviary",
     "animalCategory": "Birds",
     "isReturning": false
@@ -6127,14 +6127,14 @@
   },
   {
     "name": "Red-necked wallaby",
-    "votes": 40,
+    "votes": 41,
     "habitatType": "Terrestrial",
     "animalCategory": "Mammals",
     "isReturning": true
   },
   {
     "name": "White-faced saki",
-    "votes": 10,
+    "votes": 11,
     "habitatType": "Terrestrial",
     "animalCategory": "Mammals",
     "isReturning": true
@@ -6169,7 +6169,7 @@
   },
   {
     "name": "Indian Peafowl",
-    "votes": 52,
+    "votes": 53,
     "habitatType": "Aviary",
     "animalCategory": "Birds",
     "isReturning": true
@@ -6316,7 +6316,7 @@
   },
   {
     "name": "Lar Gibbon",
-    "votes": 21,
+    "votes": 22,
     "habitatType": "Terrestrial",
     "animalCategory": "Mammals",
     "isReturning": true
@@ -6344,7 +6344,7 @@
   },
   {
     "name": "African Crested Porcupine",
-    "votes": 27,
+    "votes": 28,
     "habitatType": "Terrestrial",
     "animalCategory": "Mammals",
     "isReturning": true
@@ -6372,14 +6372,14 @@
   },
   {
     "name": "Brown-throated sloth",
-    "votes": 13,
+    "votes": 14,
     "habitatType": "Exhibit",
     "animalCategory": "Mammals",
     "isReturning": true
   },
   {
     "name": "Koala",
-    "votes": 67,
+    "votes": 68,
     "habitatType": "Terrestrial",
     "animalCategory": "Mammals",
     "isReturning": true
@@ -6456,7 +6456,7 @@
   },
   {
     "name": "Red river hog",
-    "votes": 21,
+    "votes": 22,
     "habitatType": "Terrestrial",
     "animalCategory": "Mammals",
     "isReturning": true
@@ -6596,7 +6596,7 @@
   },
   {
     "name": "Giant anteater",
-    "votes": 67,
+    "votes": 68,
     "habitatType": "Terrestrial",
     "animalCategory": "Mammals",
     "isReturning": true
@@ -6722,7 +6722,7 @@
   },
   {
     "name": "Fossa",
-    "votes": 17,
+    "votes": 18,
     "habitatType": "Terrestrial",
     "animalCategory": "Mammals",
     "isReturning": true
@@ -6771,7 +6771,7 @@
   },
   {
     "name": "Okapi",
-    "votes": 61,
+    "votes": 63,
     "habitatType": "Terrestrial",
     "animalCategory": "Mammals",
     "isReturning": true
@@ -6911,14 +6911,14 @@
   },
   {
     "name": "Tiger shark",
-    "votes": 7,
+    "votes": 8,
     "habitatType": "Aquarium",
     "animalCategory": "Fish",
     "isReturning": false
   },
   {
     "name": "Thresher shark",
-    "votes": 7,
+    "votes": 8,
     "habitatType": "Aquarium",
     "animalCategory": "Fish",
     "isReturning": false
@@ -6932,7 +6932,7 @@
   },
   {
     "name": "Basking Shark",
-    "votes": 3,
+    "votes": 4,
     "habitatType": "Aquarium",
     "animalCategory": "Fish",
     "isReturning": false
@@ -7156,7 +7156,7 @@
   },
   {
     "name": "Coquerel's Sifaka",
-    "votes": 9,
+    "votes": 10,
     "habitatType": "Terrestrial",
     "animalCategory": "Mammals",
     "isReturning": true
@@ -7674,7 +7674,7 @@
   },
   {
     "name": "European mink",
-    "votes": 2,
+    "votes": 3,
     "habitatType": "Terrestrial",
     "animalCategory": "Mammals",
     "isReturning": false
@@ -7709,7 +7709,7 @@
   },
   {
     "name": "Little penguin",
-    "votes": 17,
+    "votes": 18,
     "habitatType": "Terrestrial",
     "animalCategory": "Birds",
     "isReturning": true
@@ -7793,7 +7793,7 @@
   },
   {
     "name": "Colombian white-faced capuchin",
-    "votes": 10,
+    "votes": 11,
     "habitatType": "Terrestrial",
     "animalCategory": "Mammals",
     "isReturning": true
@@ -8017,7 +8017,7 @@
   },
   {
     "name": "Megamouth shark",
-    "votes": 1,
+    "votes": 2,
     "habitatType": "Aquarium",
     "animalCategory": "Fish",
     "isReturning": false
@@ -8458,7 +8458,7 @@
   },
   {
     "name": "Bull shark",
-    "votes": 10,
+    "votes": 11,
     "habitatType": "Aquarium",
     "animalCategory": "Fish",
     "isReturning": false
@@ -9592,14 +9592,14 @@
   },
   {
     "name": "Whitetip Reef Shark",
-    "votes": 1,
+    "votes": 2,
     "habitatType": "Aquarium",
     "animalCategory": "Fish",
     "isReturning": false
   },
   {
     "name": "Oceanic Whitetip Shark",
-    "votes": 1,
+    "votes": 2,
     "habitatType": "Aquarium",
     "animalCategory": "Fish",
     "isReturning": false
@@ -9613,14 +9613,14 @@
   },
   {
     "name": "Small-Spotted Catshark",
-    "votes": 4,
+    "votes": 5,
     "habitatType": "Aquarium",
     "animalCategory": "Fish",
     "isReturning": false
   },
   {
     "name": "Blacknose Shark",
-    "votes": 1,
+    "votes": 2,
     "habitatType": "Aquarium",
     "animalCategory": "Fish",
     "isReturning": false
@@ -10166,7 +10166,7 @@
   },
   {
     "name": "lemon shark",
-    "votes": 2,
+    "votes": 3,
     "habitatType": "Aquarium",
     "animalCategory": "Fish",
     "isReturning": false
@@ -10775,7 +10775,7 @@
   },
   {
     "name": "Frilled Shark",
-    "votes": 1,
+    "votes": 2,
     "habitatType": "Aquarium",
     "animalCategory": "Fish",
     "isReturning": false
@@ -11598,5 +11598,132 @@
     "habitatType": "Terrestrial",
     "animalCategory": "Mammals",
     "isReturning": false
-  }
+  },
+  {
+    "name": "Silky shark",
+    "votes": 1,
+    "habitatType": "Aquarium",
+    "animalCategory": "Fish",
+    "isReturning": false
+  },
+  {
+    "name": "Grey reef shark",
+    "votes": 1,
+    "habitatType": "Aquarium",
+    "animalCategory": "Fish",
+    "isReturning": false
+  },
+  {
+    "name": "Caribbean reef shark",
+    "votes": 1,
+    "habitatType": "Aquarium",
+    "animalCategory": "Fish",
+    "isReturning": false
+  },
+  {
+    "name": "Blacktip shark",
+    "votes": 1,
+    "habitatType": "Aquarium",
+    "animalCategory": "Fish",
+    "isReturning": false
+  },
+  {
+    "name": "Silvertip shark",
+    "votes": 1,
+    "habitatType": "Aquarium",
+    "animalCategory": "Fish",
+    "isReturning": false
+  },
+  {
+    "name": "Tawny nurse shark",
+    "votes": 1,
+    "habitatType": "Aquarium",
+    "animalCategory": "Fish",
+    "isReturning": false
+  },
+  {
+    "name": "Scalloped hammerhead",
+    "votes": 1,
+    "habitatType": "Aquarium",
+    "animalCategory": "Fish",
+    "isReturning": false
+  },
+  {
+    "name": "Smooth hammerhead",
+    "votes": 1,
+    "habitatType": "Aquarium",
+    "animalCategory": "Fish",
+    "isReturning": false
+  },
+  {
+    "name": "Angelshark",
+    "votes": 1,
+    "habitatType": "Aquarium",
+    "animalCategory": "Fish",
+    "isReturning": false
+  },
+  {
+    "name": "Goblin shark",
+    "votes": 1,
+    "habitatType": "Aquarium",
+    "animalCategory": "Fish",
+    "isReturning": false
+  },
+  {
+    "name": "Spiny dogfish",
+    "votes": 1,
+    "habitatType": "Aquarium",
+    "animalCategory": "Fish",
+    "isReturning": false
+  },
+  {
+    "name": "Nursehound",
+    "votes": 1,
+    "habitatType": "Aquarium",
+    "animalCategory": "Fish",
+    "isReturning": false
+  },
+  {
+    "name": "Japanese bullhead shark",
+    "votes": 1,
+    "habitatType": "Aquarium",
+    "animalCategory": "Fish",
+    "isReturning": false
+  },
+  {
+    "name": "Finetooth shark",
+    "votes": 1,
+    "habitatType": "Aquarium",
+    "animalCategory": "Fish",
+    "isReturning": false
+  },
+  {
+    "name": "Dusky Shark",
+    "votes": 1,
+    "habitatType": "Aquarium",
+    "animalCategory": "Fish",
+    "isReturning": false
+  },
+  {
+    "name": "Galapagos shark",
+    "votes": 1,
+    "habitatType": "Aquarium",
+    "animalCategory": "Fish",
+    "isReturning": false
+  },
+  {
+    "name": "Copper shark",
+    "votes": 1,
+    "habitatType": "Aquarium",
+    "animalCategory": "Fish",
+    "isReturning": false
+  },
+  {
+    "name": "Cookiecutter shark",
+    "votes": 1,
+    "habitatType": "Aquarium",
+    "animalCategory": "Fish",
+    "isReturning": false
+  },
+
 ]
