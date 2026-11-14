@@ -85,7 +85,7 @@
   },
   {
     "name": "Polar Bear",
-    "votes": 87,
+    "votes": 88,
     "habitatType": "Terrestrial",
     "animalCategory": "Mammals",
     "isReturning": true
@@ -183,14 +183,14 @@
   },
   {
     "name": "Walrus",
-    "votes": 56,
+    "votes": 57,
     "habitatType": "Terrestrial",
     "animalCategory": "Mammals",
     "isReturning": false
   },
   {
     "name": "Harbour seal",
-    "votes": 37,
+    "votes": 38,
     "habitatType": "Terrestrial",
     "animalCategory": "Mammals",
     "isReturning": false
@@ -239,14 +239,14 @@
   },
   {
     "name": "American black bear",
-    "votes": 36,
+    "votes": 37,
     "habitatType": "Terrestrial",
     "animalCategory": "Mammals",
     "isReturning": false
   },
   {
     "name": "Kodiak brown bear",
-    "votes": 4,
+    "votes": 5,
     "habitatType": "Terrestrial",
     "animalCategory": "Mammals",
     "isReturning": false
@@ -429,14 +429,14 @@
   },
   {
     "name": "Sea otter",
-    "votes": 70,
+    "votes": 71,
     "habitatType": "Terrestrial",
     "animalCategory": "Mammals",
     "isReturning": false
   },
   {
     "name": "North American river otter",
-    "votes": 19,
+    "votes": 20,
     "habitatType": "Terrestrial",
     "animalCategory": "Mammals",
     "isReturning": false
@@ -2067,7 +2067,7 @@
   },
   {
     "name": "Whale shark",
-    "votes": 77,
+    "votes": 78,
     "habitatType": "Aquarium",
     "animalCategory": "Fish",
     "isReturning": false
@@ -2088,14 +2088,14 @@
   },
   {
     "name": "Arapaima",
-    "votes": 67,
+    "votes": 68,
     "habitatType": "Aquarium",
     "animalCategory": "Fish",
     "isReturning": false
   },
   {
     "name": "Alligator gar",
-    "votes": 27,
+    "votes": 28,
     "habitatType": "Aquarium",
     "animalCategory": "Fish",
     "isReturning": false
@@ -2116,7 +2116,7 @@
   },
   {
     "name": "Asian arowana",
-    "votes": 10,
+    "votes": 11,
     "habitatType": "Aquarium",
     "animalCategory": "Fish",
     "isReturning": false
@@ -2284,14 +2284,14 @@
   },
   {
     "name": "Largemouth bass",
-    "votes": 12,
+    "votes": 13,
     "habitatType": "Aquarium",
     "animalCategory": "Fish",
     "isReturning": false
   },
   {
     "name": "Lake sturgeon",
-    "votes": 9,
+    "votes": 10,
     "habitatType": "Aquarium",
     "animalCategory": "Fish",
     "isReturning": false
@@ -2312,7 +2312,7 @@
   },
   {
     "name": "Northern pike",
-    "votes": 18,
+    "votes": 19,
     "habitatType": "Aquarium",
     "animalCategory": "Fish",
     "isReturning": false
@@ -2382,7 +2382,7 @@
   },
   {
     "name": "Wels catfish",
-    "votes": 15,
+    "votes": 16,
     "habitatType": "Aquarium",
     "animalCategory": "Fish",
     "isReturning": false
@@ -2417,7 +2417,7 @@
   },
   {
     "name": "Beluga sturgeon",
-    "votes": 30,
+    "votes": 31,
     "habitatType": "Aquarium",
     "animalCategory": "Fish",
     "isReturning": false
@@ -2480,7 +2480,7 @@
   },
   {
     "name": "White sturgeon",
-    "votes": 15,
+    "votes": 16,
     "habitatType": "Aquarium",
     "animalCategory": "Fish",
     "isReturning": false
@@ -2718,14 +2718,14 @@
   },
   {
     "name": "Atlantic Bottlenose dolphin",
-    "votes": 46,
+    "votes": 47,
     "habitatType": "Aquarium",
     "animalCategory": "Mammals",
     "isReturning": false
   },
   {
     "name": "Beluga",
-    "votes": 55,
+    "votes": 56,
     "habitatType": "Aquarium",
     "animalCategory": "Mammals",
     "isReturning": false
@@ -2760,7 +2760,7 @@
   },
   {
     "name": "Orca",
-    "votes": 65,
+    "votes": 66,
     "habitatType": "Aquarium",
     "animalCategory": "Mammals",
     "isReturning": false
@@ -6071,7 +6071,7 @@
   },
   {
     "name": "California sea lion",
-    "votes": 82,
+    "votes": 83,
     "habitatType": "Terrestrial",
     "animalCategory": "Mammals",
     "isReturning": true
@@ -6449,7 +6449,7 @@
   },
   {
     "name": "Grey seal",
-    "votes": 36,
+    "votes": 37,
     "habitatType": "Terrestrial",
     "animalCategory": "Mammals",
     "isReturning": true
@@ -6883,7 +6883,7 @@
   },
   {
     "name": "Chinook salmon",
-    "votes": 7,
+    "votes": 8,
     "habitatType": "Aquarium",
     "animalCategory": "Fish",
     "isReturning": false
@@ -6932,7 +6932,7 @@
   },
   {
     "name": "Basking Shark",
-    "votes": 5,
+    "votes": 6,
     "habitatType": "Aquarium",
     "animalCategory": "Fish",
     "isReturning": false
@@ -7492,7 +7492,7 @@
   },
   {
     "name": "Mekong Giant Catfish",
-    "votes": 6,
+    "votes": 7,
     "habitatType": "Aquarium",
     "animalCategory": "Fish",
     "isReturning": false
@@ -8297,7 +8297,7 @@
   },
   {
     "name": "Brook trout",
-    "votes": 5,
+    "votes": 6,
     "habitatType": "Aquarium",
     "animalCategory": "Fish",
     "isReturning": false
@@ -8339,7 +8339,7 @@
   },
   {
     "name": "Australian sea lion",
-    "votes": 3,
+    "votes": 4,
     "habitatType": "Terrestrial",
     "animalCategory": "Mammals",
     "isReturning": false
@@ -8661,7 +8661,7 @@
   },
   {
     "name": "Sockeye salmon",
-    "votes": 3,
+    "votes": 4,
     "habitatType": "Aquarium",
     "animalCategory": "Fish",
     "isReturning": false
@@ -8913,7 +8913,7 @@
   },
   {
     "name": "Black Ghost Knifefish",
-    "votes": 1,
+    "votes": 2,
     "habitatType": "Aquarium",
     "animalCategory": "Fish",
     "isReturning": false
@@ -9200,7 +9200,7 @@
   },
   {
     "name": "Coho Salmon",
-    "votes": 2,
+    "votes": 3,
     "habitatType": "Aquarium",
     "animalCategory": "Fish",
     "isReturning": false
@@ -9277,7 +9277,7 @@
   },
   {
     "name": "Walleye",
-    "votes": 3,
+    "votes": 4,
     "habitatType": "Aquarium",
     "animalCategory": "Fish",
     "isReturning": false
@@ -12063,7 +12063,7 @@
   },
   {
     "name": "Burbot",
-    "votes": 1,
+    "votes": 2,
     "habitatType": "Aquarium",
     "animalCategory": "Fish",
     "isReturning": false
@@ -12077,7 +12077,7 @@
   },
   {
     "name": "Mountain Whitefish",
-    "votes": 1,
+    "votes": 2,
     "habitatType": "Aquarium",
     "animalCategory": "Fish",
     "isReturning": false
@@ -12098,7 +12098,7 @@
   },
   {
     "name": "Pacific spiny dogfish",
-    "votes": 2,
+    "votes": 3,
     "habitatType": "Aquarium",
     "animalCategory": "Fish",
     "isReturning": false
@@ -12150,6 +12150,41 @@
     "votes": 1,
     "habitatType": "Terrestrial",
     "animalCategory": "Mammals",
+    "isReturning": false
+  },
+  {
+    "name": "Pink salmon",
+    "votes": 1,
+    "habitatType": "Aquarium",
+    "animalCategory": "Fish",
+    "isReturning": false
+  },
+  {
+    "name": "Lake trout",
+    "votes": 1,
+    "habitatType": "Aquarium",
+    "animalCategory": "Fish",
+    "isReturning": false
+  },
+  {
+    "name": "Goldeye",
+    "votes": 2,
+    "habitatType": "Aquarium",
+    "animalCategory": "Fish",
+    "isReturning": false
+  },
+  {
+    "name": "Nelma",
+    "votes": 2,
+    "habitatType": "Aquarium",
+    "animalCategory": "Fish",
+    "isReturning": false
+  },
+  {
+    "name": "Signal Crayfish",
+    "votes": 2,
+    "habitatType": "Aquarium",
+    "animalCategory": "Invertebrates",
     "isReturning": false
   },
 ]
