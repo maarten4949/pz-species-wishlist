@@ -9486,7 +9486,7 @@
     "isReturning": false
   },
   {
-    "name": "Jamtland sheep",
+    "name": "Jamtland goat",
     "votes": 1,
     "habitatType": "Terrestrial",
     "animalCategory": "Mammals",
@@ -11216,13 +11216,6 @@
   },
   {
     "name": "Green Orchid Bee",
-    "votes": 1,
-    "habitatType": "Exhibit",
-    "animalCategory": "Invertebrates",
-    "isReturning": false
-  },
-  {
-    "name": "Green Orchid Bee",
     "votes": 2,
     "habitatType": "Exhibit",
     "animalCategory": "Invertebrates",
@@ -11489,14 +11482,7 @@
   },
   {
     "name": "western honey bee",
-    "votes": 2,
-    "habitatType": "Exhibit",
-    "animalCategory": "Invertebrates",
-    "isReturning": false
-  },
-  {
-    "name": "western honey bee",
-    "votes": 1,
+    "votes": 5,
     "habitatType": "Exhibit",
     "animalCategory": "Invertebrates",
     "isReturning": false
