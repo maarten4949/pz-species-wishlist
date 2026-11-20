@@ -1808,7 +1808,7 @@
   },
   {
     "name": "Eastern fiddler ray",
-    "votes": 1,
+    "votes": 0,
     "habitatType": "Aquarium",
     "animalCategory": "Fish",
     "isReturning": false
@@ -1983,7 +1983,7 @@
   },
   {
     "name": "Green sawfish",
-    "votes": 3,
+    "votes": 2,
     "habitatType": "Aquarium",
     "animalCategory": "Fish",
     "isReturning": false
@@ -2074,7 +2074,7 @@
   },
   {
     "name": "Whale shark",
-    "votes": 79,
+    "votes": 78,
     "habitatType": "Aquarium",
     "animalCategory": "Fish",
     "isReturning": false
@@ -2102,7 +2102,7 @@
   },
   {
     "name": "Alligator gar",
-    "votes": 28,
+    "votes": 27,
     "habitatType": "Aquarium",
     "animalCategory": "Fish",
     "isReturning": false
@@ -2445,7 +2445,7 @@
   },
   {
     "name": "Barramundi",
-    "votes": 3,
+    "votes": 2,
     "habitatType": "Aquarium",
     "animalCategory": "Fish",
     "isReturning": false
@@ -2585,7 +2585,7 @@
   },
   {
     "name": "Green moray eel",
-    "votes": 34,
+    "votes": 33,
     "habitatType": "Aquarium",
     "animalCategory": "Fish",
     "isReturning": false
@@ -2823,7 +2823,7 @@
   },
   {
     "name": "Green sea turtle",
-    "votes": 12,
+    "votes": 11,
     "habitatType": "Aquarium",
     "animalCategory": "Reptiles",
     "isReturning": false
@@ -3691,7 +3691,7 @@
   },
   {
     "name": "Spotted garden eel",
-    "votes": 9,
+    "votes": 8,
     "habitatType": "Exhibit",
     "animalCategory": "Fish",
     "isReturning": false
@@ -3719,7 +3719,7 @@
   },
   {
     "name": "Weedy sea dragon",
-    "votes": 11,
+    "votes": 10,
     "habitatType": "Exhibit",
     "animalCategory": "Fish",
     "isReturning": false
@@ -7254,7 +7254,7 @@
   },
   {
     "name": "Giant cuttlefish",
-    "votes": 13,
+    "votes": 12,
     "habitatType": "Aquarium",
     "animalCategory": "Invertebrates",
     "isReturning": false
@@ -9620,7 +9620,7 @@
   },
   {
     "name": "Small-Spotted Catshark",
-    "votes": 5,
+    "votes": 4,
     "habitatType": "Aquarium",
     "animalCategory": "Fish",
     "isReturning": false
